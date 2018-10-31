@@ -64,27 +64,79 @@ class StrTest extends TestCase {
     /**
      * @covers Helpers\Str::limitChars
      */
-    public function testLimitChars() {
-        $str = "abcdefg";
-
-        $this->assertEquals("abc...", Str::limitChars($str, 3));
-        $this->assertEquals("abcd__", Str::limitChars($str, 4, "__"));
+    public function testLimitCharsDefaultEnd() {
+        $this->assertEquals("ab...", Str::limitChars("abcdefg", 5));
+        $this->assertEquals("ab", Str::limitChars("abcdefg", 2));
+        $this->assertEquals("abcde", Str::limitChars("abcdefg", 5, "******"));
+    }
+    
+    /**
+     * @covers Helpers\Str::limitChars
+     * @dataProvider limitCharsProvider
+     */
+    public function testLimitChars($str, $len, $end, $expected) {
+        $this->assertEquals($expected, Str::limitChars($str, $len, $end));
+    }
+    
+    public function limitCharsProvider() {
+        return [
+            [ "abcdefghigklmno",  5, "..", "abc.."],
+            [ "abcdefghigklmno",  5, "***", "ab***"],
+            [ "abc",  5, "***", "abc"],
+            [ "abcdefghigklmno",  12, "#####", "abcdefg#####"],
+        ];
     }
 
+    public function startsWithProvider()
+    {
+        return [
+            [ "", "", false ],
+            [ "", "a", false ],
+            [ "a", "", false ],
+            [ "abcdef", "a", true ],
+            [ "abcdef", "ab", true ],
+            [ "abcdef", "abc", true ],
+            [ "abcdef", "abcd", true ],
+            [ "abcdef", "abcdef", true ],
+            [ "abcdef", "abdcef", false ],
+            [ "abcdef", "ef", false ],
+            [ "abc", "cdef", false ],
+            [ "abcdef", "bc", false ],
+            [ "abc", "abcdef", false ]
+        ];
+    }
+    
     /**
      * @covers Helpers\Str::startsWith
+     * @dataProvider startsWithProvider
      */
-    public function testStartsWith() {
-        $str = "abcdefg";
-        $this->assertTrue(Str::startsWith($str, "abc"));
+    public function testStartsWith($str, $start, $expected) {
+        $this->assertEquals($expected, Str::startsWith($str, $start));
     }
 
+    public function endsWithProvider()
+    {
+        return [
+            [ "", "", false ],
+            [ "", "a", false ],
+            [ "a", "", false ],
+            [ "abcdef", "f", true ],
+            [ "abcdef", "ef", true ],
+            [ "abcdef", "def", true ],
+            [ "abcdef", "abcdef", true ],
+            [ "abcdef", "abdcef", false ],
+            [ "abcdef", "de", false ],
+            [ "abc", "cdef", false ],
+            [ "abc", "abcdef", false ]
+        ];
+    }
+    
     /**
      * @covers Helpers\Str::endsWith
+     * @dataProvider endsWithProvider
      */
-    public function testEndsWith() {
-        $str = "abcdefg";
-        $this->assertTrue(Str::endsWith($str, "efg"));
+    public function testEndsWith($str, $end, $expected) {
+        $this->assertEquals($expected, Str::endsWith($str, $end));
     }
 
 }
