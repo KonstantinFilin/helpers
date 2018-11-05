@@ -803,8 +803,8 @@ var classes = [
             {
                 "name": "isLeapYear",
                 "role": null,
-                "public": false,
-                "private": true,
+                "public": true,
+                "private": false,
                 "_type": "Hal\\Metric\\FunctionMetric"
             },
             {
@@ -885,8 +885,8 @@ var classes = [
         ],
         "nbMethodsIncludingGettersSetters": 33,
         "nbMethods": 32,
-        "nbMethodsPrivate": 1,
-        "nbMethodsPublic": 31,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 32,
         "nbMethodsGetter": 1,
         "nbMethodsSetters": 0,
         "wmc": 59,
@@ -1694,99 +1694,6 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 1,
         "instability": 1,
-        "violations": {}
-    },
-    {
-        "name": "Helpers\\Dt\\Formatters\\Ru",
-        "interface": false,
-        "abstract": false,
-        "methods": [
-            {
-                "name": "getShort",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getFull",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMonthShortList",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMonthFullList",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMonthFullGenList",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMonthFullPropList",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            }
-        ],
-        "nbMethodsIncludingGettersSetters": 6,
-        "nbMethods": 6,
-        "nbMethodsPrivate": 0,
-        "nbMethodsPublic": 6,
-        "nbMethodsGetter": 0,
-        "nbMethodsSetters": 0,
-        "wmc": 6,
-        "ccn": 1,
-        "ccnMethodMax": 1,
-        "externals": [],
-        "parents": [],
-        "lcom": 6,
-        "length": 102,
-        "vocabulary": 60,
-        "volume": 602.5,
-        "difficulty": 0.83,
-        "effort": 500.38,
-        "level": 1.2,
-        "bugs": 0.2,
-        "time": 28,
-        "intelligentContent": 725.46,
-        "number_operators": 4,
-        "number_operands": 98,
-        "number_operators_unique": 1,
-        "number_operands_unique": 59,
-        "cloc": 0,
-        "loc": 26,
-        "lloc": 26,
-        "mi": 49.53,
-        "mIwoC": 49.53,
-        "commentWeight": 0,
-        "kanDefect": 0.15,
-        "relativeStructuralComplexity": 0,
-        "relativeDataComplexity": 4.33,
-        "relativeSystemComplexity": 4.33,
-        "totalStructuralComplexity": 0,
-        "totalDataComplexity": 26,
-        "totalSystemComplexity": 26,
-        "package": "Helpers\\Dt\\Formatters\\",
-        "pageRank": 0.01,
-        "afferentCoupling": 0,
-        "efferentCoupling": 0,
-        "instability": 0,
         "violations": {}
     },
     {
