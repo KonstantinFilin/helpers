@@ -139,11 +139,11 @@ class MonthTest extends TestCase {
     {
         $period1 = "201602";
         $m1 = Month::createFromPeriod($period1);
-        $this->assertEquals($period1, $m1->getYear() . $m1->getMonth());
+        $this->assertEquals($period1, $m1->getYear() . $m1->getMonthNum());
 
         $period2 = "201511";
         $m2 = Month::createFromPeriod($period2);
-        $this->assertEquals($period2, $m2->getYear() . $m2->getMonth());
+        $this->assertEquals($period2, $m2->getYear() . $m2->getMonthNum());
     }
     
     /**
@@ -155,172 +155,48 @@ class MonthTest extends TestCase {
     {
         $dt1 = "2016-02-01";
         $m1 = Month::createFromDt($dt1);
-        $this->assertEquals("201602", $m1->getYear() . $m1->getMonth());
+        $this->assertEquals("201602", $m1->getYear() . $m1->getMonthNum());
 
         $dt2 = "2015-12-31";
         $m2 = Month::createFromDt($dt2);
-        $this->assertEquals("201512", $m2->getYear() . $m2->getMonth());
+        $this->assertEquals("201512", $m2->getYear() . $m2->getMonthNum());
     }
-    
+
     /**
-     * @covers Helpers\Calendar\Month::getFullDt
+     * @covers Helpers\Calendar\Month::isWeekday
      */
-    public function testGetFullDt() {
-        $m1 = new Month(2020, 5);
-        $this->assertEquals("2020-05-31", $m1->getFullDt(31));
-        
-        $m2 = new Month(2005, 3);
-        $this->assertEquals("2005-03-02", $m2->getFullDt(2));
-    }
-    
-    /**
-     * @expectedException InvalidArgumentException
-     * @expectedExceptionMessage Day num must be between 1 and 31, argument value: 32
-     */
-    public function testGetFullDtException1() {
-        $m1 = new Month(2020, 5);
-        $m1->getFullDt(32);
-    }
-    
-    /**
-     * @expectedException InvalidArgumentException
-     * @expectedExceptionMessage Day num must be between 1 and 30, argument value: 31
-     */
-    public function testGetFullDtException2() {
-        $m1 = new Month(2020, 4);
-        $m1->getFullDt(31);
-    }
-    
-    /**
-     * @expectedException InvalidArgumentException
-     * @expectedExceptionMessage Day num must be between 1 and 30, argument value: 0
-     */
-    public function testGetFullDtException3() {
-        $m1 = new Month(2020, 4);
-        $m1->getFullDt(0);
-    }
-    
-    /**
-     * @covers Helpers\Calendar\Month::isMonday
-     */
-    public function testIsMonday() 
+    public function testIsWeekday() 
     {
         $m1 = new Month(2018, 11);
-        $this->assertTrue($m1->isMonday(5));
-        $this->assertTrue($m1->isMonday(12));
-        $this->assertTrue($m1->isMonday(19));
-        $this->assertFalse($m1->isMonday(11));
-        $this->assertFalse($m1->isMonday(13));
-        $this->assertFalse($m1->isMonday(18));
-        $this->assertFalse($m1->isMonday(20));
+        $this->assertTrue($m1->isWeekday(5, Month::WEEKDAY_MONDAY));
+        $this->assertTrue($m1->isWeekday(12, Month::WEEKDAY_MONDAY));
+        $this->assertTrue($m1->isWeekday(19, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m1->isWeekday(11, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m1->isWeekday(13, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m1->isWeekday(18, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m1->isWeekday(20, Month::WEEKDAY_MONDAY));
         
         $m2 = new Month(2018, 5);
-        $this->assertTrue($m2->isMonday(7));
-        $this->assertTrue($m2->isMonday(14));
-        $this->assertTrue($m2->isMonday(21));
-        $this->assertTrue($m2->isMonday(28));
-        $this->assertFalse($m2->isMonday(13));
-        $this->assertFalse($m2->isMonday(15));
-        $this->assertFalse($m2->isMonday(30));
-        $this->assertFalse($m2->isMonday(1));
+        $this->assertTrue($m2->isWeekday(7, Month::WEEKDAY_MONDAY));
+        $this->assertTrue($m2->isWeekday(14, Month::WEEKDAY_MONDAY));
+        $this->assertTrue($m2->isWeekday(21, Month::WEEKDAY_MONDAY));
+        $this->assertTrue($m2->isWeekday(28, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m2->isWeekday(13, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m2->isWeekday(15, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m2->isWeekday(30, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m2->isWeekday(1, Month::WEEKDAY_MONDAY));
         
         $m3 = new Month(2019, 1);
-        $this->assertTrue($m3->isMonday(7));
-        $this->assertTrue($m3->isMonday(14));
-        $this->assertTrue($m3->isMonday(21));
-        $this->assertTrue($m3->isMonday(28));
-        $this->assertFalse($m3->isMonday(13));
-        $this->assertFalse($m3->isMonday(15));
-        $this->assertFalse($m3->isMonday(30));
-        $this->assertFalse($m3->isMonday(1));
+        $this->assertTrue($m3->isWeekday(7, Month::WEEKDAY_MONDAY));
+        $this->assertTrue($m3->isWeekday(14, Month::WEEKDAY_MONDAY));
+        $this->assertTrue($m3->isWeekday(21, Month::WEEKDAY_MONDAY));
+        $this->assertTrue($m3->isWeekday(28, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m3->isWeekday(13, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m3->isWeekday(15, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m3->isWeekday(30, Month::WEEKDAY_MONDAY));
+        $this->assertFalse($m3->isWeekday(1, Month::WEEKDAY_MONDAY));
     }    
-    
-    /**
-     * @covers Helpers\Calendar\Month::isTuesday
-     */
-    public function testIsTuesday() 
-    {
-        $m1 = new Month(2018, 11);
-        $this->assertTrue($m1->isTuesday(6));
-        $this->assertTrue($m1->isTuesday(13));
-        $this->assertTrue($m1->isTuesday(20));
-        $this->assertTrue($m1->isTuesday(27));
-        $this->assertFalse($m1->isTuesday(19));
-        $this->assertFalse($m1->isTuesday(21));
-    }    
-    
-    /**
-     * @covers Helpers\Calendar\Month::isWednesday
-     */
-    public function testIsWednesday() 
-    {
-        $m1 = new Month(2018, 11);
-        $this->assertTrue($m1->isWednesday(7));
-        $this->assertTrue($m1->isWednesday(14));
-        $this->assertTrue($m1->isWednesday(21));
-        $this->assertTrue($m1->isWednesday(28));
-        $this->assertFalse($m1->isWednesday(20));
-        $this->assertFalse($m1->isWednesday(22));
-    }    
-    
-    /**
-     * @covers Helpers\Calendar\Month::isThursday
-     */
-    public function testIsThursday() 
-    {
-        $m1 = new Month(2018, 11);
-        $this->assertTrue($m1->isThursday(1));
-        $this->assertTrue($m1->isThursday(8));
-        $this->assertTrue($m1->isThursday(15));
-        $this->assertTrue($m1->isThursday(22));
-        $this->assertTrue($m1->isThursday(29));
-        $this->assertFalse($m1->isThursday(21));
-        $this->assertFalse($m1->isThursday(23));
-    }    
-    
-    /**
-     * @covers Helpers\Calendar\Month::isFriday
-     */
-    public function testIsFriday() 
-    {
-        $m1 = new Month(2018, 11);
-        $this->assertTrue($m1->isFriday(2));
-        $this->assertTrue($m1->isFriday(9));
-        $this->assertTrue($m1->isFriday(16));
-        $this->assertTrue($m1->isFriday(23));
-        $this->assertTrue($m1->isFriday(30));
-        $this->assertFalse($m1->isFriday(22));
-        $this->assertFalse($m1->isFriday(24));
-    }    
-    
-    /**
-     * @covers Helpers\Calendar\Month::isSaturday
-     */
-    public function testIsSaturday() 
-    {
-        $m1 = new Month(2018, 11);
-        $this->assertTrue($m1->isSaturday(3));
-        $this->assertTrue($m1->isSaturday(10));
-        $this->assertTrue($m1->isSaturday(17));
-        $this->assertTrue($m1->isSaturday(24));
-        $this->assertFalse($m1->isSaturday(23));
-        $this->assertFalse($m1->isSaturday(25));
-    }    
-    
-    /**
-     * @covers Helpers\Calendar\Month::isSunday
-     */
-    public function testIsSunday() 
-    {
-        $m1 = new Month(2018, 11);
-        $this->assertTrue($m1->isSunday(4));
-        $this->assertTrue($m1->isSunday(11));
-        $this->assertTrue($m1->isSunday(18));
-        $this->assertTrue($m1->isSunday(25));
-        $this->assertFalse($m1->isSunday(24));
-        $this->assertFalse($m1->isSunday(26));
-    }    
-    
+
     public function getWeekdayNameProvider() {
         return [
             [ 5, "Monday" ],
@@ -355,7 +231,7 @@ class MonthTest extends TestCase {
             [ 25, "Sunday" ]
         ];
     }
-    
+
     /**
      * @covers Helpers\Calendar\Month::getWeekdayName
      * @dataProvider getWeekdayNameProvider
@@ -410,42 +286,7 @@ class MonthTest extends TestCase {
         $m1 = new Month(2018, 11);
         $this->assertEquals($expected, $m1->getWeekdayNameShort($dayNum));
     }    
-        
-    /**
-     * @covers Helpers\Calendar\Month::getWeekdayNames
-     */
-    public function testGetWeekdayNames() 
-    {
-        $m1 = new Month();
-        $expected = [
-            1 => "Monday",
-            2 => "Tuesday",
-            3 => "Wednesday",
-            4 => "Thursday",
-            5 => "Friday",
-            6 => "Saturday",
-            7 => "Sunday",
-        ];
-        $this->assertEquals($expected, $m1->getWeekdayNames());
-    }    
-        
-    /**
-     * @covers Helpers\Calendar\Month::getWeekdayNamesShort
-     */
-    public function testGetWeekdayNamesShort() 
-    {
-        $m1 = new Month();
-        $expected = [
-            1 => "Mo",
-            2 => "Tu",
-            3 => "We",
-            4 => "Th",
-            5 => "Fr",
-            6 => "Sa",
-            7 => "Su",
-        ];
-        $this->assertEquals($expected, $m1->getWeekdayNamesShort());
-    }    
+
         
     /**
      * @covers Helpers\Calendar\Month::getWeekdayNum
@@ -465,30 +306,7 @@ class MonthTest extends TestCase {
         $this->assertEquals($expected20181125, $m1->getWeekdayNum(25));
         $expected20181130 = 5;
         $this->assertEquals($expected20181130, $m1->getWeekdayNum(30));
-    }    
-        
-    /**
-     * @covers Helpers\Calendar\Month::getMonthNames
-     */
-    public function testGetMonthNames() 
-    {
-        $m1 = new Month();
-        $expected = [
-            1 => "January",
-            2 => "February",
-            3 => "March",
-            4 => "April",
-            5 => "May",
-            6 => "June",
-            7 => "July",
-            8 => "August",
-            9 => "September",
-            10 => "October",
-            11 => "November",
-            12 => "December",
-        ];
-        $this->assertEquals($expected, $m1->getMonthNames());
-    }    
+    }
         
     /**
      * @covers Helpers\Calendar\Month::getWeekdayNumList
@@ -529,106 +347,6 @@ class MonthTest extends TestCase {
         
         $m1 = new Month(2018, 11);
         $this->assertEquals($expected, $m1->getWeekdayNumList());
-    }
-    
-    /**
-     * @covers Helpers\Calendar\Month::getMinDt
-     */
-    public function testGetMinDt() {
-        $y1 = 2018;
-        $m1 = 1;
-        $mo1 = new Month($y1, $m1);
-        $this->assertEquals($y1 . "-0" . $m1 . "-01", $mo1->getMinDt());
-        $y2 = 2018;
-        $m2 = 5;
-        $mo2 = new Month($y2, $m2);
-        $this->assertEquals($y2 . "-0" . $m2 . "-01", $mo2->getMinDt());
-        $y3 = 2018;
-        $m3 = 12;
-        $mo3 = new Month($y3, $m3);
-        $this->assertEquals($y3 . "-" . $m3 . "-01", $mo3->getMinDt());
-    }
-    
-    /**
-     * @covers Helpers\Calendar\Month::getMaxDt
-     */
-    public function testGetMaxDt() {
-        $y1 = 2018;
-        $m1 = 1;
-        $mo1 = new Month($y1, $m1);
-        $this->assertEquals($y1 . "-0" . $m1 . "-31", $mo1->getMaxDt());
-        $y2 = 2018;
-        $m2 = 5;
-        $mo2 = new Month($y2, $m2);
-        $this->assertEquals($y2 . "-0" . $m2 . "-31", $mo2->getMaxDt());
-        $y3 = 2018;
-        $m3 = 12;
-        $mo3 = new Month($y3, $m3);
-        $this->assertEquals($y3 . "-" . $m3 . "-31", $mo3->getMaxDt());
-        $y4 = 2018;
-        $m4 = 4;
-        $mo4 = new Month($y4, $m4);
-        $this->assertEquals($y4 . "-0" . $m4 . "-30", $mo4->getMaxDt());
-        $y5 = 2018;
-        $m5 = 2;
-        $mo5 = new Month($y5, $m5);
-        $this->assertEquals($y5 . "-0" . $m5 . "-28", $mo5->getMaxDt());
-        $y6 = 2016;
-        $m6 = 2;
-        $mo6 = new Month($y6, $m6);
-        $this->assertEquals($y6 . "-0" . $m6 . "-29", $mo6->getMaxDt());
-    }
-    
-    /**
-     * @covers Helpers\Calendar\Month::isLeapYear
-     */
-    public function testIsLeapYear() {
-        $m1 = new Month(2015, 1);
-        $this->assertFalse($m1->isLeapYear());
-        $m2 = new Month(2017, 1);
-        $this->assertFalse($m2->isLeapYear());
-        $m3 = new Month(2016, 1);
-        $this->assertTrue($m3->isLeapYear());
-        $m4 = new Month(2004, 1);
-        $this->assertTrue($m4->isLeapYear());
-        $m5 = new Month(2000, 1);
-        $this->assertTrue($m5->isLeapYear());
-        $m6 = new Month(1900, 1);
-        $this->assertFalse($m6->isLeapYear());
-        $m7 = new Month(2100, 1);
-        $this->assertFalse($m7->isLeapYear());
-        $m8 = new Month(2012, 1);
-        $this->assertTrue($m8->isLeapYear());
-    }
-    
-    /**
-     * @covers Helpers\Calendar\Month::isPast
-     */
-    public function testIsPast() {
-        $m = new Month();
-        $this->assertFalse($m->isPast());
-        $this->assertTrue($m->getPrev()->isPast());
-        $this->assertFalse($m->getNext()->isPast());        
-    }
-    
-    /**
-     * @covers Helpers\Calendar\Month::isFuture
-     */
-    public function testIsFuture() {
-        $m = new Month();
-        $this->assertFalse($m->isPast());
-        $this->assertFalse($m->getPrev()->isFuture());
-        $this->assertTrue($m->getNext()->isFuture());
-    }
-    
-    /**
-     * @covers Helpers\Calendar\Month::isCurrent
-     */
-    public function testIsCurrent() {
-        $m = new Month();
-        $this->assertTrue($m->isCurrent());
-        $this->assertFalse($m->isPast());
-        $this->assertFalse($m->isFuture());
     }
     
     /**
@@ -712,18 +430,5 @@ class MonthTest extends TestCase {
         $m2 = new Month(2018, 12);
         $this->assertEquals("201901", (string) $m2->getNext());
     }
-    
-    /**
-     * @covers Helpers\Calendar\Month::hasDt()
-     */
-    public function testHasDt() {
-        $m1 = new Month(2018, 5);
-        $this->assertTrue($m1->hasDt("2018-05-01"));
-        $this->assertTrue($m1->hasDt("2018-05-15"));
-        $this->assertFalse($m1->hasDt("2017-05-15"));
-        $this->assertFalse($m1->hasDt("2019-05-15"));
-        $this->assertTrue($m1->hasDt("2018-05-31"));
-        $this->assertFalse($m1->hasDt("2018-06-01"));
-        $this->assertFalse($m1->hasDt("2018-04-30"));
-    }
+
 }
