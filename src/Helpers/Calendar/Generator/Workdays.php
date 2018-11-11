@@ -4,7 +4,7 @@ namespace Helpers\Calendar\Generator;
 
 use Helpers\Calendar\Month;
 
-class Workdays implements \kfilin\Calendar\GeneratorIf
+class Workdays implements \Helpers\Calendar\GeneratorIf
 {
     /**
      *
@@ -19,7 +19,6 @@ class Workdays implements \kfilin\Calendar\GeneratorIf
     /**
      * 
      * {@inheritDoc}
-     * @see \kfilin\Calendar\GeneratorIf::make()
      */
     public function make(): array 
     {

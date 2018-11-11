@@ -26,7 +26,8 @@ class Is {
      * @return bool True if yes
      */
     public function currentYear(): bool {
-        return $this->month->getYear() == Date::now()->format("Y");
+        $now = new Date();
+        return $this->month->getYear() == $now->format("Y");
     }
     
     /**
@@ -34,9 +35,11 @@ class Is {
      * @return bool True if yes
      */
     public function current(): bool
-    {       
+    {
+        $now = new Date();
+
         return $this->month->is()->currentYear() 
-            && $this->month->getMonthNum() == intval(Date::now()->format("m"));
+            && $this->month->getMonthNum() == intval($now->format("m"));
     }
 
     /**
@@ -45,7 +48,7 @@ class Is {
      */
     public function past(): bool
     {
-        $now = Date::now();
+        $now = new Date();
         $condition1 = intval($now->format("Y")) > $this->month->getYear();
         $condition2 = $this->month->is()->currentYear()
             && intval($now->format("m")) > $this->month->getMonthNum();
@@ -59,7 +62,7 @@ class Is {
      */
     public function future(): bool
     {
-        $now = Date::now();
+        $now = new Date();
         $condition1 = intval($now->format("Y")) < $this->month->getYear();
         $condition2 = $this->month->is()->currentYear()
             && intval($now->format("m")) < $this->month->getMonthNum();

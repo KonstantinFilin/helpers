@@ -124,13 +124,4 @@ class Date extends \DateTime
     public function isSunday(): bool {
         return $this->getWeekdayNum() == 7;
     }
-    
-    /**
-     * Returns current date object
-     * @return \Date Current date object
-     */
-    public function now()
-    {
-        return new Date();
-    }
 }

@@ -74,15 +74,7 @@ class DateTest extends TestCase {
         $d1 = new Date("2018-12-31");
         $this->assertEquals("2018-12-31", (string) $d1);
     }
-    
-    /**
-     * @covers Helpers\Calendar\Date::now()
-     */
-    public function testNow() {
-        $d1 = Date::now();
-        $this->assertEquals(date("Y-m-d"), (string) $d1);
-    }
-    
+
     /**
      * @covers Helpers\Calendar\Date::isMonday()
      */
