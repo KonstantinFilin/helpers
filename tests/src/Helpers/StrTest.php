@@ -24,25 +24,6 @@ class StrTest extends TestCase {
 
     }
 
-    /**
-     * @covers Helpers\Str::createRandomNum
-     */
-    public function testCreateRandomNum() {
-        $len = 7;
-        $value = Str::createRandomNum($len);
-        $this->assertEquals($len, strlen($value));
-        $this->assertRegExp("/^[\d]{" . $len . "}$/", $value);
-    }
-
-    /**
-     * @covers Helpers\Str::createRandom
-     */
-    public function testCreateRandom() {
-        $len = 7;
-        $value = Str::createRandom($len);
-        $this->assertEquals($len, strlen($value));
-        $this->assertRegExp("/^[\w\d_]{" . $len . "}$/", $value);
-    }
 
     /**
      * @covers Helpers\Str::limitWords

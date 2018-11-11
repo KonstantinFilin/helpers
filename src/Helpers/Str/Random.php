@@ -14,7 +14,7 @@ class Random {
      * @return string Random string of digits
      */
     public static function createNum (int $length): string {
-        return self::createRandom($length, range(0, 9));
+        return self::create($length, range(0, 9));
     }
 
     /**

@@ -2,7 +2,9 @@
 
 namespace Helpers\Calendar;
 
-
+/**
+ * Month object
+ */
 class Month 
 {
     /**
@@ -18,21 +20,21 @@ class Month
     protected $monthNum;
 
     /**
-     *
+     * Month attribites checker
      * @var Month\Is
      */
     protected $is;
 
     /**
-     *
+     * Dates checker
      * @var Month\Dt
      */
     protected $dt;
 
     /**
      * Creates class instance
-     * @param int $year Year part
-     * @param int $monthNum Month number part
+     * @param int $year Year 
+     * @param int $monthNum Month number 
      * @throws \InvalidArgumentException
      */
     function __construct(int $year = 0, int $monthNum = 0) {
@@ -48,32 +50,40 @@ class Month
     }
     
     /**
-     * 
-     * @return string
+     * Returns month name in format YYYYMM
+     * @return string Month name in format YYYYMM
      */
     public function __toString(): string
     {
-        return $this->getYear() . $this->getMonthNum();
+        return $this->getYear() . $this->getMonthNumStr();
     }
     
     /**
-     * 
-     * @return int
+     * Returns year of the month
+     * @return int Year part
      */
     public function getYear(): int {
         return $this->year;
     }
 
     /**
-     * 
-     * @return string
+     * Returns month number as two digits string
+     * @return string Month number from "01" to "12"
      */
-    public function getMonthNum(): string {
+    public function getMonthNumStr(): string {
         return sprintf("%02u", $this->monthNum);
     }
     
     /**
-     * 
+     * Returns month number as integer
+     * @return int Month number from 1 to 12
+     */
+    public function getMonthNum(): int {
+        return $this->monthNum;
+    }
+        
+    /**
+     * Returns month attributes checker object
      * @return \Helpers\Calendar\Month\Is
      */
     public function is(): Month\Is {
@@ -85,6 +95,10 @@ class Month
         return $this->is;
     }
     
+    /**
+     * Return month dates checker object
+     * @return \Helpers\Calendar\Month\Dt
+     */
     public function dt(): Month\Dt {
         
         if (!$this->dt) {

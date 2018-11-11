@@ -4,26 +4,30 @@ namespace Helpers\Calendar\Month;
 
 use Helpers\Calendar\Month;
 
+/**
+ * Month data formatter
+ * @author Konstantin S. Filin
+ */
 class Formatter 
 {
 
     /**
      * Returns weekday name for given month day
-     * @param Month $dayNum Month object
+     * @param Month Month object
      * @param int $dayNum Month day
      * @return string Weekday name (Monday, Tuesday, Wednesday, ...)
      */
     public function getWeekdayName(Month $month, int $dayNum): string
     {
-        $weekdayNum = $month->getWeekdayNum($dayNum);
+        $weekdayNum = $month->dt()->getAsObj($dayNum)->getWeekdayNum();
         $weekdayNames = $this->getWeekdayNames();
         
         return $weekdayNames[$weekdayNum];
     }
 
     /**
-     * 
-     * @return array
+     * Returns list of month names
+     * @return array List of month names
      */
     public function getMonthNames(): array
     {
@@ -44,8 +48,8 @@ class Formatter
     }
 
     /**
-     * 
-     * @return array
+     * Returns list of weekday names
+     * @return array List of weekday names
      */
     public function getWeekdayNames(): array
     {
@@ -61,10 +65,11 @@ class Formatter
     }
     
     /**
-     * 
-     * @return string
+     * Returns month name
+     * @param Month $month
+     * @return string Month name in format "MonthName year"
      */
-    public function getName(Month $month): string
+    public function getMonthName(Month $month): string
     {
         $monthNum = $month->getMonthNum();
         $monthNames = $this->getMonthNames();

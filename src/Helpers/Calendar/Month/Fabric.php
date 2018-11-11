@@ -1,11 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace Helpers\Calendar\Month;
 
 use Helpers\Calendar\Month;
@@ -13,7 +7,7 @@ use Helpers\Calendar\Month;
 /**
  * Description of Fabric
  *
- * @author ksf
+ * @author Konstantin S. Filin
  */
 class Fabric {
 
@@ -51,10 +45,11 @@ class Fabric {
     }
 
     /**
-     * 
+     * Returns previous month
+     * @param Month $month
      * @return Month
      */
-    public function getPrev(Month $month): Month
+    public static function getPrev(Month $month): Month
     {
         $m = $month->getMonthNum();
         $y = $month->getYear();
@@ -70,10 +65,10 @@ class Fabric {
     }
 
     /**
-     * 
+     * Returns next month
      * @return Month
      */
-    public static function next(Month $month): Month
+    public static function getNext(Month $month): Month
     {
         $m = $month->getMonthNum();
         $y = $month->getYear();

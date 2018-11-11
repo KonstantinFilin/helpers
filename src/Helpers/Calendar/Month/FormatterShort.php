@@ -1,24 +1,18 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace Helpers\Calendar\Month;
 
+use Helpers\Calendar\Month;
+
 /**
- * Description of FormatterShort
- *
- * @author ksf
+ * Month data formatter
+ * @author Konstantin S. Filin
  */
 class FormatterShort extends Formatter 
 {
 
     /**
-     * 
-     * @return array
+     * {@inheritDoc}
      */
     public function getWeekdayNames(): array
     {
@@ -34,10 +28,9 @@ class FormatterShort extends Formatter
     }
     
     /**
-     * 
-     * @return string
+     * {@inheritDoc}
      */
-    public function getName(Month $month): string
+    public function getMonthName(Month $month): string
     {
         $monthNum = $month->getMonthNum();
         $monthNames = $this->getMonthNames();

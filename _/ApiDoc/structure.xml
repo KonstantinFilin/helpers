@@ -82,7 +82,7 @@
       <error line="13" code="PPC:ERR-50007">No summary for property $month</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Month/Dt.php" generated-path="Calendar.Month.Dt.html" hash="80412591e196c87568b03b23a4471ea3" package="Default">
+  <file path="Calendar/Month/Dt.php" generated-path="Calendar.Month.Dt.html" hash="45f7e7191f27414dd9dd476399e4d2d2" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -90,32 +90,33 @@
     </docblock>
     <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
     <namespace-alias name="Fabric">\Helpers\Calendar\Month\Fabric</namespace-alias>
-    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="19" package="Default">
+    <namespace-alias name="Date">\Helpers\Calendar\Date</namespace-alias>
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="20" package="Default">
       <extends/>
       <name>Dt</name>
       <full_name>\Helpers\Calendar\Month\Dt</full_name>
-      <docblock line="19">
+      <docblock line="20">
         <description>Description of Ranges</description>
         <long-description></long-description>
-        <tag name="author" line="19" description="ksf"/>
-        <tag name="package" line="19" description="Default"/>
+        <tag name="author" line="20" description="ksf"/>
+        <tag name="package" line="20" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar\Month" line="25" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar\Month" line="26" package="Default">
         <name>$month</name>
         <full_name>\Helpers\Calendar\Month\Dt::$month</full_name>
         <default></default>
-        <docblock line="25">
+        <docblock line="26">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="25" description="" type="\Helpers\Calendar\Month" variable="">
+          <tag name="var" line="26" description="" type="\Helpers\Calendar\Month" variable="">
             <type>\Helpers\Calendar\Month</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="27" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="28" package="Default">
         <name>__construct</name>
         <full_name>\Helpers\Calendar\Month\Dt::__construct()</full_name>
-        <docblock line="27">
+        <docblock line="28">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -125,19 +126,19 @@
           <type>\Helpers\Calendar\Month</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="37" package="Default">
-        <name>full</name>
-        <full_name>\Helpers\Calendar\Month\Dt::full()</full_name>
-        <docblock line="37">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="38" package="Default">
+        <name>getAsStr</name>
+        <full_name>\Helpers\Calendar\Month\Dt::getAsStr()</full_name>
+        <docblock line="38">
           <description>Returns date string of the current month from given month day num</description>
           <long-description></long-description>
-          <tag name="param" line="37" description="&lt;p&gt;Month object&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$this">
+          <tag name="param" line="38" description="&lt;p&gt;Month object&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$this">
             <type>\Helpers\Calendar\Month</type>
           </tag>
-          <tag name="param" line="37" description="&lt;p&gt;Month day number&lt;/p&gt;" type="integer" variable="$dayNum">
+          <tag name="param" line="38" description="&lt;p&gt;Month day number&lt;/p&gt;" type="integer" variable="$dayNum">
             <type>integer</type>
           </tag>
-          <tag name="return" line="37" description="Resulting date string in format YYYY-MM-DD" type="string">
+          <tag name="return" line="38" description="Resulting date string in format YYYY-MM-DD" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -147,52 +148,71 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="61" package="Default">
-        <name>max</name>
-        <full_name>\Helpers\Calendar\Month\Dt::max()</full_name>
-        <docblock line="61">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="62" package="Default">
+        <name>getAsObj</name>
+        <full_name>\Helpers\Calendar\Month\Dt::getAsObj()</full_name>
+        <docblock line="62">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="61" description="" type="\Helpers\Calendar\Month" variable="$month">
+          <tag name="param" line="62" description="" type="integer" variable="$dayNum">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="62" description="" type="\Helpers\Calendar\Date">
+            <type>\Helpers\Calendar\Date</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$dayNum</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="75" package="Default">
+        <name>max</name>
+        <full_name>\Helpers\Calendar\Month\Dt::max()</full_name>
+        <docblock line="75">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="75" description="" type="\Helpers\Calendar\Month" variable="$month">
             <type>\Helpers\Calendar\Month</type>
           </tag>
-          <tag name="return" line="61" description="" type="string">
+          <tag name="return" line="75" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="75" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="89" package="Default">
         <name>maxDay</name>
         <full_name>\Helpers\Calendar\Month\Dt::maxDay()</full_name>
-        <docblock line="75">
+        <docblock line="89">
           <description></description>
           <long-description></long-description>
-          <tag name="return" line="75" description="" type="integer">
+          <tag name="return" line="89" description="" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="90" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="104" package="Default">
         <name>min</name>
         <full_name>\Helpers\Calendar\Month\Dt::min()</full_name>
-        <docblock line="90">
+        <docblock line="104">
           <description></description>
           <long-description></long-description>
-          <tag name="return" line="90" description="" type="string">
+          <tag name="return" line="104" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="103" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="117" package="Default">
         <name>has</name>
         <full_name>\Helpers\Calendar\Month\Dt::has()</full_name>
-        <docblock line="103">
+        <docblock line="117">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="103" description="" type="string" variable="$dt">
+          <tag name="param" line="117" description="" type="string" variable="$dt">
             <type>string</type>
           </tag>
-          <tag name="return" line="103" description="" type="boolean">
+          <tag name="return" line="117" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -205,45 +225,17 @@
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="27" code="PPC:ERR-50015">Argument $month is missing from the Docblock of __construct</error>
-      <error line="27" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="37" code="PPC:ERR-50014">Name of argument $dayNum does not match with the DocBlock's name $this in full()</error>
-      <error line="37" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $dayNum in full()</error>
-      <notice line="37" code="PPC:ERR-50013">Parameter $this could not be found in full()</notice>
-      <error line="61" code="PPC:ERR-50008">No summary for method max()</error>
-      <error line="75" code="PPC:ERR-50008">No summary for method maxDay()</error>
-      <error line="90" code="PPC:ERR-50008">No summary for method min()</error>
-      <error line="103" code="PPC:ERR-50008">No summary for method has()</error>
-      <error line="25" code="PPC:ERR-50007">No summary for property $month</error>
-    </parse_markers>
-  </file>
-  <file path="File/Filter.php" generated-path="File.Filter.html" hash="27b804852dfb1419c35fbbe184a81cd4" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <interface namespace="KsUtils\File" line="5" package="Default">
-      <name>Filter</name>
-      <full_name>\KsUtils\File\Filter</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="7" package="Default">
-        <name>getMatcher</name>
-        <full_name>\KsUtils\File\Filter::getMatcher()</full_name>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-    </interface>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50009">No summary for interface \KsUtils\File\Filter</error>
-      <error line="7" code="PPC:ERR-50008">No summary for method getMatcher()</error>
+      <error line="28" code="PPC:ERR-50015">Argument $month is missing from the Docblock of __construct</error>
+      <error line="28" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="38" code="PPC:ERR-50014">Name of argument $dayNum does not match with the DocBlock's name $this in getAsStr()</error>
+      <error line="38" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $dayNum in getAsStr()</error>
+      <notice line="38" code="PPC:ERR-50013">Parameter $this could not be found in getAsStr()</notice>
+      <error line="62" code="PPC:ERR-50008">No summary for method getAsObj()</error>
+      <error line="75" code="PPC:ERR-50008">No summary for method max()</error>
+      <error line="89" code="PPC:ERR-50008">No summary for method maxDay()</error>
+      <error line="104" code="PPC:ERR-50008">No summary for method min()</error>
+      <error line="117" code="PPC:ERR-50008">No summary for method has()</error>
+      <error line="26" code="PPC:ERR-50007">No summary for property $month</error>
     </parse_markers>
   </file>
   <file path="Calendar/Year.php" generated-path="Calendar.Year.html" hash="198865a2888b4789815a0d107783b37e" package="Default">
@@ -282,7 +274,7 @@
       <error line="11" code="PPC:ERR-50008">No summary for method isLeap()</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Month/Formatter.php" generated-path="Calendar.Month.Formatter.html" hash="f17ae80dd3bf4017bc894dd29abdb1a0" package="Default">
+  <file path="Calendar/Month/Formatter.php" generated-path="Calendar.Month.Formatter.html" hash="faab6bb7f875686d8b5a64bae98ce79e" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -348,8 +340,8 @@
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="67" package="Default">
-        <name>getName</name>
-        <full_name>\Helpers\Calendar\Month\Formatter::getName()</full_name>
+        <name>getMonthName</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getMonthName()</full_name>
         <docblock line="67">
           <description></description>
           <long-description></long-description>
@@ -370,8 +362,8 @@
       <error line="16" code="PPC:ERR-50014">Name of argument $month does not match with the DocBlock's name $dayNum in getWeekdayName()</error>
       <error line="28" code="PPC:ERR-50008">No summary for method getMonthNames()</error>
       <error line="50" code="PPC:ERR-50008">No summary for method getWeekdayNames()</error>
-      <error line="67" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getName</error>
-      <error line="67" code="PPC:ERR-50008">No summary for method getName()</error>
+      <error line="67" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getMonthName</error>
+      <error line="67" code="PPC:ERR-50008">No summary for method getMonthName()</error>
     </parse_markers>
   </file>
   <file path="Calendar/GeneratorIf.php" generated-path="Calendar.GeneratorIf.html" hash="47cdbceb2a379c6a480a1d36ea56e24c" package="Default">
@@ -401,115 +393,6 @@
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
       <error line="5" code="PPC:ERR-50009">No summary for interface \kfilin\Calendar\GeneratorIf</error>
       <error line="6" code="PPC:ERR-50008">No summary for method make()</error>
-    </parse_markers>
-  </file>
-  <file path="Tree.php" generated-path="Tree.html" hash="0365d354f725edec415d6e1ca1916997" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="3" package="Default">
-      <extends/>
-      <name>Tree</name>
-      <full_name>\Tree</full_name>
-      <docblock line="3">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="3" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="" line="9" package="Default">
-        <name>$root</name>
-        <full_name>\Tree::$root</full_name>
-        <default></default>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="9" description="" type="\TreeNode" variable="">
-            <type>\TreeNode</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="10" package="Default">
-        <name>$allNodes</name>
-        <full_name>\Tree::$allNodes</full_name>
-        <default></default>
-        <docblock line="10">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="12" package="Default">
-        <name>__construct</name>
-        <full_name>\Tree::__construct()</full_name>
-        <docblock line="12">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="20" package="Default">
-        <name>addNode</name>
-        <full_name>\Tree::addNode()</full_name>
-        <docblock line="20">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$node</name>
-          <default></default>
-          <type>\TreeNode</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="35" package="Default">
-        <name>getRoot</name>
-        <full_name>\Tree::getRoot()</full_name>
-        <docblock line="35">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="35" description="" type="\TreeNode">
-            <type>\TreeNode</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="40" package="Default">
-        <name>get</name>
-        <full_name>\Tree::get()</full_name>
-        <docblock line="40">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="60" package="Default">
-        <name>getNode</name>
-        <full_name>\Tree::getNode()</full_name>
-        <docblock line="60">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="60" description="" type="integer" variable="$id">
-            <type>integer</type>
-          </tag>
-          <tag name="return" line="60" description="" type="\TreeNode">
-            <type>\TreeNode</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$id</name>
-          <default></default>
-          <type>integer</type>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="3" code="PPC:ERR-50005">No summary for class \Tree</error>
-      <error line="12" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="20" code="PPC:ERR-50015">Argument $node is missing from the Docblock of addNode</error>
-      <error line="20" code="PPC:ERR-50008">No summary for method addNode()</error>
-      <error line="35" code="PPC:ERR-50008">No summary for method getRoot()</error>
-      <error line="40" code="PPC:ERR-50008">No summary for method get()</error>
-      <error line="60" code="PPC:ERR-50008">No summary for method getNode()</error>
-      <error line="9" code="PPC:ERR-50007">No summary for property $root</error>
-      <error line="10" code="PPC:ERR-50007">No summary for property $allNodes</error>
     </parse_markers>
   </file>
   <file path="Calendar/Period.php" generated-path="Calendar.Period.html" hash="8a4d6011ab5d7fd30745d8d57571b8e9" package="Default">
@@ -628,79 +511,7 @@
       <error line="17" code="PPC:ERR-50007">No summary for property $dt2</error>
     </parse_markers>
   </file>
-  <file path="File/Filter/Extension.php" generated-path="File.Filter.Extension.html" hash="a2eba76db34647a6d394cbe35aa5d0d8" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="KsUtils\File\Filter" line="5" package="Default">
-      <extends/>
-      <implements>\KsUtils\File\Filter</implements>
-      <name>Extension</name>
-      <full_name>\KsUtils\File\Filter\Extension</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="KsUtils\File\Filter" line="7" package="Default">
-        <name>$extension</name>
-        <full_name>\KsUtils\File\Filter\Extension::$extension</full_name>
-        <default></default>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File\Filter" line="9" package="Default">
-        <name>__construct</name>
-        <full_name>\KsUtils\File\Filter\Extension::__construct()</full_name>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$ext</name>
-          <default>""</default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File\Filter" line="14" package="Default">
-        <name>setExtension</name>
-        <full_name>\KsUtils\File\Filter\Extension::setExtension()</full_name>
-        <docblock line="14">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$extension</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File\Filter" line="19" package="Default">
-        <name>getMatcher</name>
-        <full_name>\KsUtils\File\Filter\Extension::getMatcher()</full_name>
-        <docblock line="19">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\KsUtils\File\Filter::getMatcher()" refers="\KsUtils\File\Filter::getMatcher()" link="/classes/KsUtils.File.Filter.html#method_getMatcher"/>
-        </docblock>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \KsUtils\File\Filter\Extension</error>
-      <error line="9" code="PPC:ERR-50015">Argument $ext is missing from the Docblock of __construct</error>
-      <error line="9" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="14" code="PPC:ERR-50015">Argument $extension is missing from the Docblock of setExtension</error>
-      <error line="14" code="PPC:ERR-50008">No summary for method setExtension()</error>
-      <error line="19" code="PPC:ERR-50008">No summary for method getMatcher()</error>
-      <error line="7" code="PPC:ERR-50007">No summary for property $extension</error>
-    </parse_markers>
-  </file>
-  <file path="Str/Random.php" generated-path="Str.Random.html" hash="bb34a59144509358a955f62d9a7ff7aa" package="Default">
+  <file path="Str/Random.php" generated-path="Str.Random.html" hash="4c890595458c07828ecfd98c949f6b77" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -768,241 +579,51 @@
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
   </file>
-  <file path="Tree/Node.php" generated-path="Tree.Node.html" hash="ae8b295af936f6b627d73c5686e2c1c3" package="Default">
+  <file path="Calendar/Month/FormatterShort.php" generated-path="Calendar.Month.FormatterShort.html" hash="699edb4d377578555f69d2e2f072935d" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="" line="3" package="Default">
-      <extends/>
-      <name>TreeNode</name>
-      <full_name>\TreeNode</full_name>
-      <docblock line="3">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="3" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="" line="5" package="Default">
-        <name>$id</name>
-        <full_name>\TreeNode::$id</full_name>
-        <default></default>
-        <docblock line="5">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="6" package="Default">
-        <name>$pid</name>
-        <full_name>\TreeNode::$pid</full_name>
-        <default></default>
-        <docblock line="6">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="7" package="Default">
-        <name>$name</name>
-        <full_name>\TreeNode::$name</full_name>
-        <default></default>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="8" package="Default">
-        <name>$data</name>
-        <full_name>\TreeNode::$data</full_name>
-        <default></default>
-        <docblock line="8">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="9" package="Default">
-        <name>$children</name>
-        <full_name>\TreeNode::$children</full_name>
-        <default></default>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="11" package="Default">
-        <name>__construct</name>
-        <full_name>\TreeNode::__construct()</full_name>
-        <docblock line="11">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$id</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$pid</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$name</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="19" package="Default">
-        <name>getId</name>
-        <full_name>\TreeNode::getId()</full_name>
-        <docblock line="19">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="23" package="Default">
-        <name>getPid</name>
-        <full_name>\TreeNode::getPid()</full_name>
-        <docblock line="23">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="27" package="Default">
-        <name>getName</name>
-        <full_name>\TreeNode::getName()</full_name>
-        <docblock line="27">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="31" package="Default">
-        <name>addChild</name>
-        <full_name>\TreeNode::addChild()</full_name>
-        <docblock line="31">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$child</name>
-          <default></default>
-          <type>\TreeNode</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="36" package="Default">
-        <name>getChildren</name>
-        <full_name>\TreeNode::getChildren()</full_name>
-        <docblock line="36">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="40" package="Default">
-        <name>getData</name>
-        <full_name>\TreeNode::getData()</full_name>
-        <docblock line="40">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="44" package="Default">
-        <name>setData</name>
-        <full_name>\TreeNode::setData()</full_name>
-        <docblock line="44">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$data</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="48" package="Default">
-        <name>hasChildren</name>
-        <full_name>\TreeNode::hasChildren()</full_name>
-        <docblock line="48">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="53" package="Default">
-        <name>hasParent</name>
-        <full_name>\TreeNode::hasParent()</full_name>
-        <docblock line="53">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="3" code="PPC:ERR-50005">No summary for class \TreeNode</error>
-      <error line="11" code="PPC:ERR-50015">Argument $id is missing from the Docblock of __construct</error>
-      <error line="11" code="PPC:ERR-50015">Argument $pid is missing from the Docblock of __construct</error>
-      <error line="11" code="PPC:ERR-50015">Argument $name is missing from the Docblock of __construct</error>
-      <error line="11" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="19" code="PPC:ERR-50008">No summary for method getId()</error>
-      <error line="23" code="PPC:ERR-50008">No summary for method getPid()</error>
-      <error line="27" code="PPC:ERR-50008">No summary for method getName()</error>
-      <error line="31" code="PPC:ERR-50015">Argument $child is missing from the Docblock of addChild</error>
-      <error line="31" code="PPC:ERR-50008">No summary for method addChild()</error>
-      <error line="36" code="PPC:ERR-50008">No summary for method getChildren()</error>
-      <error line="40" code="PPC:ERR-50008">No summary for method getData()</error>
-      <error line="44" code="PPC:ERR-50015">Argument $data is missing from the Docblock of setData</error>
-      <error line="44" code="PPC:ERR-50008">No summary for method setData()</error>
-      <error line="48" code="PPC:ERR-50008">No summary for method hasChildren()</error>
-      <error line="53" code="PPC:ERR-50008">No summary for method hasParent()</error>
-      <error line="5" code="PPC:ERR-50007">No summary for property $id</error>
-      <error line="6" code="PPC:ERR-50007">No summary for property $pid</error>
-      <error line="7" code="PPC:ERR-50007">No summary for property $name</error>
-      <error line="8" code="PPC:ERR-50007">No summary for property $data</error>
-      <error line="9" code="PPC:ERR-50007">No summary for property $children</error>
-    </parse_markers>
-  </file>
-  <file path="Calendar/Month/FormatterShort.php" generated-path="Calendar.Month.FormatterShort.html" hash="3e53c711fd371433f3e0405cb7a18172" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="16" package="Default">
+    <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="18" package="Default">
       <extends>\Helpers\Calendar\Month\Formatter</extends>
       <name>FormatterShort</name>
       <full_name>\Helpers\Calendar\Month\FormatterShort</full_name>
-      <docblock line="16">
+      <docblock line="18">
         <description>Description of FormatterShort</description>
         <long-description></long-description>
-        <tag name="author" line="16" description="ksf"/>
-        <tag name="package" line="16" description="Default"/>
+        <tag name="author" line="18" description="ksf"/>
+        <tag name="package" line="18" description="Default"/>
         <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter" refers="\Helpers\Calendar\Month\Formatter" link="/classes/Helpers.Calendar.Month.Formatter.html"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="23" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="25" package="Default">
         <name>getWeekdayNames</name>
         <full_name>\Helpers\Calendar\Month\FormatterShort::getWeekdayNames()</full_name>
-        <docblock line="23">
+        <docblock line="25">
           <description></description>
           <long-description></long-description>
-          <tag name="return" line="23" description="" type="array">
+          <tag name="return" line="25" description="" type="array">
             <type>array</type>
           </tag>
           <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter::getWeekdayNames()" refers="\Helpers\Calendar\Month\Formatter::getWeekdayNames()" link="/classes/Helpers.Calendar.Month.Formatter.html#method_getWeekdayNames"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="40" package="Default">
-        <name>getName</name>
-        <full_name>\Helpers\Calendar\Month\FormatterShort::getName()</full_name>
-        <docblock line="40">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="42" package="Default">
+        <name>getMonthName</name>
+        <full_name>\Helpers\Calendar\Month\FormatterShort::getMonthName()</full_name>
+        <docblock line="42">
           <description></description>
           <long-description></long-description>
-          <tag name="return" line="40" description="" type="string">
+          <tag name="return" line="42" description="" type="string">
             <type>string</type>
           </tag>
-          <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter::getName()" refers="\Helpers\Calendar\Month\Formatter::getName()" link="/classes/Helpers.Calendar.Month.Formatter.html#method_getName"/>
+          <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter::getMonthName()" refers="\Helpers\Calendar\Month\Formatter::getMonthName()" link="/classes/Helpers.Calendar.Month.Formatter.html#method_getMonthName"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$month</name>
           <default></default>
-          <type>\Helpers\Calendar\Month\Month</type>
+          <type>\Helpers\Calendar\Month</type>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="16" package="Default">
@@ -1058,8 +679,8 @@
         <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="67" package="Default">
-        <name>getName</name>
-        <full_name>\Helpers\Calendar\Month\Formatter::getName()</full_name>
+        <name>getMonthName</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getMonthName()</full_name>
         <docblock line="67">
           <description></description>
           <long-description></long-description>
@@ -1077,370 +698,12 @@
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="23" code="PPC:ERR-50008">No summary for method getWeekdayNames()</error>
-      <error line="40" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getName</error>
-      <error line="40" code="PPC:ERR-50008">No summary for method getName()</error>
+      <error line="25" code="PPC:ERR-50008">No summary for method getWeekdayNames()</error>
+      <error line="42" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getMonthName</error>
+      <error line="42" code="PPC:ERR-50008">No summary for method getMonthName()</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Now.php" generated-path="Calendar.Now.html" hash="ebb83e4bd25e6300838cac1eaa36a6bc" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Helpers\Calendar" line="5" package="Default">
-      <extends/>
-      <name>Now</name>
-      <full_name>\Helpers\Calendar\Now</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-      </docblock>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="6" package="Default">
-        <name>year</name>
-        <full_name>\Helpers\Calendar\Now::year()</full_name>
-        <docblock line="6">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="11" package="Default">
-        <name>monthNum</name>
-        <full_name>\Helpers\Calendar\Now::monthNum()</full_name>
-        <docblock line="11">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="16" package="Default">
-        <name>dayNum</name>
-        <full_name>\Helpers\Calendar\Now::dayNum()</full_name>
-        <docblock line="16">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="21" package="Default">
-        <name>full</name>
-        <full_name>\Helpers\Calendar\Now::full()</full_name>
-        <docblock line="21">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="26" package="Default">
-        <name>dt</name>
-        <full_name>\Helpers\Calendar\Now::dt()</full_name>
-        <docblock line="26">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="31" package="Default">
-        <name>get</name>
-        <full_name>\Helpers\Calendar\Now::get()</full_name>
-        <docblock line="31">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$format</name>
-          <default>"Y-m-d"</default>
-          <type>\Helpers\Calendar\string</type>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\Now</error>
-      <error line="6" code="PPC:ERR-50008">No summary for method year()</error>
-      <error line="11" code="PPC:ERR-50008">No summary for method monthNum()</error>
-      <error line="16" code="PPC:ERR-50008">No summary for method dayNum()</error>
-      <error line="21" code="PPC:ERR-50008">No summary for method full()</error>
-      <error line="26" code="PPC:ERR-50008">No summary for method dt()</error>
-      <error line="31" code="PPC:ERR-50015">Argument $format is missing from the Docblock of get</error>
-      <error line="31" code="PPC:ERR-50008">No summary for method get()</error>
-    </parse_markers>
-  </file>
-  <file path="File/Zip.php" generated-path="File.Zip.html" hash="5e010ee09a0be97f830efbc344dff6c1" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="KsUtils\File" line="5" package="Default">
-      <extends/>
-      <name>Zip</name>
-      <full_name>\KsUtils\File\Zip</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="KsUtils\File" line="7" package="Default">
-        <name>$filename</name>
-        <full_name>\KsUtils\File\Zip::$filename</full_name>
-        <default></default>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="9" package="Default">
-        <name>__construct</name>
-        <full_name>\KsUtils\File\Zip::__construct()</full_name>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$filename</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="KsUtils\File" line="14" package="Default">
-        <name>ensureZipResource</name>
-        <full_name>\KsUtils\File\Zip::ensureZipResource()</full_name>
-        <docblock line="14">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$zfh</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="28" package="Default">
-        <name>unpackAllTo</name>
-        <full_name>\KsUtils\File\Zip::unpackAllTo()</full_name>
-        <docblock line="28">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dir</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="KsUtils\File" line="39" package="Default">
-        <name>unpackZipFileItem</name>
-        <full_name>\KsUtils\File\Zip::unpackZipFileItem()</full_name>
-        <docblock line="39">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$destinationDir</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$zfh</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$zipEntry</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="KsUtils\File" line="58" package="Default">
-        <name>getZipErrorMessage</name>
-        <full_name>\KsUtils\File\Zip::getZipErrorMessage()</full_name>
-        <docblock line="58">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$errNo</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \KsUtils\File\Zip</error>
-      <error line="9" code="PPC:ERR-50015">Argument $filename is missing from the Docblock of __construct</error>
-      <error line="9" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="14" code="PPC:ERR-50015">Argument $zfh is missing from the Docblock of ensureZipResource</error>
-      <error line="14" code="PPC:ERR-50008">No summary for method ensureZipResource()</error>
-      <error line="28" code="PPC:ERR-50015">Argument $dir is missing from the Docblock of unpackAllTo</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method unpackAllTo()</error>
-      <error line="39" code="PPC:ERR-50015">Argument $destinationDir is missing from the Docblock of unpackZipFileItem</error>
-      <error line="39" code="PPC:ERR-50015">Argument $zfh is missing from the Docblock of unpackZipFileItem</error>
-      <error line="39" code="PPC:ERR-50015">Argument $zipEntry is missing from the Docblock of unpackZipFileItem</error>
-      <error line="39" code="PPC:ERR-50008">No summary for method unpackZipFileItem()</error>
-      <error line="58" code="PPC:ERR-50015">Argument $errNo is missing from the Docblock of getZipErrorMessage</error>
-      <error line="58" code="PPC:ERR-50008">No summary for method getZipErrorMessage()</error>
-      <error line="7" code="PPC:ERR-50007">No summary for property $filename</error>
-    </parse_markers>
-  </file>
-  <file path="File/Dir.php" generated-path="File.Dir.html" hash="30652905a0fcdf60d20f13cb7ab3b710" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="KsUtils\File" line="5" package="Default">
-      <extends/>
-      <name>Dir</name>
-      <full_name>\KsUtils\File\Dir</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="7" package="Default">
-        <name>mkdirIfNotExists</name>
-        <full_name>\KsUtils\File\Dir::mkdirIfNotExists()</full_name>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dir</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="15" package="Default">
-        <name>isReadableOrThrow</name>
-        <full_name>\KsUtils\File\Dir::isReadableOrThrow()</full_name>
-        <docblock line="15">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dir</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="26" package="Default">
-        <name>isWritableOrThrow</name>
-        <full_name>\KsUtils\File\Dir::isWritableOrThrow()</full_name>
-        <docblock line="26">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dir</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="34" package="Default">
-        <name>copy</name>
-        <full_name>\KsUtils\File\Dir::copy()</full_name>
-        <docblock line="34">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$from</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$to</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="45" package="Default">
-        <name>clear</name>
-        <full_name>\KsUtils\File\Dir::clear()</full_name>
-        <docblock line="45">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dir</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="53" package="Default">
-        <name>get</name>
-        <full_name>\KsUtils\File\Dir::get()</full_name>
-        <docblock line="53">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dir</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$filter</name>
-          <default>null</default>
-          <type>\KsUtils\File\Filter</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils\File" line="70" package="Default">
-        <name>getAllFiles</name>
-        <full_name>\KsUtils\File\Dir::getAllFiles()</full_name>
-        <docblock line="70">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dir</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \KsUtils\File\Dir</error>
-      <error line="7" code="PPC:ERR-50015">Argument $dir is missing from the Docblock of mkdirIfNotExists</error>
-      <error line="7" code="PPC:ERR-50008">No summary for method mkdirIfNotExists()</error>
-      <error line="15" code="PPC:ERR-50015">Argument $dir is missing from the Docblock of isReadableOrThrow</error>
-      <error line="15" code="PPC:ERR-50008">No summary for method isReadableOrThrow()</error>
-      <error line="26" code="PPC:ERR-50015">Argument $dir is missing from the Docblock of isWritableOrThrow</error>
-      <error line="26" code="PPC:ERR-50008">No summary for method isWritableOrThrow()</error>
-      <error line="34" code="PPC:ERR-50015">Argument $from is missing from the Docblock of copy</error>
-      <error line="34" code="PPC:ERR-50015">Argument $to is missing from the Docblock of copy</error>
-      <error line="34" code="PPC:ERR-50008">No summary for method copy()</error>
-      <error line="45" code="PPC:ERR-50015">Argument $dir is missing from the Docblock of clear</error>
-      <error line="45" code="PPC:ERR-50008">No summary for method clear()</error>
-      <error line="53" code="PPC:ERR-50015">Argument $dir is missing from the Docblock of get</error>
-      <error line="53" code="PPC:ERR-50015">Argument $filter is missing from the Docblock of get</error>
-      <error line="53" code="PPC:ERR-50008">No summary for method get()</error>
-      <error line="70" code="PPC:ERR-50015">Argument $dir is missing from the Docblock of getAllFiles</error>
-      <error line="70" code="PPC:ERR-50008">No summary for method getAllFiles()</error>
-    </parse_markers>
-  </file>
-  <file path="File/OperationException.php" generated-path="File.OperationException.html" hash="a3ba9d3fe00891893ecf696d3aa4fbbe" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="KsUtils\File" line="5" package="Default">
-      <extends>\Exception</extends>
-      <name>OperationException</name>
-      <full_name>\KsUtils\File\OperationException</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-      </docblock>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \KsUtils\File\OperationException</error>
-    </parse_markers>
-  </file>
-  <file path="Calendar/Month/Fabric.php" generated-path="Calendar.Month.Fabric.html" hash="bffd84f4a148ad54afb36f471dbd93db" package="Default">
+  <file path="Calendar/Month/Fabric.php" generated-path="Calendar.Month.Fabric.html" hash="7c5ada3c3d30fe7f326223510b57a750" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1498,7 +761,7 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="57" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="57" package="Default">
         <name>getPrev</name>
         <full_name>\Helpers\Calendar\Month\Fabric::getPrev()</full_name>
         <docblock line="57">
@@ -1515,8 +778,8 @@
         </argument>
       </method>
       <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="76" package="Default">
-        <name>next</name>
-        <full_name>\Helpers\Calendar\Month\Fabric::next()</full_name>
+        <name>getNext</name>
+        <full_name>\Helpers\Calendar\Month\Fabric::getNext()</full_name>
         <docblock line="76">
           <description></description>
           <long-description></long-description>
@@ -1535,387 +798,8 @@
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
       <error line="57" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getPrev</error>
       <error line="57" code="PPC:ERR-50008">No summary for method getPrev()</error>
-      <error line="76" code="PPC:ERR-50015">Argument $month is missing from the Docblock of next</error>
-      <error line="76" code="PPC:ERR-50008">No summary for method next()</error>
-    </parse_markers>
-  </file>
-  <file path="Tree/NodeEmpty.php" generated-path="Tree.NodeEmpty.html" hash="49db96c42e03eee537520c6a3fe82de6" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="3" package="Default">
-      <extends>\TreeNode</extends>
-      <name>TreeNodeEmpty</name>
-      <full_name>\TreeNodeEmpty</full_name>
-      <docblock line="3">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="3" description="Default"/>
-        <tag name="inherited_from" description="\TreeNode" refers="\TreeNode" link="/classes/TreeNode.html"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="" line="5" package="Default">
-        <name>$id</name>
-        <full_name>\TreeNode::$id</full_name>
-        <default></default>
-        <docblock line="5">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="6" package="Default">
-        <name>$pid</name>
-        <full_name>\TreeNode::$pid</full_name>
-        <default></default>
-        <docblock line="6">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="7" package="Default">
-        <name>$name</name>
-        <full_name>\TreeNode::$name</full_name>
-        <default></default>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="8" package="Default">
-        <name>$data</name>
-        <full_name>\TreeNode::$data</full_name>
-        <default></default>
-        <docblock line="8">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="9" package="Default">
-        <name>$children</name>
-        <full_name>\TreeNode::$children</full_name>
-        <default></default>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="5" package="Default">
-        <name>__construct</name>
-        <full_name>\TreeNodeEmpty::__construct()</full_name>
-        <docblock line="5">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\TreeNode::__construct()" refers="\TreeNode::__construct()" link="/classes/TreeNode.html#method___construct"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="13" package="Default">
-        <name>addChild</name>
-        <full_name>\TreeNodeEmpty::addChild()</full_name>
-        <docblock line="13">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\TreeNode::addChild()" refers="\TreeNode::addChild()" link="/classes/TreeNode.html#method_addChild"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$child</name>
-          <default></default>
-          <type>\TreeNode</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="17" package="Default">
-        <name>getChildren</name>
-        <full_name>\TreeNodeEmpty::getChildren()</full_name>
-        <docblock line="17">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\TreeNode::getChildren()" refers="\TreeNode::getChildren()" link="/classes/TreeNode.html#method_getChildren"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="21" package="Default">
-        <name>getData</name>
-        <full_name>\TreeNodeEmpty::getData()</full_name>
-        <docblock line="21">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\TreeNode::getData()" refers="\TreeNode::getData()" link="/classes/TreeNode.html#method_getData"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="25" package="Default">
-        <name>getId</name>
-        <full_name>\TreeNodeEmpty::getId()</full_name>
-        <docblock line="25">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\TreeNode::getId()" refers="\TreeNode::getId()" link="/classes/TreeNode.html#method_getId"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="29" package="Default">
-        <name>getName</name>
-        <full_name>\TreeNodeEmpty::getName()</full_name>
-        <docblock line="29">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\TreeNode::getName()" refers="\TreeNode::getName()" link="/classes/TreeNode.html#method_getName"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="33" package="Default">
-        <name>getPid</name>
-        <full_name>\TreeNodeEmpty::getPid()</full_name>
-        <docblock line="33">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\TreeNode::getPid()" refers="\TreeNode::getPid()" link="/classes/TreeNode.html#method_getPid"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="37" package="Default">
-        <name>isRoot</name>
-        <full_name>\TreeNodeEmpty::isRoot()</full_name>
-        <docblock line="37">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="41" package="Default">
-        <name>setData</name>
-        <full_name>\TreeNodeEmpty::setData()</full_name>
-        <docblock line="41">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\TreeNode::setData()" refers="\TreeNode::setData()" link="/classes/TreeNode.html#method_setData"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$data</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="11" package="Default">
-        <name>__construct</name>
-        <full_name>\TreeNode::__construct()</full_name>
-        <docblock line="11">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$id</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$pid</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$name</name>
-          <default></default>
-          <type/>
-        </argument>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="19" package="Default">
-        <name>getId</name>
-        <full_name>\TreeNode::getId()</full_name>
-        <docblock line="19">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="23" package="Default">
-        <name>getPid</name>
-        <full_name>\TreeNode::getPid()</full_name>
-        <docblock line="23">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="27" package="Default">
-        <name>getName</name>
-        <full_name>\TreeNode::getName()</full_name>
-        <docblock line="27">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="31" package="Default">
-        <name>addChild</name>
-        <full_name>\TreeNode::addChild()</full_name>
-        <docblock line="31">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$child</name>
-          <default></default>
-          <type>\TreeNode</type>
-        </argument>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="36" package="Default">
-        <name>getChildren</name>
-        <full_name>\TreeNode::getChildren()</full_name>
-        <docblock line="36">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="40" package="Default">
-        <name>getData</name>
-        <full_name>\TreeNode::getData()</full_name>
-        <docblock line="40">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="44" package="Default">
-        <name>setData</name>
-        <full_name>\TreeNode::setData()</full_name>
-        <docblock line="44">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$data</name>
-          <default></default>
-          <type/>
-        </argument>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="48" package="Default">
-        <name>hasChildren</name>
-        <full_name>\TreeNode::hasChildren()</full_name>
-        <docblock line="48">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="53" package="Default">
-        <name>hasParent</name>
-        <full_name>\TreeNode::hasParent()</full_name>
-        <docblock line="53">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\TreeNode</inherited_from>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="3" code="PPC:ERR-50005">No summary for class \TreeNodeEmpty</error>
-      <error line="5" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="13" code="PPC:ERR-50015">Argument $child is missing from the Docblock of addChild</error>
-      <error line="13" code="PPC:ERR-50008">No summary for method addChild()</error>
-      <error line="17" code="PPC:ERR-50008">No summary for method getChildren()</error>
-      <error line="21" code="PPC:ERR-50008">No summary for method getData()</error>
-      <error line="25" code="PPC:ERR-50008">No summary for method getId()</error>
-      <error line="29" code="PPC:ERR-50008">No summary for method getName()</error>
-      <error line="33" code="PPC:ERR-50008">No summary for method getPid()</error>
-      <error line="37" code="PPC:ERR-50008">No summary for method isRoot()</error>
-      <error line="41" code="PPC:ERR-50015">Argument $data is missing from the Docblock of setData</error>
-      <error line="41" code="PPC:ERR-50008">No summary for method setData()</error>
-    </parse_markers>
-  </file>
-  <file path="Calendar/Month/Week.php" generated-path="Calendar.Month.Week.html" hash="303ffe96dcbfd504b224216205b80a6e" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="16" package="Default">
-      <extends/>
-      <name>Week</name>
-      <full_name>\Helpers\Calendar\Month\Week</full_name>
-      <docblock line="16">
-        <description>Description of Week</description>
-        <long-description></long-description>
-        <tag name="author" line="16" description="ksf"/>
-        <tag name="package" line="16" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar\Month" line="21" package="Default">
-        <name>$month</name>
-        <full_name>\Helpers\Calendar\Month\Week::$month</full_name>
-        <default></default>
-        <docblock line="21">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="21" description="" type="\Helpers\Calendar\Month\Month" variable="">
-            <type>\Helpers\Calendar\Month\Month</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="23" package="Default">
-        <name>__construct</name>
-        <full_name>\Helpers\Calendar\Month\Week::__construct()</full_name>
-        <docblock line="23">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$month</name>
-          <default></default>
-          <type>\Helpers\Calendar\Month\Month</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="33" package="Default">
-        <name>isWeekdayNum</name>
-        <full_name>\Helpers\Calendar\Month\Week::isWeekdayNum()</full_name>
-        <docblock line="33">
-          <description>Checks is given day is weekday number in this month</description>
-          <long-description></long-description>
-          <tag name="param" line="33" description="&lt;p&gt;Month day number&lt;/p&gt;" type="integer" variable="$dayNum">
-            <type>integer</type>
-          </tag>
-          <tag name="param" line="33" description="&lt;p&gt;Weekday number&lt;/p&gt;" type="integer" variable="$weekday">
-            <type>integer</type>
-          </tag>
-          <tag name="return" line="33" description="True if yes" type="boolean">
-            <type>boolean</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dayNum</name>
-          <default></default>
-          <type>integer</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$weekday</name>
-          <default></default>
-          <type>integer</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="43" package="Default">
-        <name>getWeekdayNum</name>
-        <full_name>\Helpers\Calendar\Month\Week::getWeekdayNum()</full_name>
-        <docblock line="43">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="43" description="" type="integer" variable="$day">
-            <type>integer</type>
-          </tag>
-          <tag name="return" line="43" description="" type="integer">
-            <type>integer</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$day</name>
-          <default></default>
-          <type>integer</type>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="23" code="PPC:ERR-50015">Argument $month is missing from the Docblock of __construct</error>
-      <error line="23" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="43" code="PPC:ERR-50008">No summary for method getWeekdayNum()</error>
-      <error line="21" code="PPC:ERR-50007">No summary for property $month</error>
+      <error line="76" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getNext</error>
+      <error line="76" code="PPC:ERR-50008">No summary for method getNext()</error>
     </parse_markers>
   </file>
   <file path="Calendar/ru/Month.php" generated-path="Calendar.ru.Month.html" hash="b0356521d76ef9af28b4393b1a3eea76" package="Default">
@@ -1934,69 +818,6 @@
         <tag name="package" line="5" description="Default"/>
         <tag name="inherited_from" description="\Helpers\Calendar\Month" refers="\Helpers\Calendar\Month" link="/classes/Helpers.Calendar.Month.html"/>
       </docblock>
-      <constant namespace="Helpers\Calendar\ru" line="38" package="Default">
-        <name>WEEKDAY_MONDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_MONDAY</full_name>
-        <value>1</value>
-        <docblock line="38">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar\ru" line="39" package="Default">
-        <name>WEEKDAY_TUESDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_TUESDAY</full_name>
-        <value>2</value>
-        <docblock line="39">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar\ru" line="40" package="Default">
-        <name>WEEKDAY_WEDNESDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_WEDNESDAY</full_name>
-        <value>3</value>
-        <docblock line="40">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar\ru" line="41" package="Default">
-        <name>WEEKDAY_THIRSDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_THIRSDAY</full_name>
-        <value>4</value>
-        <docblock line="41">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar\ru" line="42" package="Default">
-        <name>WEEKDAY_FRIDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_FRIDAY</full_name>
-        <value>5</value>
-        <docblock line="42">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar\ru" line="43" package="Default">
-        <name>WEEKDAY_SATURDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_SATURDAY</full_name>
-        <value>6</value>
-        <docblock line="43">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar\ru" line="44" package="Default">
-        <name>WEEKDAY_SUNDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_SUNDAY</full_name>
-        <value>7</value>
-        <docblock line="44">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
       <property static="false" visibility="protected" namespace="Helpers\Calendar\ru" line="12" package="Default">
         <name>$year</name>
         <full_name>\Helpers\Calendar\Month::$year</full_name>
@@ -2010,8 +831,8 @@
         </docblock>
       </property>
       <property static="false" visibility="protected" namespace="Helpers\Calendar\ru" line="18" package="Default">
-        <name>$month</name>
-        <full_name>\Helpers\Calendar\Month::$month</full_name>
+        <name>$monthNum</name>
+        <full_name>\Helpers\Calendar\Month::$monthNum</full_name>
         <default></default>
         <docblock line="18">
           <description>Month number part</description>
@@ -2026,7 +847,7 @@
         <full_name>\Helpers\Calendar\Month::$is</full_name>
         <default></default>
         <docblock line="24">
-          <description></description>
+          <description>Month attribites checker</description>
           <long-description></long-description>
           <tag name="var" line="24" description="" type="\Helpers\Calendar\Month\Is" variable="">
             <type>\Helpers\Calendar\Month\Is</type>
@@ -2038,22 +859,10 @@
         <full_name>\Helpers\Calendar\Month::$dt</full_name>
         <default></default>
         <docblock line="30">
-          <description></description>
+          <description>Dates checker</description>
           <long-description></long-description>
           <tag name="var" line="30" description="" type="\Helpers\Calendar\Month\Dt" variable="">
             <type>\Helpers\Calendar\Month\Dt</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar\ru" line="36" package="Default">
-        <name>$week</name>
-        <full_name>\Helpers\Calendar\Month::$week</full_name>
-        <default></default>
-        <docblock line="36">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="36" description="" type="\Helpers\Calendar\Month\Week" variable="">
-            <type>\Helpers\Calendar\Month\Week</type>
           </tag>
         </docblock>
       </property>
@@ -2081,19 +890,19 @@
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="52" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="38" package="Default">
         <name>__construct</name>
         <full_name>\Helpers\Calendar\Month::__construct()</full_name>
-        <docblock line="52">
+        <docblock line="38">
           <description>Creates class instance</description>
           <long-description></long-description>
-          <tag name="param" line="52" description="&lt;p&gt;Year part&lt;/p&gt;" type="integer" variable="$year">
+          <tag name="param" line="38" description="&lt;p&gt;Year&lt;/p&gt;" type="integer" variable="$year">
             <type>integer</type>
           </tag>
-          <tag name="param" line="52" description="&lt;p&gt;Month number part&lt;/p&gt;" type="integer" variable="$month">
+          <tag name="param" line="38" description="&lt;p&gt;Month number&lt;/p&gt;" type="integer" variable="$monthNum">
             <type>integer</type>
           </tag>
-          <tag name="throws" line="52" description="" type="\InvalidArgumentException">
+          <tag name="throws" line="38" description="" type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
         </docblock>
@@ -2103,78 +912,81 @@
           <type>integer</type>
         </argument>
         <argument line="0" by_reference="false">
-          <name>$month</name>
+          <name>$monthNum</name>
           <default>0</default>
           <type>integer</type>
         </argument>
         <inherited_from>\Helpers\Calendar\Month</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="69" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="54" package="Default">
         <name>__toString</name>
         <full_name>\Helpers\Calendar\Month::__toString()</full_name>
-        <docblock line="69">
-          <description></description>
+        <docblock line="54">
+          <description>Returns month name in format YYYYMM</description>
           <long-description></long-description>
-          <tag name="return" line="69" description="" type="string">
+          <tag name="return" line="54" description="Month name in format YYYYMM" type="string">
             <type>string</type>
           </tag>
         </docblock>
         <inherited_from>\Helpers\Calendar\Month</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="78" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="63" package="Default">
         <name>getYear</name>
         <full_name>\Helpers\Calendar\Month::getYear()</full_name>
-        <docblock line="78">
-          <description></description>
+        <docblock line="63">
+          <description>Returns year of the month</description>
           <long-description></long-description>
-          <tag name="return" line="78" description="" type="integer">
+          <tag name="return" line="63" description="Year part" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
         <inherited_from>\Helpers\Calendar\Month</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="86" package="Default">
-        <name>getMonth</name>
-        <full_name>\Helpers\Calendar\Month::getMonth()</full_name>
-        <docblock line="86">
-          <description></description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="71" package="Default">
+        <name>getMonthNumStr</name>
+        <full_name>\Helpers\Calendar\Month::getMonthNumStr()</full_name>
+        <docblock line="71">
+          <description>Returns month number as two digits string</description>
           <long-description></long-description>
-          <tag name="return" line="86" description="" type="string">
+          <tag name="return" line="71" description="Month number from &quot;01&quot; to &quot;12&quot;" type="string">
             <type>string</type>
           </tag>
         </docblock>
         <inherited_from>\Helpers\Calendar\Month</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="94" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="79" package="Default">
+        <name>getMonthNum</name>
+        <full_name>\Helpers\Calendar\Month::getMonthNum()</full_name>
+        <docblock line="79">
+          <description>Returns month number as integer</description>
+          <long-description></long-description>
+          <tag name="return" line="79" description="Month number from 1 to 12" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Helpers\Calendar\Month</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="87" package="Default">
         <name>is</name>
         <full_name>\Helpers\Calendar\Month::is()</full_name>
-        <docblock line="94">
-          <description></description>
+        <docblock line="87">
+          <description>Returns month attributes checker object</description>
           <long-description></long-description>
-          <tag name="return" line="94" description="" type="\Helpers\Calendar\Month\Is">
+          <tag name="return" line="87" description="" type="\Helpers\Calendar\Month\Is">
             <type>\Helpers\Calendar\Month\Is</type>
           </tag>
         </docblock>
         <inherited_from>\Helpers\Calendar\Month</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="107" package="Default">
-        <name>week</name>
-        <full_name>\Helpers\Calendar\Month::week()</full_name>
-        <docblock line="107">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="107" description="" type="\Helpers\Calendar\Month\Week">
-            <type>\Helpers\Calendar\Month\Week</type>
-          </tag>
-        </docblock>
-        <inherited_from>\Helpers\Calendar\Month</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="116" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="100" package="Default">
         <name>dt</name>
         <full_name>\Helpers\Calendar\Month::dt()</full_name>
-        <docblock line="116">
-          <description></description>
+        <docblock line="100">
+          <description>Return month dates checker object</description>
           <long-description></long-description>
+          <tag name="return" line="100" description="" type="\Helpers\Calendar\Month\Dt">
+            <type>\Helpers\Calendar\Month\Dt</type>
+          </tag>
         </docblock>
         <inherited_from>\Helpers\Calendar\Month</inherited_from>
       </method>
@@ -2187,206 +999,7 @@
       <error line="33" code="PPC:ERR-50008">No summary for method getMonthNames()</error>
     </parse_markers>
   </file>
-  <file path="FilenameChanger.php" generated-path="FilenameChanger.html" hash="5190236c83aabbe6fe9593da98e0d90e" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="3" package="Default">
-      <extends/>
-      <name>FilenameChanger</name>
-      <full_name>\FilenameChanger</full_name>
-      <docblock line="3">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="3" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="" line="5" package="Default">
-        <name>$filenameRaw</name>
-        <full_name>\FilenameChanger::$filenameRaw</full_name>
-        <default></default>
-        <docblock line="5">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="7" package="Default">
-        <name>__construct</name>
-        <full_name>\FilenameChanger::__construct()</full_name>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$filenameRaw</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="12" package="Default">
-        <name>cyr2lat</name>
-        <full_name>\FilenameChanger::cyr2lat()</full_name>
-        <docblock line="12">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="28" package="Default">
-        <name>toLower</name>
-        <full_name>\FilenameChanger::toLower()</full_name>
-        <docblock line="28">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="33" package="Default">
-        <name>spaces2underscores</name>
-        <full_name>\FilenameChanger::spaces2underscores()</full_name>
-        <docblock line="33">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="39" package="Default">
-        <name>stripPunctuation</name>
-        <full_name>\FilenameChanger::stripPunctuation()</full_name>
-        <docblock line="39">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="52" package="Default">
-        <name>stripBadChars</name>
-        <full_name>\FilenameChanger::stripBadChars()</full_name>
-        <docblock line="52">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="58" package="Default">
-        <name>stripTrailingSpaces</name>
-        <full_name>\FilenameChanger::stripTrailingSpaces()</full_name>
-        <docblock line="58">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="63" package="Default">
-        <name>cutLongBasename</name>
-        <full_name>\FilenameChanger::cutLongBasename()</full_name>
-        <docblock line="63">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$maxChars</name>
-          <default>100</default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="74" package="Default">
-        <name>addSuffix</name>
-        <full_name>\FilenameChanger::addSuffix()</full_name>
-        <docblock line="74">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$suffix</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$delim</name>
-          <default>"_"</default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="82" package="Default">
-        <name>getFilename</name>
-        <full_name>\FilenameChanger::getFilename()</full_name>
-        <docblock line="82">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$filters</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="3" code="PPC:ERR-50005">No summary for class \FilenameChanger</error>
-      <error line="7" code="PPC:ERR-50015">Argument $filenameRaw is missing from the Docblock of __construct</error>
-      <error line="7" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="12" code="PPC:ERR-50008">No summary for method cyr2lat()</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method toLower()</error>
-      <error line="33" code="PPC:ERR-50008">No summary for method spaces2underscores()</error>
-      <error line="39" code="PPC:ERR-50008">No summary for method stripPunctuation()</error>
-      <error line="52" code="PPC:ERR-50008">No summary for method stripBadChars()</error>
-      <error line="58" code="PPC:ERR-50008">No summary for method stripTrailingSpaces()</error>
-      <error line="63" code="PPC:ERR-50015">Argument $maxChars is missing from the Docblock of cutLongBasename</error>
-      <error line="63" code="PPC:ERR-50008">No summary for method cutLongBasename()</error>
-      <error line="74" code="PPC:ERR-50015">Argument $suffix is missing from the Docblock of addSuffix</error>
-      <error line="74" code="PPC:ERR-50015">Argument $delim is missing from the Docblock of addSuffix</error>
-      <error line="74" code="PPC:ERR-50008">No summary for method addSuffix()</error>
-      <error line="82" code="PPC:ERR-50015">Argument $filters is missing from the Docblock of getFilename</error>
-      <error line="82" code="PPC:ERR-50008">No summary for method getFilename()</error>
-      <error line="5" code="PPC:ERR-50007">No summary for property $filenameRaw</error>
-    </parse_markers>
-  </file>
-  <file path="Utils.php" generated-path="Utils.html" hash="82868f1cd8b9ff5f58afb7936c3c4bff" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="app\models" line="5" package="Default">
-      <extends/>
-      <name>Utils</name>
-      <full_name>\app\models\Utils</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-      </docblock>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="app\models" line="7" package="Default">
-        <name>dateBelongsToRange</name>
-        <full_name>\app\models\Utils::dateBelongsToRange()</full_name>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dtFrom</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$dtTo</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$dtCheck</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \app\models\Utils</error>
-      <error line="7" code="PPC:ERR-50015">Argument $dtFrom is missing from the Docblock of dateBelongsToRange</error>
-      <error line="7" code="PPC:ERR-50015">Argument $dtTo is missing from the Docblock of dateBelongsToRange</error>
-      <error line="7" code="PPC:ERR-50015">Argument $dtCheck is missing from the Docblock of dateBelongsToRange</error>
-      <error line="7" code="PPC:ERR-50008">No summary for method dateBelongsToRange()</error>
-    </parse_markers>
-  </file>
-  <file path="Calendar/Month.php" generated-path="Calendar.Month.html" hash="617b9d49aa6cd8270b4ec4ea8fb92f06" package="Default">
+  <file path="Calendar/Month.php" generated-path="Calendar.Month.html" hash="df4d6d7824e271356b1819f7bd0b4c9f" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -2401,69 +1014,6 @@
         <long-description></long-description>
         <tag name="package" line="6" description="Default"/>
       </docblock>
-      <constant namespace="Helpers\Calendar" line="38" package="Default">
-        <name>WEEKDAY_MONDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_MONDAY</full_name>
-        <value>1</value>
-        <docblock line="38">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar" line="39" package="Default">
-        <name>WEEKDAY_TUESDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_TUESDAY</full_name>
-        <value>2</value>
-        <docblock line="39">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar" line="40" package="Default">
-        <name>WEEKDAY_WEDNESDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_WEDNESDAY</full_name>
-        <value>3</value>
-        <docblock line="40">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar" line="41" package="Default">
-        <name>WEEKDAY_THIRSDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_THIRSDAY</full_name>
-        <value>4</value>
-        <docblock line="41">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar" line="42" package="Default">
-        <name>WEEKDAY_FRIDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_FRIDAY</full_name>
-        <value>5</value>
-        <docblock line="42">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar" line="43" package="Default">
-        <name>WEEKDAY_SATURDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_SATURDAY</full_name>
-        <value>6</value>
-        <docblock line="43">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Helpers\Calendar" line="44" package="Default">
-        <name>WEEKDAY_SUNDAY</name>
-        <full_name>\Helpers\Calendar\Month::WEEKDAY_SUNDAY</full_name>
-        <value>7</value>
-        <docblock line="44">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
       <property static="false" visibility="protected" namespace="Helpers\Calendar" line="12" package="Default">
         <name>$year</name>
         <full_name>\Helpers\Calendar\Month::$year</full_name>
@@ -2477,8 +1027,8 @@
         </docblock>
       </property>
       <property static="false" visibility="protected" namespace="Helpers\Calendar" line="18" package="Default">
-        <name>$month</name>
-        <full_name>\Helpers\Calendar\Month::$month</full_name>
+        <name>$monthNum</name>
+        <full_name>\Helpers\Calendar\Month::$monthNum</full_name>
         <default></default>
         <docblock line="18">
           <description>Month number part</description>
@@ -2493,7 +1043,7 @@
         <full_name>\Helpers\Calendar\Month::$is</full_name>
         <default></default>
         <docblock line="24">
-          <description></description>
+          <description>Month attribites checker</description>
           <long-description></long-description>
           <tag name="var" line="24" description="" type="\Helpers\Calendar\Month\Is" variable="">
             <type>\Helpers\Calendar\Month\Is</type>
@@ -2505,38 +1055,26 @@
         <full_name>\Helpers\Calendar\Month::$dt</full_name>
         <default></default>
         <docblock line="30">
-          <description></description>
+          <description>Dates checker</description>
           <long-description></long-description>
           <tag name="var" line="30" description="" type="\Helpers\Calendar\Month\Dt" variable="">
             <type>\Helpers\Calendar\Month\Dt</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="36" package="Default">
-        <name>$week</name>
-        <full_name>\Helpers\Calendar\Month::$week</full_name>
-        <default></default>
-        <docblock line="36">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="36" description="" type="\Helpers\Calendar\Month\Week" variable="">
-            <type>\Helpers\Calendar\Month\Week</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="52" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="38" package="Default">
         <name>__construct</name>
         <full_name>\Helpers\Calendar\Month::__construct()</full_name>
-        <docblock line="52">
+        <docblock line="38">
           <description>Creates class instance</description>
           <long-description></long-description>
-          <tag name="param" line="52" description="&lt;p&gt;Year part&lt;/p&gt;" type="integer" variable="$year">
+          <tag name="param" line="38" description="&lt;p&gt;Year&lt;/p&gt;" type="integer" variable="$year">
             <type>integer</type>
           </tag>
-          <tag name="param" line="52" description="&lt;p&gt;Month number part&lt;/p&gt;" type="integer" variable="$month">
+          <tag name="param" line="38" description="&lt;p&gt;Month number&lt;/p&gt;" type="integer" variable="$monthNum">
             <type>integer</type>
           </tag>
-          <tag name="throws" line="52" description="" type="\InvalidArgumentException">
+          <tag name="throws" line="38" description="" type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
         </docblock>
@@ -2546,592 +1084,168 @@
           <type>integer</type>
         </argument>
         <argument line="0" by_reference="false">
-          <name>$month</name>
+          <name>$monthNum</name>
           <default>0</default>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="69" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="54" package="Default">
         <name>__toString</name>
         <full_name>\Helpers\Calendar\Month::__toString()</full_name>
-        <docblock line="69">
-          <description></description>
+        <docblock line="54">
+          <description>Returns month name in format YYYYMM</description>
           <long-description></long-description>
-          <tag name="return" line="69" description="" type="string">
+          <tag name="return" line="54" description="Month name in format YYYYMM" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="78" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="63" package="Default">
         <name>getYear</name>
         <full_name>\Helpers\Calendar\Month::getYear()</full_name>
-        <docblock line="78">
-          <description></description>
+        <docblock line="63">
+          <description>Returns year of the month</description>
           <long-description></long-description>
-          <tag name="return" line="78" description="" type="integer">
+          <tag name="return" line="63" description="Year part" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="86" package="Default">
-        <name>getMonth</name>
-        <full_name>\Helpers\Calendar\Month::getMonth()</full_name>
-        <docblock line="86">
-          <description></description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="71" package="Default">
+        <name>getMonthNumStr</name>
+        <full_name>\Helpers\Calendar\Month::getMonthNumStr()</full_name>
+        <docblock line="71">
+          <description>Returns month number as two digits string</description>
           <long-description></long-description>
-          <tag name="return" line="86" description="" type="string">
+          <tag name="return" line="71" description="Month number from &quot;01&quot; to &quot;12&quot;" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="94" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="79" package="Default">
+        <name>getMonthNum</name>
+        <full_name>\Helpers\Calendar\Month::getMonthNum()</full_name>
+        <docblock line="79">
+          <description>Returns month number as integer</description>
+          <long-description></long-description>
+          <tag name="return" line="79" description="Month number from 1 to 12" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="87" package="Default">
         <name>is</name>
         <full_name>\Helpers\Calendar\Month::is()</full_name>
-        <docblock line="94">
-          <description></description>
+        <docblock line="87">
+          <description>Returns month attributes checker object</description>
           <long-description></long-description>
-          <tag name="return" line="94" description="" type="\Helpers\Calendar\Month\Is">
+          <tag name="return" line="87" description="" type="\Helpers\Calendar\Month\Is">
             <type>\Helpers\Calendar\Month\Is</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="107" package="Default">
-        <name>week</name>
-        <full_name>\Helpers\Calendar\Month::week()</full_name>
-        <docblock line="107">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="107" description="" type="\Helpers\Calendar\Month\Week">
-            <type>\Helpers\Calendar\Month\Week</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="116" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="100" package="Default">
         <name>dt</name>
         <full_name>\Helpers\Calendar\Month::dt()</full_name>
-        <docblock line="116">
-          <description></description>
+        <docblock line="100">
+          <description>Return month dates checker object</description>
           <long-description></long-description>
+          <tag name="return" line="100" description="" type="\Helpers\Calendar\Month\Dt">
+            <type>\Helpers\Calendar\Month\Dt</type>
+          </tag>
         </docblock>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
       <error line="6" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\Month</error>
-      <error line="69" code="PPC:ERR-50008">No summary for method __toString()</error>
-      <error line="78" code="PPC:ERR-50008">No summary for method getYear()</error>
-      <error line="86" code="PPC:ERR-50008">No summary for method getMonth()</error>
-      <error line="94" code="PPC:ERR-50008">No summary for method is()</error>
-      <error line="107" code="PPC:ERR-50008">No summary for method week()</error>
-      <error line="116" code="PPC:ERR-50008">No summary for method dt()</error>
-      <error line="24" code="PPC:ERR-50007">No summary for property $is</error>
-      <error line="30" code="PPC:ERR-50007">No summary for property $dt</error>
-      <error line="36" code="PPC:ERR-50007">No summary for property $week</error>
     </parse_markers>
   </file>
-  <file path="File.php" generated-path="File.html" hash="3b0a4d6e047dbf035905318e7d9d7e85" package="Default">
+  <file path="Calendar/Week.php" generated-path="Calendar.Week.html" hash="e23134302502bf3608fc8bb2ab65ec33" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="KsUtils" line="8" package="Default">
+    <class final="false" abstract="false" namespace="" line="14" package="Default">
       <extends/>
-      <name>File</name>
-      <full_name>\KsUtils\File</full_name>
-      <docblock line="8">
-        <description>File utils</description>
+      <name>Week</name>
+      <full_name>\Week</full_name>
+      <docblock line="14">
+        <description>Description of Week</description>
         <long-description></long-description>
-        <tag name="package" line="8" description="Default"/>
+        <tag name="author" line="14" description="ksf"/>
+        <tag name="package" line="14" description="Default"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils" line="16" package="Default">
-        <name>incrVersion</name>
-        <full_name>\KsUtils\File::incrVersion()</full_name>
-        <docblock line="16">
-          <description>Returns new version of filename. abc.2.ext -&gt; abc.3.ext; abc.4 -&gt; abc.5
-abc -&gt; abc.1</description>
-          <long-description></long-description>
-          <tag name="param" line="16" description="&lt;p&gt;Old version of filename&lt;/p&gt;" type="string" variable="$filename">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="16" description="New    version of filename" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$filename</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="KsUtils" line="51" package="Default">
-        <name>isReadableOrThrow</name>
-        <full_name>\KsUtils\File::isReadableOrThrow()</full_name>
-        <docblock line="51">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$file</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="KsUtils" line="60" package="Default">
-        <name>getDirFiles</name>
-        <full_name>\KsUtils\File::getDirFiles()</full_name>
-        <docblock line="60">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$directory</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="51" code="PPC:ERR-50015">Argument $file is missing from the Docblock of isReadableOrThrow</error>
-      <error line="51" code="PPC:ERR-50008">No summary for method isReadableOrThrow()</error>
-      <error line="60" code="PPC:ERR-50015">Argument $directory is missing from the Docblock of getDirFiles</error>
-      <error line="60" code="PPC:ERR-50008">No summary for method getDirFiles()</error>
-    </parse_markers>
-  </file>
-  <file path="Paginator.php" generated-path="Paginator.html" hash="fd957e70255af050c342d7346b42a209" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="3" package="Default">
-      <extends/>
-      <name>KsPaginator</name>
-      <full_name>\KsPaginator</full_name>
-      <docblock line="3">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="3" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="" line="5" package="Default">
-        <name>$totalPages</name>
-        <full_name>\KsPaginator::$totalPages</full_name>
-        <default></default>
-        <docblock line="5">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="6" package="Default">
-        <name>$curPage</name>
-        <full_name>\KsPaginator::$curPage</full_name>
-        <default></default>
-        <docblock line="6">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="7" package="Default">
-        <name>$itemsOnPage</name>
-        <full_name>\KsPaginator::$itemsOnPage</full_name>
-        <default></default>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="8" package="Default">
-        <name>$totalItems</name>
-        <full_name>\KsPaginator::$totalItems</full_name>
-        <default></default>
-        <docblock line="8">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="9" package="Default">
-        <name>$url1</name>
-        <full_name>\KsPaginator::$url1</full_name>
-        <default></default>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="10" package="Default">
-        <name>$urlN</name>
-        <full_name>\KsPaginator::$urlN</full_name>
-        <default></default>
-        <docblock line="10">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="11" package="Default">
-        <name>$urlNplaceholder</name>
-        <full_name>\KsPaginator::$urlNplaceholder</full_name>
-        <default></default>
-        <docblock line="11">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="13" package="Default">
-        <name>__construct</name>
-        <full_name>\KsPaginator::__construct()</full_name>
-        <docblock line="13">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$curPage</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$itemsOnPage</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$totalItems</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="28" package="Default">
-        <name>getTotalPages</name>
-        <full_name>\KsPaginator::getTotalPages()</full_name>
-        <docblock line="28">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="33" package="Default">
-        <name>getCurPage</name>
-        <full_name>\KsPaginator::getCurPage()</full_name>
-        <docblock line="33">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="38" package="Default">
-        <name>getItemsOnPage</name>
-        <full_name>\KsPaginator::getItemsOnPage()</full_name>
-        <docblock line="38">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="43" package="Default">
-        <name>getPage1Url</name>
-        <full_name>\KsPaginator::getPage1Url()</full_name>
-        <docblock line="43">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="48" package="Default">
-        <name>getPageNUrl</name>
-        <full_name>\KsPaginator::getPageNUrl()</full_name>
-        <docblock line="48">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$pageCnt</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="55" package="Default">
-        <name>getUrlNplaceholder</name>
-        <full_name>\KsPaginator::getUrlNplaceholder()</full_name>
-        <docblock line="55">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$placeholder</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="60" package="Default">
-        <name>setTotalPages</name>
-        <full_name>\KsPaginator::setTotalPages()</full_name>
-        <docblock line="60">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$totalPages</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="65" package="Default">
-        <name>setCurPage</name>
-        <full_name>\KsPaginator::setCurPage()</full_name>
-        <docblock line="65">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$curPage</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="70" package="Default">
-        <name>setItemsOnPage</name>
-        <full_name>\KsPaginator::setItemsOnPage()</full_name>
-        <docblock line="70">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$itemsOnPage</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="75" package="Default">
-        <name>setUrl1</name>
-        <full_name>\KsPaginator::setUrl1()</full_name>
-        <docblock line="75">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$url1</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="80" package="Default">
-        <name>setUrlN</name>
-        <full_name>\KsPaginator::setUrlN()</full_name>
-        <docblock line="80">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$urlN</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="85" package="Default">
-        <name>getTotalItems</name>
-        <full_name>\KsPaginator::getTotalItems()</full_name>
-        <docblock line="85">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="90" package="Default">
-        <name>getFrom</name>
-        <full_name>\KsPaginator::getFrom()</full_name>
-        <docblock line="90">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="97" package="Default">
-        <name>getTo</name>
-        <full_name>\KsPaginator::getTo()</full_name>
-        <docblock line="97">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="105" package="Default">
-        <name>getOffset</name>
-        <full_name>\KsPaginator::getOffset()</full_name>
-        <docblock line="105">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="112" package="Default">
-        <name>init</name>
-        <full_name>\KsPaginator::init()</full_name>
-        <docblock line="112">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="3" code="PPC:ERR-50005">No summary for class \KsPaginator</error>
-      <error line="13" code="PPC:ERR-50015">Argument $curPage is missing from the Docblock of __construct</error>
-      <error line="13" code="PPC:ERR-50015">Argument $itemsOnPage is missing from the Docblock of __construct</error>
-      <error line="13" code="PPC:ERR-50015">Argument $totalItems is missing from the Docblock of __construct</error>
-      <error line="13" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method getTotalPages()</error>
-      <error line="33" code="PPC:ERR-50008">No summary for method getCurPage()</error>
-      <error line="38" code="PPC:ERR-50008">No summary for method getItemsOnPage()</error>
-      <error line="43" code="PPC:ERR-50008">No summary for method getPage1Url()</error>
-      <error line="48" code="PPC:ERR-50015">Argument $pageCnt is missing from the Docblock of getPageNUrl</error>
-      <error line="48" code="PPC:ERR-50008">No summary for method getPageNUrl()</error>
-      <error line="55" code="PPC:ERR-50015">Argument $placeholder is missing from the Docblock of getUrlNplaceholder</error>
-      <error line="55" code="PPC:ERR-50008">No summary for method getUrlNplaceholder()</error>
-      <error line="60" code="PPC:ERR-50015">Argument $totalPages is missing from the Docblock of setTotalPages</error>
-      <error line="60" code="PPC:ERR-50008">No summary for method setTotalPages()</error>
-      <error line="65" code="PPC:ERR-50015">Argument $curPage is missing from the Docblock of setCurPage</error>
-      <error line="65" code="PPC:ERR-50008">No summary for method setCurPage()</error>
-      <error line="70" code="PPC:ERR-50015">Argument $itemsOnPage is missing from the Docblock of setItemsOnPage</error>
-      <error line="70" code="PPC:ERR-50008">No summary for method setItemsOnPage()</error>
-      <error line="75" code="PPC:ERR-50015">Argument $url1 is missing from the Docblock of setUrl1</error>
-      <error line="75" code="PPC:ERR-50008">No summary for method setUrl1()</error>
-      <error line="80" code="PPC:ERR-50015">Argument $urlN is missing from the Docblock of setUrlN</error>
-      <error line="80" code="PPC:ERR-50008">No summary for method setUrlN()</error>
-      <error line="85" code="PPC:ERR-50008">No summary for method getTotalItems()</error>
-      <error line="90" code="PPC:ERR-50008">No summary for method getFrom()</error>
-      <error line="97" code="PPC:ERR-50008">No summary for method getTo()</error>
-      <error line="105" code="PPC:ERR-50008">No summary for method getOffset()</error>
-      <error line="112" code="PPC:ERR-50008">No summary for method init()</error>
-      <error line="5" code="PPC:ERR-50007">No summary for property $totalPages</error>
-      <error line="6" code="PPC:ERR-50007">No summary for property $curPage</error>
-      <error line="7" code="PPC:ERR-50007">No summary for property $itemsOnPage</error>
-      <error line="8" code="PPC:ERR-50007">No summary for property $totalItems</error>
-      <error line="9" code="PPC:ERR-50007">No summary for property $url1</error>
-      <error line="10" code="PPC:ERR-50007">No summary for property $urlN</error>
-      <error line="11" code="PPC:ERR-50007">No summary for property $urlNplaceholder</error>
-    </parse_markers>
-  </file>
-  <file path="Tree/Fabric.php" generated-path="Tree.Fabric.html" hash="b75ae3864d3f3c3b6b8521ed9195ae3d" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="3" package="Default">
-      <extends/>
-      <name>TreeFabric</name>
-      <full_name>\TreeFabric</full_name>
-      <docblock line="3">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="3" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="" line="5" package="Default">
-        <name>$idField</name>
-        <full_name>\TreeFabric::$idField</full_name>
-        <default></default>
-        <docblock line="5">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="6" package="Default">
-        <name>$pidField</name>
-        <full_name>\TreeFabric::$pidField</full_name>
-        <default></default>
-        <docblock line="6">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="" line="7" package="Default">
-        <name>$nameField</name>
-        <full_name>\TreeFabric::$nameField</full_name>
-        <default></default>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="9" package="Default">
-        <name>__construct</name>
-        <full_name>\TreeFabric::__construct()</full_name>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="15" package="Default">
-        <name>setIdField</name>
-        <full_name>\TreeFabric::setIdField()</full_name>
+      <constant namespace="" line="15" package="Default">
+        <name>WEEKDAY_MONDAY</name>
+        <full_name>\Week::WEEKDAY_MONDAY</full_name>
+        <value>1</value>
         <docblock line="15">
           <description></description>
           <long-description></long-description>
         </docblock>
-        <argument line="0" by_reference="false">
-          <name>$idField</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="19" package="Default">
-        <name>setPidField</name>
-        <full_name>\TreeFabric::setPidField()</full_name>
+      </constant>
+      <constant namespace="" line="16" package="Default">
+        <name>WEEKDAY_TUESDAY</name>
+        <full_name>\Week::WEEKDAY_TUESDAY</full_name>
+        <value>2</value>
+        <docblock line="16">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="" line="17" package="Default">
+        <name>WEEKDAY_WEDNESDAY</name>
+        <full_name>\Week::WEEKDAY_WEDNESDAY</full_name>
+        <value>3</value>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="" line="18" package="Default">
+        <name>WEEKDAY_THIRSDAY</name>
+        <full_name>\Week::WEEKDAY_THIRSDAY</full_name>
+        <value>4</value>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="" line="19" package="Default">
+        <name>WEEKDAY_FRIDAY</name>
+        <full_name>\Week::WEEKDAY_FRIDAY</full_name>
+        <value>5</value>
         <docblock line="19">
           <description></description>
           <long-description></long-description>
         </docblock>
-        <argument line="0" by_reference="false">
-          <name>$pidField</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="23" package="Default">
-        <name>setNameField</name>
-        <full_name>\TreeFabric::setNameField()</full_name>
-        <docblock line="23">
+      </constant>
+      <constant namespace="" line="20" package="Default">
+        <name>WEEKDAY_SATURDAY</name>
+        <full_name>\Week::WEEKDAY_SATURDAY</full_name>
+        <value>6</value>
+        <docblock line="20">
           <description></description>
           <long-description></long-description>
         </docblock>
-        <argument line="0" by_reference="false">
-          <name>$nameField</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="33" package="Default">
-        <name>createFromArray</name>
-        <full_name>\TreeFabric::createFromArray()</full_name>
-        <docblock line="33">
+      </constant>
+      <constant namespace="" line="21" package="Default">
+        <name>WEEKDAY_SUNDAY</name>
+        <full_name>\Week::WEEKDAY_SUNDAY</full_name>
+        <value>7</value>
+        <docblock line="21">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="33" description="" type="array" variable="$arr">
-            <type>array</type>
-          </tag>
-          <tag name="return" line="33" description="" type="\Tree">
-            <type>\Tree</type>
-          </tag>
-          <tag name="throws" line="33" description="" type="\InvalidArgumentException">
-            <type>\InvalidArgumentException</type>
-          </tag>
         </docblock>
-        <argument line="0" by_reference="false">
-          <name>$arr</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
+      </constant>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="3" code="PPC:ERR-50005">No summary for class \TreeFabric</error>
-      <error line="9" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="15" code="PPC:ERR-50015">Argument $idField is missing from the Docblock of setIdField</error>
-      <error line="15" code="PPC:ERR-50008">No summary for method setIdField()</error>
-      <error line="19" code="PPC:ERR-50015">Argument $pidField is missing from the Docblock of setPidField</error>
-      <error line="19" code="PPC:ERR-50008">No summary for method setPidField()</error>
-      <error line="23" code="PPC:ERR-50015">Argument $nameField is missing from the Docblock of setNameField</error>
-      <error line="23" code="PPC:ERR-50008">No summary for method setNameField()</error>
-      <error line="33" code="PPC:ERR-50008">No summary for method createFromArray()</error>
-      <error line="5" code="PPC:ERR-50007">No summary for property $idField</error>
-      <error line="6" code="PPC:ERR-50007">No summary for property $pidField</error>
-      <error line="7" code="PPC:ERR-50007">No summary for property $nameField</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Month/Is.php" generated-path="Calendar.Month.Is.html" hash="f1c0ecaec87e402d8cd88ba117e15687" package="Default">
+  <file path="Calendar/Month/Is.php" generated-path="Calendar.Month.Is.html" hash="2aa7edad77f64bcb3713663c76b8f723" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -3174,8 +1288,8 @@ abc -&gt; abc.1</description>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="28" package="Default">
-        <name>isCurrentYear</name>
-        <full_name>\Helpers\Calendar\Month\Is::isCurrentYear()</full_name>
+        <name>currentYear</name>
+        <full_name>\Helpers\Calendar\Month\Is::currentYear()</full_name>
         <docblock line="28">
           <description></description>
           <long-description></long-description>
@@ -3185,8 +1299,8 @@ abc -&gt; abc.1</description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="36" package="Default">
-        <name>isCurrent</name>
-        <full_name>\Helpers\Calendar\Month\Is::isCurrent()</full_name>
+        <name>current</name>
+        <full_name>\Helpers\Calendar\Month\Is::current()</full_name>
         <docblock line="36">
           <description></description>
           <long-description></long-description>
@@ -3195,24 +1309,24 @@ abc -&gt; abc.1</description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="46" package="Default">
-        <name>isPast</name>
-        <full_name>\Helpers\Calendar\Month\Is::isPast()</full_name>
-        <docblock line="46">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="47" package="Default">
+        <name>past</name>
+        <full_name>\Helpers\Calendar\Month\Is::past()</full_name>
+        <docblock line="47">
           <description></description>
           <long-description></long-description>
-          <tag name="return" line="46" description="" type="boolean">
+          <tag name="return" line="47" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="59" package="Default">
-        <name>isFuture</name>
-        <full_name>\Helpers\Calendar\Month\Is::isFuture()</full_name>
-        <docblock line="59">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="61" package="Default">
+        <name>future</name>
+        <full_name>\Helpers\Calendar\Month\Is::future()</full_name>
+        <docblock line="61">
           <description></description>
           <long-description></long-description>
-          <tag name="return" line="59" description="" type="boolean">
+          <tag name="return" line="61" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -3222,32 +1336,11 @@ abc -&gt; abc.1</description>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
       <error line="20" code="PPC:ERR-50015">Argument $month is missing from the Docblock of __construct</error>
       <error line="20" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method isCurrentYear()</error>
-      <error line="36" code="PPC:ERR-50008">No summary for method isCurrent()</error>
-      <error line="46" code="PPC:ERR-50008">No summary for method isPast()</error>
-      <error line="59" code="PPC:ERR-50008">No summary for method isFuture()</error>
+      <error line="28" code="PPC:ERR-50008">No summary for method currentYear()</error>
+      <error line="36" code="PPC:ERR-50008">No summary for method current()</error>
+      <error line="47" code="PPC:ERR-50008">No summary for method past()</error>
+      <error line="61" code="PPC:ERR-50008">No summary for method future()</error>
       <error line="18" code="PPC:ERR-50007">No summary for property $month</error>
-    </parse_markers>
-  </file>
-  <file path="File/ZipException.php" generated-path="File.ZipException.html" hash="2f3dbee536a6e1d99bf20152978e500b" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="KsUtils\File" line="5" package="Default">
-      <extends>\Exception</extends>
-      <name>ZipException</name>
-      <full_name>\KsUtils\File\ZipException</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-      </docblock>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \KsUtils\File\ZipException</error>
     </parse_markers>
   </file>
   <file path="Str/Ru.php" generated-path="Str.Ru.html" hash="772b7c1f4093dacea4073a0c71b5d2f1" package="Default">
@@ -3432,51 +1525,51 @@ abc -&gt; abc.1</description>
       <error line="46" code="PPC:ERR-50007">No summary for property $rest100</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Date.php" generated-path="Calendar.Date.html" hash="cefa590b897fe9cbaf38c8c47ac27cb9" package="Default">
+  <file path="Calendar/Date.php" generated-path="Calendar.Date.html" hash="31c8cb1e1d39b10a912176332a4e4aa4" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="kfilin\Calendar" line="5" package="Default">
+    <class final="false" abstract="false" namespace="Helpers\Calendar" line="5" package="Default">
       <extends/>
       <name>Date</name>
-      <full_name>\kfilin\Calendar\Date</full_name>
+      <full_name>\Helpers\Calendar\Date</full_name>
       <docblock line="5">
         <description></description>
         <long-description></long-description>
         <tag name="package" line="5" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="kfilin\Calendar" line="7" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="7" package="Default">
         <name>$day</name>
-        <full_name>\kfilin\Calendar\Date::$day</full_name>
+        <full_name>\Helpers\Calendar\Date::$day</full_name>
         <default></default>
         <docblock line="7">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="kfilin\Calendar" line="8" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="8" package="Default">
         <name>$month</name>
-        <full_name>\kfilin\Calendar\Date::$month</full_name>
+        <full_name>\Helpers\Calendar\Date::$month</full_name>
         <default></default>
         <docblock line="8">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="kfilin\Calendar" line="9" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="9" package="Default">
         <name>$year</name>
-        <full_name>\kfilin\Calendar\Date::$year</full_name>
+        <full_name>\Helpers\Calendar\Date::$year</full_name>
         <default></default>
         <docblock line="9">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="17" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="17" package="Default">
         <name>__construct</name>
-        <full_name>\kfilin\Calendar\Date::__construct()</full_name>
+        <full_name>\Helpers\Calendar\Date::__construct()</full_name>
         <docblock line="17">
           <description></description>
           <long-description></long-description>
@@ -3506,9 +1599,9 @@ abc -&gt; abc.1</description>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="27" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="27" package="Default">
         <name>getWeekdayNum</name>
-        <full_name>\kfilin\Calendar\Date::getWeekdayNum()</full_name>
+        <full_name>\Helpers\Calendar\Date::getWeekdayNum()</full_name>
         <docblock line="27">
           <description></description>
           <long-description></long-description>
@@ -3517,9 +1610,9 @@ abc -&gt; abc.1</description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="39" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="39" package="Default">
         <name>getPrev</name>
-        <full_name>\kfilin\Calendar\Date::getPrev()</full_name>
+        <full_name>\Helpers\Calendar\Date::getPrev()</full_name>
         <docblock line="39">
           <description></description>
           <long-description></long-description>
@@ -3536,9 +1629,9 @@ abc -&gt; abc.1</description>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="51" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="51" package="Default">
         <name>getNext</name>
-        <full_name>\kfilin\Calendar\Date::getNext()</full_name>
+        <full_name>\Helpers\Calendar\Date::getNext()</full_name>
         <docblock line="51">
           <description></description>
           <long-description></long-description>
@@ -3555,9 +1648,9 @@ abc -&gt; abc.1</description>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="62" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="62" package="Default">
         <name>getAsArray</name>
-        <full_name>\kfilin\Calendar\Date::getAsArray()</full_name>
+        <full_name>\Helpers\Calendar\Date::getAsArray()</full_name>
         <docblock line="62">
           <description></description>
           <long-description></long-description>
@@ -3566,9 +1659,9 @@ abc -&gt; abc.1</description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="75" package="Default">
-        <name>getAsPhpObject</name>
-        <full_name>\kfilin\Calendar\Date::getAsPhpObject()</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="75" package="Default">
+        <name>getAsObj</name>
+        <full_name>\Helpers\Calendar\Date::getAsObj()</full_name>
         <docblock line="75">
           <description></description>
           <long-description></long-description>
@@ -3577,9 +1670,9 @@ abc -&gt; abc.1</description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="84" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="84" package="Default">
         <name>__toString</name>
-        <full_name>\kfilin\Calendar\Date::__toString()</full_name>
+        <full_name>\Helpers\Calendar\Date::__toString()</full_name>
         <docblock line="84">
           <description></description>
           <long-description></long-description>
@@ -3588,17 +1681,17 @@ abc -&gt; abc.1</description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="kfilin\Calendar" line="93" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="98" package="Default">
         <name>createFromString</name>
-        <full_name>\kfilin\Calendar\Date::createFromString()</full_name>
-        <docblock line="93">
+        <full_name>\Helpers\Calendar\Date::createFromString()</full_name>
+        <docblock line="98">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="93" description="" type="string" variable="$date">
+          <tag name="param" line="98" description="" type="string" variable="$date">
             <type>string</type>
           </tag>
-          <tag name="return" line="93" description="" type="\kfilin\Calendar\Date">
-            <type>\kfilin\Calendar\Date</type>
+          <tag name="return" line="98" description="" type="\Helpers\Calendar\Date">
+            <type>\Helpers\Calendar\Date</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -3607,18 +1700,114 @@ abc -&gt; abc.1</description>
           <type>string</type>
         </argument>
       </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="109" package="Default">
+        <name>now</name>
+        <full_name>\Helpers\Calendar\Date::now()</full_name>
+        <docblock line="109">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="109" description="" type="\kfilin\Calendar\Date">
+            <type>\kfilin\Calendar\Date</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="118" package="Default">
+        <name>isMonday</name>
+        <full_name>\Helpers\Calendar\Date::isMonday()</full_name>
+        <docblock line="118">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="118" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="126" package="Default">
+        <name>isTuesday</name>
+        <full_name>\Helpers\Calendar\Date::isTuesday()</full_name>
+        <docblock line="126">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="126" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="134" package="Default">
+        <name>isWednesday</name>
+        <full_name>\Helpers\Calendar\Date::isWednesday()</full_name>
+        <docblock line="134">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="134" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="142" package="Default">
+        <name>isThursday</name>
+        <full_name>\Helpers\Calendar\Date::isThursday()</full_name>
+        <docblock line="142">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="142" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="150" package="Default">
+        <name>isFriday</name>
+        <full_name>\Helpers\Calendar\Date::isFriday()</full_name>
+        <docblock line="150">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="150" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="158" package="Default">
+        <name>isSaturday</name>
+        <full_name>\Helpers\Calendar\Date::isSaturday()</full_name>
+        <docblock line="158">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="158" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="166" package="Default">
+        <name>isSanday</name>
+        <full_name>\Helpers\Calendar\Date::isSanday()</full_name>
+        <docblock line="166">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="166" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \kfilin\Calendar\Date</error>
+      <error line="5" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\Date</error>
       <error line="17" code="PPC:ERR-50008">No summary for method __construct()</error>
       <error line="27" code="PPC:ERR-50008">No summary for method getWeekdayNum()</error>
       <error line="39" code="PPC:ERR-50008">No summary for method getPrev()</error>
       <error line="51" code="PPC:ERR-50008">No summary for method getNext()</error>
       <error line="62" code="PPC:ERR-50008">No summary for method getAsArray()</error>
-      <error line="75" code="PPC:ERR-50008">No summary for method getAsPhpObject()</error>
+      <error line="75" code="PPC:ERR-50008">No summary for method getAsObj()</error>
       <error line="84" code="PPC:ERR-50008">No summary for method __toString()</error>
-      <error line="93" code="PPC:ERR-50008">No summary for method createFromString()</error>
+      <error line="98" code="PPC:ERR-50008">No summary for method createFromString()</error>
+      <error line="109" code="PPC:ERR-50008">No summary for method now()</error>
+      <error line="118" code="PPC:ERR-50008">No summary for method isMonday()</error>
+      <error line="126" code="PPC:ERR-50008">No summary for method isTuesday()</error>
+      <error line="134" code="PPC:ERR-50008">No summary for method isWednesday()</error>
+      <error line="142" code="PPC:ERR-50008">No summary for method isThursday()</error>
+      <error line="150" code="PPC:ERR-50008">No summary for method isFriday()</error>
+      <error line="158" code="PPC:ERR-50008">No summary for method isSaturday()</error>
+      <error line="166" code="PPC:ERR-50008">No summary for method isSanday()</error>
       <error line="7" code="PPC:ERR-50007">No summary for property $day</error>
       <error line="8" code="PPC:ERR-50007">No summary for property $month</error>
       <error line="9" code="PPC:ERR-50007">No summary for property $year</error>
@@ -3779,14 +1968,6 @@ abc -&gt; abc.1</description>
       <namespace name="ru" full_name="Helpers\Calendar\ru"/>
     </namespace>
     <namespace name="Str" full_name="Helpers\Str"/>
-  </namespace>
-  <namespace name="KsUtils" full_name="KsUtils">
-    <namespace name="File" full_name="KsUtils\File">
-      <namespace name="Filter" full_name="KsUtils\File\Filter"/>
-    </namespace>
-  </namespace>
-  <namespace name="app" full_name="app">
-    <namespace name="models" full_name="app\models"/>
   </namespace>
   <namespace name="kfilin" full_name="kfilin">
     <namespace name="Calendar" full_name="kfilin\Calendar"/>

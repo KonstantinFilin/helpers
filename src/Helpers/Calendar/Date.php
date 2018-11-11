@@ -2,163 +2,135 @@
 
 namespace Helpers\Calendar;
 
-class Date 
-{
-    protected $day;
-    protected $month;
-    protected $year;
-    
+/**
+ * @see http://php.net/manual/en/book.datetime.php
+ * @author Konstantin S. Filin
+ */
+class Date extends \DateTime
+{    
     /**
-     * 
-     * @param int $year
-     * @param int $month
-     * @param int $day
+     * @see http://php.net/manual/en/book.datetime.php
      */
-    function __construct(int $year, int $month, int $day ) {
-        $this->day = $day;
-        $this->month = $month;
-        $this->year = $year;
+    function __construct($time = "now", $object = null) {
+        parent::__construct($time, $object);
     }
 
     /**
-     * 
-     * @return int
+     * Returns weekday number
+     * @return int Weekday number from 1 (Monday) to 7 (Sunday)
      */
     public function getWeekdayNum(): int
     {
-        $dtObj = $this->getAsObj();
-        
-        return $dtObj->format("N");
+        return $this->format("N");
     }
     
     /**
-     * 
-     * @param int $days
-     * @return string
+     * Returns day before given date
+     * @param int $days How many days to go back
+     * @return string Date before given date
      */
-    public function getPrev(int $days = 1): string
+    public function getPrev(int $days = 1): Date
     {
-        $dtObj = new \DateTime((string) $this);
+        $dtObj = clone $this;
         $dtObj->sub(new \DateInterval("P" . $days . "D"));
-        return $dtObj->format("Y-m-d");
+        return $dtObj;
     }
 
     /**
-     * 
-     * @param int $days
-     * @return string
+     * Returns day after given date
+     * @param int $days How many days to go forward
+     * @return string Date after given date
      */
-    public function getNext(int $days = 1): string
+    public function getNext(int $days = 1): Date
     {
-        $dtObj = new \DateTime((string) $this);
+        $dtObj = clone $this;
         $dtObj->add(new \DateInterval("P" . $days . "D"));
-        return $dtObj->format("Y-m-d");
+        return $dtObj;
     }
 
     /**
-     * 
-     * @return array
+     * Returns date as array
+     * @return array Date as array. [ 0 => year, 1 => month, 2 => day ]
      */
     public function getAsArray(): array
     {
         return [
-            $this->year,
-            $this->month,
-            $this->day
+            $this->format("Y"),
+            $this->format("m"),
+            $this->format("d")
         ];
     }
     
     /**
-     * 
-     * @return \DateTime
-     */
-    public function getAsObj(): \DateTime
-    {
-        return new \DateTime((string) $this);
-    }
-    
-    /**
-     * 
-     * @return string
+     * Returns date as string
+     * @return string Date as string in format YYYY-MM-DD
      */
     public function __toString(): string {
-        return $this->year . "-" . $this->month . "-" . $this->day;
+        return $this->format("Y-m-d");
     }
    
     /**
-     * 
-     * @param string $date
-     * @return Date
-     */
-    public static function createFromString(string $date): Date
-    {
-        list($year, $month, $day) = explode("-", $date);
-        
-        return new Date($year, $month, $day);
-    }
-    
-    /**
-     * 
-     * @return \kfilin\Calendar\Date
-     */
-    public static function now(): Date
-    {
-        return new Date(date("d"), date("m"), date("Y"));
-    }
-
-    /**
-     * 
-     * @return bool
+     * Checks if date is monday
+     * @return bool True if yes
      */
     public function isMonday(): bool {
         return $this->getWeekdayNum() == 1;
     }
     
     /**
-     * 
-     * @return bool
+     * Checks if date is tuesday
+     * @return bool True if yes
      */
     public function isTuesday(): bool {
         return $this->getWeekdayNum() == 2;
     }
     
     /**
-     * 
-     * @return bool
+     * Checks if date is wednesday
+     * @return bool True if yes
      */
     public function isWednesday(): bool {
         return $this->getWeekdayNum() == 3;
     }
     
     /**
-     * 
-     * @return bool
+     * Checks if date is thursday
+     * @return bool True if yes
      */
     public function isThursday(): bool {
         return $this->getWeekdayNum() == 4;
     }
     
     /**
-     * 
-     * @return bool
+     * Checks if date is friday
+     * @return bool True if yes
      */
     public function isFriday(): bool {
         return $this->getWeekdayNum() == 5;
     }
     
     /**
-     * 
-     * @return bool
+     * Checks if date is saturday
+     * @return bool True if yes
      */
     public function isSaturday(): bool {
         return $this->getWeekdayNum() == 6;
     }
     
     /**
-     * 
-     * @return bool
+     * Checks if date is sunday
+     * @return bool True if yes
      */
-    public function isSanday(): bool {
+    public function isSunday(): bool {
         return $this->getWeekdayNum() == 7;
+    }
+    
+    /**
+     * Returns current date object
+     * @return \Date Current date object
+     */
+    public function now()
+    {
+        return new Date();
     }
 }

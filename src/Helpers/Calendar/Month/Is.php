@@ -3,11 +3,11 @@
 namespace Helpers\Calendar\Month;
 
 use Helpers\Calendar\Month;
+use Helpers\Calendar\Date;
 
 /**
- * Description of Info
- *
- * @author ksf
+ * Month attributes checker
+ * @author Konstantin S. Filin
  */
 class Is {
     
@@ -22,45 +22,47 @@ class Is {
     }
     
     /**
-     * 
-     * @return bool
+     * Checks if month is in current year
+     * @return bool True if yes
      */
     public function currentYear(): bool {
-        return $this->getYear() == Now::year();
+        return $this->month->getYear() == Date::now()->format("Y");
     }
     
     /**
-     * 
-     * @return bool
+     * Checks if it is current month
+     * @return bool True if yes
      */
     public function current(): bool
     {       
-        return $this->isCurrentYear() && $this->getMonth() == Now::monthNum();
+        return $this->month->is()->currentYear() 
+            && $this->month->getMonthNum() == intval(Date::now()->format("m"));
     }
-    
 
     /**
-     * 
-     * @return bool
+     * Checks if month is in a past
+     * @return bool True if yes
      */
     public function past(): bool
     {
-        $condition1 = Now::year() > $this->getYear();
-        $condition2 = $this->isCurrentYear()
-            && Now::monthNum() > $this->getMonth();
+        $now = Date::now();
+        $condition1 = intval($now->format("Y")) > $this->month->getYear();
+        $condition2 = $this->month->is()->currentYear()
+            && intval($now->format("m")) > $this->month->getMonthNum();
 
         return $condition1 || $condition2;
     }
     
     /**
-     * 
-     * @return bool
+     * Checks if month is in a future
+     * @return bool True if yes
      */
     public function future(): bool
     {
-        $condition1 = Now::year() < $this->getYear();
-        $condition2 = $this->isCurrentYear()
-            && Now::monthNum() < $this->getMonth();
+        $now = Date::now();
+        $condition1 = intval($now->format("Y")) < $this->month->getYear();
+        $condition2 = $this->month->is()->currentYear()
+            && intval($now->format("m")) < $this->month->getMonthNum();
 
         return $condition1 || $condition2;
     }

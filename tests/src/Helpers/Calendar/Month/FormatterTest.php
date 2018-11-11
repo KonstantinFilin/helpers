@@ -10,6 +10,9 @@ namespace Helpers\Calendar\Month;
 
 use PHPUnit\Framework\TestCase;
 
+use Helpers\Calendar\Month;
+use Helpers\Calendar\Month\Formatter;
+
 /**
  * Description of MonthFormatter
  *
@@ -50,7 +53,7 @@ class FormatterTest  extends TestCase
             9 => "September",
             10 => "October",
             11 => "November",
-            12 => "December",
+            12 => "December"
         ];
         $this->assertEquals($expected, $m1->getMonthNames());
     }  
@@ -68,28 +71,36 @@ class FormatterTest  extends TestCase
             4 => "Thursday",
             5 => "Friday",
             6 => "Saturday",
-            7 => "Sunday",
+            7 => "Sunday"
         ];
         $this->assertEquals($expected, $m1->getWeekdayNames());
     }    
 
     /**
-     * @covers Helpers\Calendar\Month\Formatter::getWeekdayNamesShort
+     * @covers Helpers\Calendar\Month\Formatter::getMonthName
      */
-    public function testGetWeekdayNamesShort() 
+    public function testGetMonthName()
     {
-        $m1 = new Formatter();
-        $expected = [
-            1 => "Mo",
-            2 => "Tu",
-            3 => "We",
-            4 => "Th",
-            5 => "Fr",
-            6 => "Sa",
-            7 => "Su",
-        ];
-        $this->assertEquals($expected, $m1->getWeekdayNamesShort());
-    }    
-    
-    
+        $mf = new Formatter();
+        
+        $m1 = new Month(2018, 1);
+        $this->assertEquals("January 2018", $mf->getMonthName($m1));
+        
+        $m2 = new Month(2018, 11);
+        $this->assertEquals("November 2018", $mf->getMonthName($m2));
+    }
+
+    /**
+     * @covers Helpers\Calendar\Month\Formatter::getWeekdayName
+     */
+    public function testGetWeekdayName()
+    {
+        $mf = new Formatter();
+        
+        $m1 = new Month(2018, 1);
+        $this->assertEquals("Wednesday", $mf->getWeekdayName($m1, 31));
+        
+        $m2 = new Month(2018, 11);
+        $this->assertEquals("Thursday", $mf->getWeekdayName($m2, 8));
+    }
 }
