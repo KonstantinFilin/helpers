@@ -46,7 +46,15 @@ class Period
             return false;
         }
         
-        return true;
+        $now = new Date();
+        
+        if ($dt <= $now) {
+            return true;
+        }
+        
+        throw new \InvalidArgumentException(
+            "Cannot check future date " . (string) $dt . " for unclosed period"
+        );
     }
     
     /**
@@ -67,13 +75,13 @@ class Period
     public function length(): int
     {
         if (!$this->isUnclosed()) {
-            return self::daysBetween($this->dt2, $this->dt1);
+            return self::daysBetween($this->dt1, $this->dt2);
         }
         
         $now = new Date();
         
         if ($this->dt1 < $now) {
-            return self::daysBetween($now, $this->dt1);
+            return self::daysBetween($this->dt1, $now);
         }
         
         return 0;
@@ -107,13 +115,5 @@ class Period
      */
     public function getDt2(): Date {
         return $this->dt2;
-    }
-    
-    /**
-     * Returns all dates in this period
-     * @return array
-     */
-    public function getDtList(): array {
-        
     }
 }
