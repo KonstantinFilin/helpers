@@ -1,88 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="2.9.1">
   <partials/>
-  <file path="Calendar/Generator/Workdays.php" generated-path="Calendar.Generator.Workdays.html" hash="3ff965d39d4c324121b12cefcfa6bff5" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
-    <class final="false" abstract="false" namespace="Helpers\Calendar\Generator" line="7" package="Default">
-      <extends/>
-      <implements>\kfilin\Calendar\GeneratorIf</implements>
-      <name>Workdays</name>
-      <full_name>\Helpers\Calendar\Generator\Workdays</full_name>
-      <docblock line="7">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="7" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar\Generator" line="13" package="Default">
-        <name>$month</name>
-        <full_name>\Helpers\Calendar\Generator\Workdays::$month</full_name>
-        <default></default>
-        <docblock line="13">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="13" description="" type="\Helpers\Calendar\Month" variable="">
-            <type>\Helpers\Calendar\Month</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Generator" line="15" package="Default">
-        <name>__construct</name>
-        <full_name>\Helpers\Calendar\Generator\Workdays::__construct()</full_name>
-        <docblock line="15">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$month</name>
-          <default></default>
-          <type>\Helpers\Calendar\Month</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Generator" line="24" package="Default">
-        <name>make</name>
-        <full_name>\Helpers\Calendar\Generator\Workdays::make()</full_name>
-        <docblock line="24">
-          <description></description>
-          <long-description></long-description>
-          <tag name="see" line="24" description="" link="\kfilin\Calendar\GeneratorIf::make()"/>
-          <tag name="inherited_from" description="\kfilin\Calendar\GeneratorIf::make()" refers="\kfilin\Calendar\GeneratorIf::make()" link="/classes/kfilin.Calendar.GeneratorIf.html#method_make"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Helpers\Calendar\Generator" line="45" package="Default">
-        <name>isWeekend</name>
-        <full_name>\Helpers\Calendar\Generator\Workdays::isWeekend()</full_name>
-        <docblock line="45">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="45" description="" type="integer" variable="$dayNum">
-            <type>integer</type>
-          </tag>
-          <tag name="return" line="45" description="" type="boolean">
-            <type>boolean</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dayNum</name>
-          <default></default>
-          <type>integer</type>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="7" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\Generator\Workdays</error>
-      <error line="15" code="PPC:ERR-50015">Argument $month is missing from the Docblock of __construct</error>
-      <error line="15" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="45" code="PPC:ERR-50008">No summary for method isWeekend()</error>
-      <error line="13" code="PPC:ERR-50007">No summary for property $month</error>
-    </parse_markers>
-  </file>
-  <file path="Calendar/Month/Dt.php" generated-path="Calendar.Month.Dt.html" hash="45f7e7191f27414dd9dd476399e4d2d2" package="Default">
+  <file path="Calendar/Month/Dt.php" generated-path="Calendar.Month.Dt.html" hash="1b5d7783ec9b996d35f341562ecb58f4" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -91,34 +10,37 @@
     <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
     <namespace-alias name="Fabric">\Helpers\Calendar\Month\Fabric</namespace-alias>
     <namespace-alias name="Date">\Helpers\Calendar\Date</namespace-alias>
-    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="20" package="Default">
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="14" package="Default">
       <extends/>
       <name>Dt</name>
       <full_name>\Helpers\Calendar\Month\Dt</full_name>
-      <docblock line="20">
-        <description>Description of Ranges</description>
+      <docblock line="14">
+        <description>Information about dates in the month</description>
         <long-description></long-description>
-        <tag name="author" line="20" description="ksf"/>
-        <tag name="package" line="20" description="Default"/>
+        <tag name="author" line="14" description="Konstantin S. Filin"/>
+        <tag name="package" line="14" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar\Month" line="26" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar\Month" line="20" package="Default">
         <name>$month</name>
         <full_name>\Helpers\Calendar\Month\Dt::$month</full_name>
         <default></default>
-        <docblock line="26">
+        <docblock line="20">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="26" description="" type="\Helpers\Calendar\Month" variable="">
+          <tag name="var" line="20" description="" type="\Helpers\Calendar\Month" variable="">
             <type>\Helpers\Calendar\Month</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="28" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="26" package="Default">
         <name>__construct</name>
         <full_name>\Helpers\Calendar\Month\Dt::__construct()</full_name>
-        <docblock line="28">
+        <docblock line="26">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="26" description="&lt;p&gt;Month&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$month">
+            <type>\Helpers\Calendar\Month</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$month</name>
@@ -126,19 +48,16 @@
           <type>\Helpers\Calendar\Month</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="38" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="35" package="Default">
         <name>getAsStr</name>
         <full_name>\Helpers\Calendar\Month\Dt::getAsStr()</full_name>
-        <docblock line="38">
+        <docblock line="35">
           <description>Returns date string of the current month from given month day num</description>
           <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;Month object&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$this">
-            <type>\Helpers\Calendar\Month</type>
-          </tag>
-          <tag name="param" line="38" description="&lt;p&gt;Month day number&lt;/p&gt;" type="integer" variable="$dayNum">
+          <tag name="param" line="35" description="&lt;p&gt;Month day number&lt;/p&gt;" type="integer" variable="$dayNum">
             <type>integer</type>
           </tag>
-          <tag name="return" line="38" description="Resulting date string in format YYYY-MM-DD" type="string">
+          <tag name="return" line="35" description="Resulting date string in format YYYY-MM-DD" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -148,17 +67,14 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="62" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="58" package="Default">
         <name>getAsObj</name>
         <full_name>\Helpers\Calendar\Month\Dt::getAsObj()</full_name>
-        <docblock line="62">
-          <description></description>
+        <docblock line="58">
+          <description>Returns date object of the current month from given month day num</description>
           <long-description></long-description>
-          <tag name="param" line="62" description="" type="integer" variable="$dayNum">
+          <tag name="param" line="58" description="&lt;p&gt;Month day number&lt;/p&gt;" type="integer" variable="$dayNum">
             <type>integer</type>
-          </tag>
-          <tag name="return" line="62" description="" type="\Helpers\Calendar\Date">
-            <type>\Helpers\Calendar\Date</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -167,52 +83,49 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="75" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="70" package="Default">
         <name>max</name>
         <full_name>\Helpers\Calendar\Month\Dt::max()</full_name>
-        <docblock line="75">
-          <description></description>
+        <docblock line="70">
+          <description>Returns last day of the month</description>
           <long-description></long-description>
-          <tag name="param" line="75" description="" type="\Helpers\Calendar\Month" variable="$month">
-            <type>\Helpers\Calendar\Month</type>
-          </tag>
-          <tag name="return" line="75" description="" type="string">
+          <tag name="return" line="70" description="Last day of the month in format YYYY-mm-dd" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="89" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="84" package="Default">
         <name>maxDay</name>
         <full_name>\Helpers\Calendar\Month\Dt::maxDay()</full_name>
-        <docblock line="89">
-          <description></description>
+        <docblock line="84">
+          <description>Returns days amount in this month</description>
           <long-description></long-description>
-          <tag name="return" line="89" description="" type="integer">
+          <tag name="return" line="84" description="Days amount in this month" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="104" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="99" package="Default">
         <name>min</name>
         <full_name>\Helpers\Calendar\Month\Dt::min()</full_name>
-        <docblock line="104">
-          <description></description>
+        <docblock line="99">
+          <description>Returns first day of the month</description>
           <long-description></long-description>
-          <tag name="return" line="104" description="" type="string">
+          <tag name="return" line="99" description="First day of the month in format YYYY-mm-dd" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="117" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="112" package="Default">
         <name>has</name>
         <full_name>\Helpers\Calendar\Month\Dt::has()</full_name>
-        <docblock line="117">
-          <description></description>
+        <docblock line="112">
+          <description>Checks if given date belongs to given month</description>
           <long-description></long-description>
-          <tag name="param" line="117" description="" type="string" variable="$dt">
+          <tag name="param" line="112" description="&lt;p&gt;Date to check&lt;/p&gt;" type="string" variable="$dt">
             <type>string</type>
           </tag>
-          <tag name="return" line="117" description="" type="boolean">
+          <tag name="return" line="112" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -225,17 +138,8 @@
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="28" code="PPC:ERR-50015">Argument $month is missing from the Docblock of __construct</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="38" code="PPC:ERR-50014">Name of argument $dayNum does not match with the DocBlock's name $this in getAsStr()</error>
-      <error line="38" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $dayNum in getAsStr()</error>
-      <notice line="38" code="PPC:ERR-50013">Parameter $this could not be found in getAsStr()</notice>
-      <error line="62" code="PPC:ERR-50008">No summary for method getAsObj()</error>
-      <error line="75" code="PPC:ERR-50008">No summary for method max()</error>
-      <error line="89" code="PPC:ERR-50008">No summary for method maxDay()</error>
-      <error line="104" code="PPC:ERR-50008">No summary for method min()</error>
-      <error line="117" code="PPC:ERR-50008">No summary for method has()</error>
-      <error line="26" code="PPC:ERR-50007">No summary for property $month</error>
+      <error line="26" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="20" code="PPC:ERR-50007">No summary for property $month</error>
     </parse_markers>
   </file>
   <file path="Calendar/Year.php" generated-path="Calendar.Year.html" hash="198865a2888b4789815a0d107783b37e" package="Default">
@@ -274,35 +178,36 @@
       <error line="11" code="PPC:ERR-50008">No summary for method isLeap()</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Month/Formatter.php" generated-path="Calendar.Month.Formatter.html" hash="faab6bb7f875686d8b5a64bae98ce79e" package="Default">
+  <file path="Calendar/Month/Formatter.php" generated-path="Calendar.Month.Formatter.html" hash="044bc0be4e3045b64b00ce8df0cb2813" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
     <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
-    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="7" package="Default">
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="11" package="Default">
       <extends/>
       <name>Formatter</name>
       <full_name>\Helpers\Calendar\Month\Formatter</full_name>
-      <docblock line="7">
-        <description></description>
+      <docblock line="11">
+        <description>Month data formatter</description>
         <long-description></long-description>
-        <tag name="package" line="7" description="Default"/>
+        <tag name="author" line="11" description="Konstantin S. Filin"/>
+        <tag name="package" line="11" description="Default"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="16" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="20" package="Default">
         <name>getWeekdayName</name>
         <full_name>\Helpers\Calendar\Month\Formatter::getWeekdayName()</full_name>
-        <docblock line="16">
+        <docblock line="20">
           <description>Returns weekday name for given month day</description>
           <long-description></long-description>
-          <tag name="param" line="16" description="&lt;p&gt;Month object&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$dayNum">
+          <tag name="param" line="20" description="&lt;p&gt;Month object&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$month">
             <type>\Helpers\Calendar\Month</type>
           </tag>
-          <tag name="param" line="16" description="&lt;p&gt;Month day&lt;/p&gt;" type="integer" variable="$dayNum">
+          <tag name="param" line="20" description="&lt;p&gt;Month day&lt;/p&gt;" type="integer" variable="$dayNum">
             <type>integer</type>
           </tag>
-          <tag name="return" line="16" description="Weekday name (Monday, Tuesday, Wednesday, ...)" type="string">
+          <tag name="return" line="20" description="Weekday name (Monday, Tuesday, Wednesday, ...)" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -317,35 +222,38 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="28" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="32" package="Default">
         <name>getMonthNames</name>
         <full_name>\Helpers\Calendar\Month\Formatter::getMonthNames()</full_name>
-        <docblock line="28">
-          <description></description>
+        <docblock line="32">
+          <description>Returns list of month names</description>
           <long-description></long-description>
-          <tag name="return" line="28" description="" type="array">
+          <tag name="return" line="32" description="List of month names" type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="50" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="54" package="Default">
         <name>getWeekdayNames</name>
         <full_name>\Helpers\Calendar\Month\Formatter::getWeekdayNames()</full_name>
-        <docblock line="50">
-          <description></description>
+        <docblock line="54">
+          <description>Returns list of weekday names</description>
           <long-description></long-description>
-          <tag name="return" line="50" description="" type="array">
+          <tag name="return" line="54" description="List of weekday names" type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="67" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="72" package="Default">
         <name>getMonthName</name>
         <full_name>\Helpers\Calendar\Month\Formatter::getMonthName()</full_name>
-        <docblock line="67">
-          <description></description>
+        <docblock line="72">
+          <description>Returns month name</description>
           <long-description></long-description>
-          <tag name="return" line="67" description="" type="string">
+          <tag name="param" line="72" description="" type="\Helpers\Calendar\Month" variable="$month">
+            <type>\Helpers\Calendar\Month</type>
+          </tag>
+          <tag name="return" line="72" description="Month name in format &quot;MonthName year&quot;" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -358,31 +266,25 @@
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="7" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\Month\Formatter</error>
-      <error line="16" code="PPC:ERR-50014">Name of argument $month does not match with the DocBlock's name $dayNum in getWeekdayName()</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method getMonthNames()</error>
-      <error line="50" code="PPC:ERR-50008">No summary for method getWeekdayNames()</error>
-      <error line="67" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getMonthName</error>
-      <error line="67" code="PPC:ERR-50008">No summary for method getMonthName()</error>
     </parse_markers>
   </file>
-  <file path="Calendar/GeneratorIf.php" generated-path="Calendar.GeneratorIf.html" hash="47cdbceb2a379c6a480a1d36ea56e24c" package="Default">
+  <file path="Calendar/GeneratorIf.php" generated-path="Calendar.GeneratorIf.html" hash="5e1d6c07704aa2eac9abf72814d8d525" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <interface namespace="kfilin\Calendar" line="5" package="Default">
+    <interface namespace="Helpers\Calendar" line="5" package="Default">
       <name>GeneratorIf</name>
-      <full_name>\kfilin\Calendar\GeneratorIf</full_name>
+      <full_name>\Helpers\Calendar\GeneratorIf</full_name>
       <docblock line="5">
         <description></description>
         <long-description></long-description>
         <tag name="package" line="5" description="Default"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="6" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="6" package="Default">
         <name>make</name>
-        <full_name>\kfilin\Calendar\GeneratorIf::make()</full_name>
+        <full_name>\Helpers\Calendar\GeneratorIf::make()</full_name>
         <docblock line="6">
           <description></description>
           <long-description></long-description>
@@ -391,124 +293,168 @@
     </interface>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50009">No summary for interface \kfilin\Calendar\GeneratorIf</error>
+      <error line="5" code="PPC:ERR-50009">No summary for interface \Helpers\Calendar\GeneratorIf</error>
       <error line="6" code="PPC:ERR-50008">No summary for method make()</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Period.php" generated-path="Calendar.Period.html" hash="8a4d6011ab5d7fd30745d8d57571b8e9" package="Default">
+  <file path="Calendar/Period.php" generated-path="Calendar.Period.html" hash="8708fc5380d12370f6c2a567e69547e0" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="kfilin\Calendar" line="5" package="Default">
+    <class final="false" abstract="false" namespace="Helpers\Calendar" line="10" package="Default">
       <extends/>
       <name>Period</name>
-      <full_name>\kfilin\Calendar\Period</full_name>
-      <docblock line="5">
-        <description></description>
+      <full_name>\Helpers\Calendar\Period</full_name>
+      <docblock line="10">
+        <description>Represents date period</description>
         <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
+        <tag name="author" line="10" description="Konstantin S. Filin"/>
+        <tag name="package" line="10" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="kfilin\Calendar" line="11" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="16" package="Default">
         <name>$dt1</name>
-        <full_name>\kfilin\Calendar\Period::$dt1</full_name>
+        <full_name>\Helpers\Calendar\Period::$dt1</full_name>
         <default></default>
-        <docblock line="11">
-          <description></description>
+        <docblock line="16">
+          <description>Start date</description>
           <long-description></long-description>
-          <tag name="var" line="11" description="" type="\kfilin\Calendar\Date" variable="">
-            <type>\kfilin\Calendar\Date</type>
+          <tag name="var" line="16" description="" type="\Helpers\Calendar\Date" variable="">
+            <type>\Helpers\Calendar\Date</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="kfilin\Calendar" line="17" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="22" package="Default">
         <name>$dt2</name>
-        <full_name>\kfilin\Calendar\Period::$dt2</full_name>
+        <full_name>\Helpers\Calendar\Period::$dt2</full_name>
         <default></default>
-        <docblock line="17">
-          <description></description>
+        <docblock line="22">
+          <description>Finish date</description>
           <long-description></long-description>
-          <tag name="var" line="17" description="" type="\kfilin\Calendar\Date" variable="">
-            <type>\kfilin\Calendar\Date</type>
+          <tag name="var" line="22" description="" type="\Helpers\Calendar\Date" variable="">
+            <type>\Helpers\Calendar\Date</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="19" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="29" package="Default">
         <name>__construct</name>
-        <full_name>\kfilin\Calendar\Period::__construct()</full_name>
-        <docblock line="19">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dt1</name>
-          <default></default>
-          <type>\kfilin\Calendar\Date</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$dt2</name>
-          <default></default>
-          <type>\kfilin\Calendar\Date</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="kfilin\Calendar" line="24" package="Default">
-        <name>createFromString</name>
-        <full_name>\kfilin\Calendar\Period::createFromString()</full_name>
-        <docblock line="24">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$dt1</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$dt2</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="kfilin\Calendar" line="29" package="Default">
-        <name>contains</name>
-        <full_name>\kfilin\Calendar\Period::contains()</full_name>
+        <full_name>\Helpers\Calendar\Period::__construct()</full_name>
         <docblock line="29">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="29" description="&lt;p&gt;Start date&lt;/p&gt;" type="\Helpers\Calendar\Date" variable="$dt1">
+            <type>\Helpers\Calendar\Date</type>
+          </tag>
+          <tag name="param" line="29" description="&lt;p&gt;Finish date&lt;/p&gt;" type="\Helpers\Calendar\Date" variable="$dt2">
+            <type>\Helpers\Calendar\Date</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$dt1</name>
+          <default></default>
+          <type>\Helpers\Calendar\Date</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$dt2</name>
+          <default>null</default>
+          <type>\Helpers\Calendar\Date</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="39" package="Default">
+        <name>contains</name>
+        <full_name>\Helpers\Calendar\Period::contains()</full_name>
+        <docblock line="39">
+          <description>Checks if period contains date</description>
+          <long-description></long-description>
+          <tag name="param" line="39" description="&lt;p&gt;Date to check&lt;/p&gt;" type="\Helpers\Calendar\Date" variable="$dt">
+            <type>\Helpers\Calendar\Date</type>
+          </tag>
+          <tag name="return" line="39" description="True if yes" type="boolean">
+            <type>boolean</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$dt</name>
           <default></default>
-          <type/>
+          <type>\Helpers\Calendar\Date</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="64" package="Default">
+        <name>isUnclosed</name>
+        <full_name>\Helpers\Calendar\Period::isUnclosed()</full_name>
+        <docblock line="64">
+          <description>Checks if period is unclosed (has no finishing date)</description>
+          <long-description></long-description>
+          <tag name="return" line="64" description="True if yes" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="75" package="Default">
+        <name>length</name>
+        <full_name>\Helpers\Calendar\Period::length()</full_name>
+        <docblock line="75">
+          <description>Returns days amount in current period</description>
+          <long-description></long-description>
+          <tag name="return" line="75" description="Days amount. If period unclosed and starting date in the past,&#10;it is a difference for today. If starting date in the future, then&#10;0 will be returned" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="97" package="Default">
+        <name>daysBetween</name>
+        <full_name>\Helpers\Calendar\Period::daysBetween()</full_name>
+        <docblock line="97">
+          <description>Returns days difference between two dates</description>
+          <long-description></long-description>
+          <tag name="param" line="97" description="&lt;p&gt;Date # 1&lt;/p&gt;" type="\Helpers\Calendar\Date" variable="$dt1">
+            <type>\Helpers\Calendar\Date</type>
+          </tag>
+          <tag name="param" line="97" description="&lt;p&gt;Date # 2&lt;/p&gt;" type="\Helpers\Calendar\Date" variable="$dt2">
+            <type>\Helpers\Calendar\Date</type>
+          </tag>
+          <tag name="return" line="97" description="Days difference between two dates. If $dt2 is older then&#10;negative value will be returned" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$dt1</name>
+          <default></default>
+          <type>\Helpers\Calendar\Date</type>
         </argument>
         <argument line="0" by_reference="false">
-          <name>$dtFrom</name>
+          <name>$dt2</name>
           <default></default>
-          <type/>
+          <type>\Helpers\Calendar\Date</type>
         </argument>
-        <argument line="0" by_reference="false">
-          <name>$dtTo</name>
-          <default></default>
-          <type/>
-        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="107" package="Default">
+        <name>getDt1</name>
+        <full_name>\Helpers\Calendar\Period::getDt1()</full_name>
+        <docblock line="107">
+          <description>Returns starting date of the period</description>
+          <long-description></long-description>
+          <tag name="return" line="107" description="Starting date" type="\Helpers\Calendar\Date">
+            <type>\Helpers\Calendar\Date</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="116" package="Default">
+        <name>getDt2</name>
+        <full_name>\Helpers\Calendar\Period::getDt2()</full_name>
+        <docblock line="116">
+          <description>Returns finishing date of the period</description>
+          <long-description></long-description>
+          <tag name="return" line="116" description="Finishing date of the period. Can be null&#10;if period is unclosed" type="\Helpers\Calendar\Date">
+            <type>\Helpers\Calendar\Date</type>
+          </tag>
+        </docblock>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \kfilin\Calendar\Period</error>
-      <error line="19" code="PPC:ERR-50015">Argument $dt1 is missing from the Docblock of __construct</error>
-      <error line="19" code="PPC:ERR-50015">Argument $dt2 is missing from the Docblock of __construct</error>
-      <error line="19" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="24" code="PPC:ERR-50015">Argument $dt1 is missing from the Docblock of createFromString</error>
-      <error line="24" code="PPC:ERR-50015">Argument $dt2 is missing from the Docblock of createFromString</error>
-      <error line="24" code="PPC:ERR-50008">No summary for method createFromString()</error>
-      <error line="29" code="PPC:ERR-50015">Argument $dt is missing from the Docblock of contains</error>
-      <error line="29" code="PPC:ERR-50015">Argument $dtFrom is missing from the Docblock of contains</error>
-      <error line="29" code="PPC:ERR-50015">Argument $dtTo is missing from the Docblock of contains</error>
-      <error line="29" code="PPC:ERR-50008">No summary for method contains()</error>
-      <error line="11" code="PPC:ERR-50007">No summary for property $dt1</error>
-      <error line="17" code="PPC:ERR-50007">No summary for property $dt2</error>
+      <error line="29" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
   </file>
   <file path="Str/Random.php" generated-path="Str.Random.html" hash="4c890595458c07828ecfd98c949f6b77" package="Default">
@@ -579,45 +525,39 @@
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Month/FormatterShort.php" generated-path="Calendar.Month.FormatterShort.html" hash="699edb4d377578555f69d2e2f072935d" package="Default">
+  <file path="Calendar/Month/FormatterShort.php" generated-path="Calendar.Month.FormatterShort.html" hash="6455319dff0dfd3f60753b4a989f51ce" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
     <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
-    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="18" package="Default">
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="11" package="Default">
       <extends>\Helpers\Calendar\Month\Formatter</extends>
       <name>FormatterShort</name>
       <full_name>\Helpers\Calendar\Month\FormatterShort</full_name>
-      <docblock line="18">
-        <description>Description of FormatterShort</description>
+      <docblock line="11">
+        <description>Month data formatter</description>
         <long-description></long-description>
-        <tag name="author" line="18" description="ksf"/>
-        <tag name="package" line="18" description="Default"/>
+        <tag name="author" line="11" description="Konstantin S. Filin"/>
+        <tag name="package" line="11" description="Default"/>
         <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter" refers="\Helpers\Calendar\Month\Formatter" link="/classes/Helpers.Calendar.Month.Formatter.html"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="25" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="17" package="Default">
         <name>getWeekdayNames</name>
         <full_name>\Helpers\Calendar\Month\FormatterShort::getWeekdayNames()</full_name>
-        <docblock line="25">
-          <description></description>
+        <docblock line="17">
+          <description>Returns list of weekday names</description>
           <long-description></long-description>
-          <tag name="return" line="25" description="" type="array">
-            <type>array</type>
-          </tag>
           <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter::getWeekdayNames()" refers="\Helpers\Calendar\Month\Formatter::getWeekdayNames()" link="/classes/Helpers.Calendar.Month.Formatter.html#method_getWeekdayNames"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="42" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="33" package="Default">
         <name>getMonthName</name>
         <full_name>\Helpers\Calendar\Month\FormatterShort::getMonthName()</full_name>
-        <docblock line="42">
-          <description></description>
+        <docblock line="33">
+          <description>Returns month name</description>
           <long-description></long-description>
-          <tag name="return" line="42" description="" type="string">
-            <type>string</type>
-          </tag>
           <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter::getMonthName()" refers="\Helpers\Calendar\Month\Formatter::getMonthName()" link="/classes/Helpers.Calendar.Month.Formatter.html#method_getMonthName"/>
         </docblock>
         <argument line="0" by_reference="false">
@@ -626,19 +566,19 @@
           <type>\Helpers\Calendar\Month</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="16" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="20" package="Default">
         <name>getWeekdayName</name>
         <full_name>\Helpers\Calendar\Month\Formatter::getWeekdayName()</full_name>
-        <docblock line="16">
+        <docblock line="20">
           <description>Returns weekday name for given month day</description>
           <long-description></long-description>
-          <tag name="param" line="16" description="&lt;p&gt;Month object&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$dayNum">
+          <tag name="param" line="20" description="&lt;p&gt;Month object&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$month">
             <type>\Helpers\Calendar\Month</type>
           </tag>
-          <tag name="param" line="16" description="&lt;p&gt;Month day&lt;/p&gt;" type="integer" variable="$dayNum">
+          <tag name="param" line="20" description="&lt;p&gt;Month day&lt;/p&gt;" type="integer" variable="$dayNum">
             <type>integer</type>
           </tag>
-          <tag name="return" line="16" description="Weekday name (Monday, Tuesday, Wednesday, ...)" type="string">
+          <tag name="return" line="20" description="Weekday name (Monday, Tuesday, Wednesday, ...)" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -654,37 +594,40 @@
         </argument>
         <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="28" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="32" package="Default">
         <name>getMonthNames</name>
         <full_name>\Helpers\Calendar\Month\Formatter::getMonthNames()</full_name>
-        <docblock line="28">
-          <description></description>
+        <docblock line="32">
+          <description>Returns list of month names</description>
           <long-description></long-description>
-          <tag name="return" line="28" description="" type="array">
+          <tag name="return" line="32" description="List of month names" type="array">
             <type>array</type>
           </tag>
         </docblock>
         <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="50" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="54" package="Default">
         <name>getWeekdayNames</name>
         <full_name>\Helpers\Calendar\Month\Formatter::getWeekdayNames()</full_name>
-        <docblock line="50">
-          <description></description>
+        <docblock line="54">
+          <description>Returns list of weekday names</description>
           <long-description></long-description>
-          <tag name="return" line="50" description="" type="array">
+          <tag name="return" line="54" description="List of weekday names" type="array">
             <type>array</type>
           </tag>
         </docblock>
         <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="67" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="72" package="Default">
         <name>getMonthName</name>
         <full_name>\Helpers\Calendar\Month\Formatter::getMonthName()</full_name>
-        <docblock line="67">
-          <description></description>
+        <docblock line="72">
+          <description>Returns month name</description>
           <long-description></long-description>
-          <tag name="return" line="67" description="" type="string">
+          <tag name="param" line="72" description="" type="\Helpers\Calendar\Month" variable="$month">
+            <type>\Helpers\Calendar\Month</type>
+          </tag>
+          <tag name="return" line="72" description="Month name in format &quot;MonthName year&quot;" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -698,41 +641,39 @@
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="25" code="PPC:ERR-50008">No summary for method getWeekdayNames()</error>
-      <error line="42" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getMonthName</error>
-      <error line="42" code="PPC:ERR-50008">No summary for method getMonthName()</error>
+      <error line="33" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getMonthName</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Month/Fabric.php" generated-path="Calendar.Month.Fabric.html" hash="7c5ada3c3d30fe7f326223510b57a750" package="Default">
+  <file path="Calendar/Month/Fabric.php" generated-path="Calendar.Month.Fabric.html" hash="82290f15541c0e10647cfb8df359b0b5" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
     <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
-    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="18" package="Default">
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="12" package="Default">
       <extends/>
       <name>Fabric</name>
       <full_name>\Helpers\Calendar\Month\Fabric</full_name>
-      <docblock line="18">
+      <docblock line="12">
         <description>Description of Fabric</description>
         <long-description></long-description>
-        <tag name="author" line="18" description="ksf"/>
-        <tag name="package" line="18" description="Default"/>
+        <tag name="author" line="12" description="Konstantin S. Filin"/>
+        <tag name="package" line="12" description="Default"/>
       </docblock>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="26" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="20" package="Default">
         <name>createFromPeriod</name>
         <full_name>\Helpers\Calendar\Month\Fabric::createFromPeriod()</full_name>
-        <docblock line="26">
+        <docblock line="20">
           <description>Creates month object from given period string in format YYYYMM</description>
           <long-description></long-description>
-          <tag name="param" line="26" description="&lt;p&gt;Period string in format YYYYMM&lt;/p&gt;" type="string" variable="$period">
+          <tag name="param" line="20" description="&lt;p&gt;Period string in format YYYYMM&lt;/p&gt;" type="string" variable="$period">
             <type>string</type>
           </tag>
-          <tag name="throws" line="26" description="" type="\InvalidArgumentException">
+          <tag name="throws" line="20" description="" type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
-          <tag name="return" line="26" description="Resulting object" type="\Helpers\Calendar\Month">
+          <tag name="return" line="20" description="Resulting object" type="\Helpers\Calendar\Month">
             <type>\Helpers\Calendar\Month</type>
           </tag>
         </docblock>
@@ -742,16 +683,16 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="43" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="37" package="Default">
         <name>createFromDt</name>
         <full_name>\Helpers\Calendar\Month\Fabric::createFromDt()</full_name>
-        <docblock line="43">
+        <docblock line="37">
           <description>Creates month object from given date</description>
           <long-description></long-description>
-          <tag name="param" line="43" description="&lt;p&gt;Date string in format YYYY-MM-DD&lt;/p&gt;" type="string" variable="$dt">
+          <tag name="param" line="37" description="&lt;p&gt;Date string in format YYYY-MM-DD&lt;/p&gt;" type="string" variable="$dt">
             <type>string</type>
           </tag>
-          <tag name="return" line="43" description="Resulting object" type="\Helpers\Calendar\Month">
+          <tag name="return" line="37" description="Resulting object" type="\Helpers\Calendar\Month">
             <type>\Helpers\Calendar\Month</type>
           </tag>
         </docblock>
@@ -761,13 +702,16 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="57" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="52" package="Default">
         <name>getPrev</name>
         <full_name>\Helpers\Calendar\Month\Fabric::getPrev()</full_name>
-        <docblock line="57">
-          <description></description>
+        <docblock line="52">
+          <description>Returns previous month</description>
           <long-description></long-description>
-          <tag name="return" line="57" description="" type="\Helpers\Calendar\Month">
+          <tag name="param" line="52" description="" type="\Helpers\Calendar\Month" variable="$month">
+            <type>\Helpers\Calendar\Month</type>
+          </tag>
+          <tag name="return" line="52" description="" type="\Helpers\Calendar\Month">
             <type>\Helpers\Calendar\Month</type>
           </tag>
         </docblock>
@@ -777,13 +721,13 @@
           <type>\Helpers\Calendar\Month</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="76" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar\Month" line="71" package="Default">
         <name>getNext</name>
         <full_name>\Helpers\Calendar\Month\Fabric::getNext()</full_name>
-        <docblock line="76">
-          <description></description>
+        <docblock line="71">
+          <description>Returns next month</description>
           <long-description></long-description>
-          <tag name="return" line="76" description="" type="\Helpers\Calendar\Month">
+          <tag name="return" line="71" description="" type="\Helpers\Calendar\Month">
             <type>\Helpers\Calendar\Month</type>
           </tag>
         </docblock>
@@ -796,285 +740,85 @@
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="57" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getPrev</error>
-      <error line="57" code="PPC:ERR-50008">No summary for method getPrev()</error>
-      <error line="76" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getNext</error>
-      <error line="76" code="PPC:ERR-50008">No summary for method getNext()</error>
+      <error line="71" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getNext</error>
     </parse_markers>
   </file>
-  <file path="Calendar/ru/Month.php" generated-path="Calendar.ru.Month.html" hash="b0356521d76ef9af28b4393b1a3eea76" package="Default">
+  <file path="Calendar/Month.php" generated-path="Calendar.Month.html" hash="af13075c84cb7f8b1083bde37afab32b" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Helpers\Calendar\ru" line="5" package="Default">
-      <extends>\Helpers\Calendar\Month</extends>
-      <name>Month</name>
-      <full_name>\Helpers\Calendar\ru\Month</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-        <tag name="inherited_from" description="\Helpers\Calendar\Month" refers="\Helpers\Calendar\Month" link="/classes/Helpers.Calendar.Month.html"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar\ru" line="12" package="Default">
-        <name>$year</name>
-        <full_name>\Helpers\Calendar\Month::$year</full_name>
-        <default></default>
-        <docblock line="12">
-          <description>Year part</description>
-          <long-description></long-description>
-          <tag name="var" line="12" description="" type="integer" variable="">
-            <type>integer</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar\ru" line="18" package="Default">
-        <name>$monthNum</name>
-        <full_name>\Helpers\Calendar\Month::$monthNum</full_name>
-        <default></default>
-        <docblock line="18">
-          <description>Month number part</description>
-          <long-description></long-description>
-          <tag name="var" line="18" description="" type="integer" variable="">
-            <type>integer</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar\ru" line="24" package="Default">
-        <name>$is</name>
-        <full_name>\Helpers\Calendar\Month::$is</full_name>
-        <default></default>
-        <docblock line="24">
-          <description>Month attribites checker</description>
-          <long-description></long-description>
-          <tag name="var" line="24" description="" type="\Helpers\Calendar\Month\Is" variable="">
-            <type>\Helpers\Calendar\Month\Is</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar\ru" line="30" package="Default">
-        <name>$dt</name>
-        <full_name>\Helpers\Calendar\Month::$dt</full_name>
-        <default></default>
-        <docblock line="30">
-          <description>Dates checker</description>
-          <long-description></long-description>
-          <tag name="var" line="30" description="" type="\Helpers\Calendar\Month\Dt" variable="">
-            <type>\Helpers\Calendar\Month\Dt</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="7" package="Default">
-        <name>getWeekdayNamesShort</name>
-        <full_name>\Helpers\Calendar\ru\Month::getWeekdayNamesShort()</full_name>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="20" package="Default">
-        <name>getWeekdayNames</name>
-        <full_name>\Helpers\Calendar\ru\Month::getWeekdayNames()</full_name>
-        <docblock line="20">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="33" package="Default">
-        <name>getMonthNames</name>
-        <full_name>\Helpers\Calendar\ru\Month::getMonthNames()</full_name>
-        <docblock line="33">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="38" package="Default">
-        <name>__construct</name>
-        <full_name>\Helpers\Calendar\Month::__construct()</full_name>
-        <docblock line="38">
-          <description>Creates class instance</description>
-          <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;Year&lt;/p&gt;" type="integer" variable="$year">
-            <type>integer</type>
-          </tag>
-          <tag name="param" line="38" description="&lt;p&gt;Month number&lt;/p&gt;" type="integer" variable="$monthNum">
-            <type>integer</type>
-          </tag>
-          <tag name="throws" line="38" description="" type="\InvalidArgumentException">
-            <type>\InvalidArgumentException</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$year</name>
-          <default>0</default>
-          <type>integer</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$monthNum</name>
-          <default>0</default>
-          <type>integer</type>
-        </argument>
-        <inherited_from>\Helpers\Calendar\Month</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="54" package="Default">
-        <name>__toString</name>
-        <full_name>\Helpers\Calendar\Month::__toString()</full_name>
-        <docblock line="54">
-          <description>Returns month name in format YYYYMM</description>
-          <long-description></long-description>
-          <tag name="return" line="54" description="Month name in format YYYYMM" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <inherited_from>\Helpers\Calendar\Month</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="63" package="Default">
-        <name>getYear</name>
-        <full_name>\Helpers\Calendar\Month::getYear()</full_name>
-        <docblock line="63">
-          <description>Returns year of the month</description>
-          <long-description></long-description>
-          <tag name="return" line="63" description="Year part" type="integer">
-            <type>integer</type>
-          </tag>
-        </docblock>
-        <inherited_from>\Helpers\Calendar\Month</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="71" package="Default">
-        <name>getMonthNumStr</name>
-        <full_name>\Helpers\Calendar\Month::getMonthNumStr()</full_name>
-        <docblock line="71">
-          <description>Returns month number as two digits string</description>
-          <long-description></long-description>
-          <tag name="return" line="71" description="Month number from &quot;01&quot; to &quot;12&quot;" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <inherited_from>\Helpers\Calendar\Month</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="79" package="Default">
-        <name>getMonthNum</name>
-        <full_name>\Helpers\Calendar\Month::getMonthNum()</full_name>
-        <docblock line="79">
-          <description>Returns month number as integer</description>
-          <long-description></long-description>
-          <tag name="return" line="79" description="Month number from 1 to 12" type="integer">
-            <type>integer</type>
-          </tag>
-        </docblock>
-        <inherited_from>\Helpers\Calendar\Month</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="87" package="Default">
-        <name>is</name>
-        <full_name>\Helpers\Calendar\Month::is()</full_name>
-        <docblock line="87">
-          <description>Returns month attributes checker object</description>
-          <long-description></long-description>
-          <tag name="return" line="87" description="" type="\Helpers\Calendar\Month\Is">
-            <type>\Helpers\Calendar\Month\Is</type>
-          </tag>
-        </docblock>
-        <inherited_from>\Helpers\Calendar\Month</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\ru" line="100" package="Default">
-        <name>dt</name>
-        <full_name>\Helpers\Calendar\Month::dt()</full_name>
-        <docblock line="100">
-          <description>Return month dates checker object</description>
-          <long-description></long-description>
-          <tag name="return" line="100" description="" type="\Helpers\Calendar\Month\Dt">
-            <type>\Helpers\Calendar\Month\Dt</type>
-          </tag>
-        </docblock>
-        <inherited_from>\Helpers\Calendar\Month</inherited_from>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\ru\Month</error>
-      <error line="7" code="PPC:ERR-50008">No summary for method getWeekdayNamesShort()</error>
-      <error line="20" code="PPC:ERR-50008">No summary for method getWeekdayNames()</error>
-      <error line="33" code="PPC:ERR-50008">No summary for method getMonthNames()</error>
-    </parse_markers>
-  </file>
-  <file path="Calendar/Month.php" generated-path="Calendar.Month.html" hash="df4d6d7824e271356b1819f7bd0b4c9f" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Helpers\Calendar" line="6" package="Default">
+    <class final="false" abstract="false" namespace="Helpers\Calendar" line="8" package="Default">
       <extends/>
       <name>Month</name>
       <full_name>\Helpers\Calendar\Month</full_name>
-      <docblock line="6">
-        <description></description>
+      <docblock line="8">
+        <description>Month object</description>
         <long-description></long-description>
-        <tag name="package" line="6" description="Default"/>
+        <tag name="package" line="8" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="12" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="14" package="Default">
         <name>$year</name>
         <full_name>\Helpers\Calendar\Month::$year</full_name>
         <default></default>
-        <docblock line="12">
+        <docblock line="14">
           <description>Year part</description>
           <long-description></long-description>
-          <tag name="var" line="12" description="" type="integer" variable="">
+          <tag name="var" line="14" description="" type="integer" variable="">
             <type>integer</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="18" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="20" package="Default">
         <name>$monthNum</name>
         <full_name>\Helpers\Calendar\Month::$monthNum</full_name>
         <default></default>
-        <docblock line="18">
+        <docblock line="20">
           <description>Month number part</description>
           <long-description></long-description>
-          <tag name="var" line="18" description="" type="integer" variable="">
+          <tag name="var" line="20" description="" type="integer" variable="">
             <type>integer</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="24" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="26" package="Default">
         <name>$is</name>
         <full_name>\Helpers\Calendar\Month::$is</full_name>
         <default></default>
-        <docblock line="24">
+        <docblock line="26">
           <description>Month attribites checker</description>
           <long-description></long-description>
-          <tag name="var" line="24" description="" type="\Helpers\Calendar\Month\Is" variable="">
+          <tag name="var" line="26" description="" type="\Helpers\Calendar\Month\Is" variable="">
             <type>\Helpers\Calendar\Month\Is</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="30" package="Default">
+      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="32" package="Default">
         <name>$dt</name>
         <full_name>\Helpers\Calendar\Month::$dt</full_name>
         <default></default>
-        <docblock line="30">
+        <docblock line="32">
           <description>Dates checker</description>
           <long-description></long-description>
-          <tag name="var" line="30" description="" type="\Helpers\Calendar\Month\Dt" variable="">
+          <tag name="var" line="32" description="" type="\Helpers\Calendar\Month\Dt" variable="">
             <type>\Helpers\Calendar\Month\Dt</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="38" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="40" package="Default">
         <name>__construct</name>
         <full_name>\Helpers\Calendar\Month::__construct()</full_name>
-        <docblock line="38">
+        <docblock line="40">
           <description>Creates class instance</description>
           <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;Year&lt;/p&gt;" type="integer" variable="$year">
+          <tag name="param" line="40" description="&lt;p&gt;Year&lt;/p&gt;" type="integer" variable="$year">
             <type>integer</type>
           </tag>
-          <tag name="param" line="38" description="&lt;p&gt;Month number&lt;/p&gt;" type="integer" variable="$monthNum">
+          <tag name="param" line="40" description="&lt;p&gt;Month number&lt;/p&gt;" type="integer" variable="$monthNum">
             <type>integer</type>
           </tag>
-          <tag name="throws" line="38" description="" type="\InvalidArgumentException">
+          <tag name="throws" line="40" description="" type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
         </docblock>
@@ -1089,68 +833,68 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="54" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="56" package="Default">
         <name>__toString</name>
         <full_name>\Helpers\Calendar\Month::__toString()</full_name>
-        <docblock line="54">
+        <docblock line="56">
           <description>Returns month name in format YYYYMM</description>
           <long-description></long-description>
-          <tag name="return" line="54" description="Month name in format YYYYMM" type="string">
+          <tag name="return" line="56" description="Month name in format YYYYMM" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="63" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="65" package="Default">
         <name>getYear</name>
         <full_name>\Helpers\Calendar\Month::getYear()</full_name>
-        <docblock line="63">
+        <docblock line="65">
           <description>Returns year of the month</description>
           <long-description></long-description>
-          <tag name="return" line="63" description="Year part" type="integer">
+          <tag name="return" line="65" description="Year part" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="71" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="73" package="Default">
         <name>getMonthNumStr</name>
         <full_name>\Helpers\Calendar\Month::getMonthNumStr()</full_name>
-        <docblock line="71">
+        <docblock line="73">
           <description>Returns month number as two digits string</description>
           <long-description></long-description>
-          <tag name="return" line="71" description="Month number from &quot;01&quot; to &quot;12&quot;" type="string">
+          <tag name="return" line="73" description="Month number from &quot;01&quot; to &quot;12&quot;" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="79" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="81" package="Default">
         <name>getMonthNum</name>
         <full_name>\Helpers\Calendar\Month::getMonthNum()</full_name>
-        <docblock line="79">
+        <docblock line="81">
           <description>Returns month number as integer</description>
           <long-description></long-description>
-          <tag name="return" line="79" description="Month number from 1 to 12" type="integer">
+          <tag name="return" line="81" description="Month number from 1 to 12" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="87" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="89" package="Default">
         <name>is</name>
         <full_name>\Helpers\Calendar\Month::is()</full_name>
-        <docblock line="87">
+        <docblock line="89">
           <description>Returns month attributes checker object</description>
           <long-description></long-description>
-          <tag name="return" line="87" description="" type="\Helpers\Calendar\Month\Is">
+          <tag name="return" line="89" description="" type="\Helpers\Calendar\Month\Is">
             <type>\Helpers\Calendar\Month\Is</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="100" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="102" package="Default">
         <name>dt</name>
         <full_name>\Helpers\Calendar\Month::dt()</full_name>
-        <docblock line="100">
+        <docblock line="102">
           <description>Return month dates checker object</description>
           <long-description></long-description>
-          <tag name="return" line="100" description="" type="\Helpers\Calendar\Month\Dt">
+          <tag name="return" line="102" description="" type="\Helpers\Calendar\Month\Dt">
             <type>\Helpers\Calendar\Month\Dt</type>
           </tag>
         </docblock>
@@ -1158,7 +902,6 @@
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="6" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\Month</error>
     </parse_markers>
   </file>
   <file path="Calendar/Week.php" generated-path="Calendar.Week.html" hash="e23134302502bf3608fc8bb2ab65ec33" package="Default">
@@ -1245,21 +988,22 @@
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
   </file>
-  <file path="Calendar/Month/Is.php" generated-path="Calendar.Month.Is.html" hash="2aa7edad77f64bcb3713663c76b8f723" package="Default">
+  <file path="Calendar/Month/Is.php" generated-path="Calendar.Month.Is.html" hash="4fc4ebb394cad9a3cf4f04e8a74153a6" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
     <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
+    <namespace-alias name="Date">\Helpers\Calendar\Date</namespace-alias>
     <class final="false" abstract="false" namespace="Helpers\Calendar\Month" line="12" package="Default">
       <extends/>
       <name>Is</name>
       <full_name>\Helpers\Calendar\Month\Is</full_name>
       <docblock line="12">
-        <description>Description of Info</description>
+        <description>Month attributes checker</description>
         <long-description></long-description>
-        <tag name="author" line="12" description="ksf"/>
+        <tag name="author" line="12" description="Konstantin S. Filin"/>
         <tag name="package" line="12" description="Default"/>
       </docblock>
       <property static="false" visibility="protected" namespace="Helpers\Calendar\Month" line="18" package="Default">
@@ -1291,42 +1035,42 @@
         <name>currentYear</name>
         <full_name>\Helpers\Calendar\Month\Is::currentYear()</full_name>
         <docblock line="28">
-          <description></description>
+          <description>Checks if month is in current year</description>
           <long-description></long-description>
-          <tag name="return" line="28" description="" type="boolean">
+          <tag name="return" line="28" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="36" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="37" package="Default">
         <name>current</name>
         <full_name>\Helpers\Calendar\Month\Is::current()</full_name>
-        <docblock line="36">
-          <description></description>
+        <docblock line="37">
+          <description>Checks if it is current month</description>
           <long-description></long-description>
-          <tag name="return" line="36" description="" type="boolean">
+          <tag name="return" line="37" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="47" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="49" package="Default">
         <name>past</name>
         <full_name>\Helpers\Calendar\Month\Is::past()</full_name>
-        <docblock line="47">
-          <description></description>
+        <docblock line="49">
+          <description>Checks if month is in a past</description>
           <long-description></long-description>
-          <tag name="return" line="47" description="" type="boolean">
+          <tag name="return" line="49" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="61" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month" line="63" package="Default">
         <name>future</name>
         <full_name>\Helpers\Calendar\Month\Is::future()</full_name>
-        <docblock line="61">
-          <description></description>
+        <docblock line="63">
+          <description>Checks if month is in a future</description>
           <long-description></long-description>
-          <tag name="return" line="61" description="" type="boolean">
+          <tag name="return" line="63" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -1336,10 +1080,6 @@
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
       <error line="20" code="PPC:ERR-50015">Argument $month is missing from the Docblock of __construct</error>
       <error line="20" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method currentYear()</error>
-      <error line="36" code="PPC:ERR-50008">No summary for method current()</error>
-      <error line="47" code="PPC:ERR-50008">No summary for method past()</error>
-      <error line="61" code="PPC:ERR-50008">No summary for method future()</error>
       <error line="18" code="PPC:ERR-50007">No summary for property $month</error>
     </parse_markers>
   </file>
@@ -1364,262 +1104,63 @@
       <error line="4" code="PPC:ERR-50005">No summary for class \Helpers\Str\Ru</error>
     </parse_markers>
   </file>
-  <file path="Str/RuPluralizer.php" generated-path="Str.RuPluralizer.html" hash="64ac289ccaf8a898a01a122dc18b00ab" package="Default">
+  <file path="Calendar/Date.php" generated-path="Calendar.Date.html" hash="b673add222d5a5e620aee7e0bbe285f7" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Helpers\Str" line="16" package="Default">
-      <extends/>
-      <name>RuPluralizer</name>
-      <full_name>\Helpers\Str\RuPluralizer</full_name>
-      <docblock line="16">
-        <description>Description of RuPluralizer</description>
-        <long-description></long-description>
-        <tag name="author" line="16" description="ksf"/>
-        <tag name="package" line="16" description="Default"/>
-      </docblock>
-      <property static="false" visibility="private" namespace="Helpers\Str" line="22" package="Default">
-        <name>$form1</name>
-        <full_name>\Helpers\Str\RuPluralizer::$form1</full_name>
-        <default></default>
-        <docblock line="22">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="22" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="Helpers\Str" line="28" package="Default">
-        <name>$form2</name>
-        <full_name>\Helpers\Str\RuPluralizer::$form2</full_name>
-        <default></default>
-        <docblock line="28">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="28" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="Helpers\Str" line="34" package="Default">
-        <name>$form3</name>
-        <full_name>\Helpers\Str\RuPluralizer::$form3</full_name>
-        <default></default>
-        <docblock line="34">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="34" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="Helpers\Str" line="40" package="Default">
-        <name>$rest10</name>
-        <full_name>\Helpers\Str\RuPluralizer::$rest10</full_name>
-        <default></default>
-        <docblock line="40">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="40" description="" type="integer" variable="">
-            <type>integer</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="Helpers\Str" line="46" package="Default">
-        <name>$rest100</name>
-        <full_name>\Helpers\Str\RuPluralizer::$rest100</full_name>
-        <default></default>
-        <docblock line="46">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="46" description="" type="integer" variable="">
-            <type>integer</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Str" line="48" package="Default">
-        <name>__construct</name>
-        <full_name>\Helpers\Str\RuPluralizer::__construct()</full_name>
-        <docblock line="48">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$form1</name>
-          <default></default>
-          <type>\Helpers\Str\string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$form2</name>
-          <default></default>
-          <type>\Helpers\Str\string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$form3</name>
-          <default></default>
-          <type>\Helpers\Str\string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Str" line="56" package="Default">
-        <name>run</name>
-        <full_name>\Helpers\Str\RuPluralizer::run()</full_name>
-        <docblock line="56">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$num</name>
-          <default></default>
-          <type>\Helpers\Str\int</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Helpers\Str" line="69" package="Default">
-        <name>fillRest</name>
-        <full_name>\Helpers\Str\RuPluralizer::fillRest()</full_name>
-        <docblock line="69">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$num</name>
-          <default></default>
-          <type>\Helpers\Str\int</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Helpers\Str" line="76" package="Default">
-        <name>isForm1</name>
-        <full_name>\Helpers\Str\RuPluralizer::isForm1()</full_name>
-        <docblock line="76">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Helpers\Str" line="81" package="Default">
-        <name>isForm2</name>
-        <full_name>\Helpers\Str\RuPluralizer::isForm2()</full_name>
-        <docblock line="81">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="48" code="PPC:ERR-50015">Argument $form1 is missing from the Docblock of __construct</error>
-      <error line="48" code="PPC:ERR-50015">Argument $form2 is missing from the Docblock of __construct</error>
-      <error line="48" code="PPC:ERR-50015">Argument $form3 is missing from the Docblock of __construct</error>
-      <error line="48" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="56" code="PPC:ERR-50015">Argument $num is missing from the Docblock of run</error>
-      <error line="56" code="PPC:ERR-50008">No summary for method run()</error>
-      <error line="69" code="PPC:ERR-50015">Argument $num is missing from the Docblock of fillRest</error>
-      <error line="69" code="PPC:ERR-50008">No summary for method fillRest()</error>
-      <error line="76" code="PPC:ERR-50008">No summary for method isForm1()</error>
-      <error line="81" code="PPC:ERR-50008">No summary for method isForm2()</error>
-      <error line="22" code="PPC:ERR-50007">No summary for property $form1</error>
-      <error line="28" code="PPC:ERR-50007">No summary for property $form2</error>
-      <error line="34" code="PPC:ERR-50007">No summary for property $form3</error>
-      <error line="40" code="PPC:ERR-50007">No summary for property $rest10</error>
-      <error line="46" code="PPC:ERR-50007">No summary for property $rest100</error>
-    </parse_markers>
-  </file>
-  <file path="Calendar/Date.php" generated-path="Calendar.Date.html" hash="31c8cb1e1d39b10a912176332a4e4aa4" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Helpers\Calendar" line="5" package="Default">
-      <extends/>
+    <class final="false" abstract="false" namespace="Helpers\Calendar" line="9" package="Default">
+      <extends>\DateTime</extends>
       <name>Date</name>
       <full_name>\Helpers\Calendar\Date</full_name>
-      <docblock line="5">
+      <docblock line="9">
         <description></description>
         <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
+        <tag name="see" line="9" description="" link="http://php.net/manual/en/book.datetime.php"/>
+        <tag name="author" line="9" description="Konstantin S. Filin"/>
+        <tag name="package" line="9" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="7" package="Default">
-        <name>$day</name>
-        <full_name>\Helpers\Calendar\Date::$day</full_name>
-        <default></default>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="8" package="Default">
-        <name>$month</name>
-        <full_name>\Helpers\Calendar\Date::$month</full_name>
-        <default></default>
-        <docblock line="8">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Helpers\Calendar" line="9" package="Default">
-        <name>$year</name>
-        <full_name>\Helpers\Calendar\Date::$year</full_name>
-        <default></default>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="17" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="14" package="Default">
         <name>__construct</name>
         <full_name>\Helpers\Calendar\Date::__construct()</full_name>
-        <docblock line="17">
+        <docblock line="14">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="17" description="" type="integer" variable="$year">
-            <type>integer</type>
-          </tag>
-          <tag name="param" line="17" description="" type="integer" variable="$month">
-            <type>integer</type>
-          </tag>
-          <tag name="param" line="17" description="" type="integer" variable="$day">
-            <type>integer</type>
-          </tag>
+          <tag name="see" line="14" description="" link="http://php.net/manual/en/book.datetime.php"/>
         </docblock>
         <argument line="0" by_reference="false">
-          <name>$year</name>
-          <default></default>
-          <type>integer</type>
+          <name>$time</name>
+          <default>"now"</default>
+          <type/>
         </argument>
         <argument line="0" by_reference="false">
-          <name>$month</name>
-          <default></default>
-          <type>integer</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$day</name>
-          <default></default>
-          <type>integer</type>
+          <name>$object</name>
+          <default>null</default>
+          <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="27" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="22" package="Default">
         <name>getWeekdayNum</name>
         <full_name>\Helpers\Calendar\Date::getWeekdayNum()</full_name>
-        <docblock line="27">
-          <description></description>
+        <docblock line="22">
+          <description>Returns weekday number</description>
           <long-description></long-description>
-          <tag name="return" line="27" description="" type="integer">
+          <tag name="return" line="22" description="Weekday number from 1 (Monday) to 7 (Sunday)" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="39" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="32" package="Default">
         <name>getPrev</name>
         <full_name>\Helpers\Calendar\Date::getPrev()</full_name>
-        <docblock line="39">
-          <description></description>
+        <docblock line="32">
+          <description>Returns day before given date</description>
           <long-description></long-description>
-          <tag name="param" line="39" description="" type="integer" variable="$days">
+          <tag name="param" line="32" description="&lt;p&gt;How many days to go back&lt;/p&gt;" type="integer" variable="$days">
             <type>integer</type>
           </tag>
-          <tag name="return" line="39" description="" type="string">
+          <tag name="return" line="32" description="Date before given date" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -1629,16 +1170,16 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="51" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="44" package="Default">
         <name>getNext</name>
         <full_name>\Helpers\Calendar\Date::getNext()</full_name>
-        <docblock line="51">
-          <description></description>
+        <docblock line="44">
+          <description>Returns day after given date</description>
           <long-description></long-description>
-          <tag name="param" line="51" description="" type="integer" variable="$days">
+          <tag name="param" line="44" description="&lt;p&gt;How many days to go forward&lt;/p&gt;" type="integer" variable="$days">
             <type>integer</type>
           </tag>
-          <tag name="return" line="51" description="" type="string">
+          <tag name="return" line="44" description="Date after given date" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -1648,142 +1189,101 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="62" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="55" package="Default">
         <name>getAsArray</name>
         <full_name>\Helpers\Calendar\Date::getAsArray()</full_name>
-        <docblock line="62">
-          <description></description>
+        <docblock line="55">
+          <description>Returns date as array</description>
           <long-description></long-description>
-          <tag name="return" line="62" description="" type="array">
+          <tag name="return" line="55" description="Date as array. [ 0 =&gt; year, 1 =&gt; month, 2 =&gt; day ]" type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="75" package="Default">
-        <name>getAsObj</name>
-        <full_name>\Helpers\Calendar\Date::getAsObj()</full_name>
-        <docblock line="75">
-          <description></description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="68" package="Default">
+        <name>__toString</name>
+        <full_name>\Helpers\Calendar\Date::__toString()</full_name>
+        <docblock line="68">
+          <description>Returns date as string</description>
           <long-description></long-description>
-          <tag name="return" line="75" description="" type="\DateTime">
-            <type>\DateTime</type>
+          <tag name="return" line="68" description="Date as string in format YYYY-MM-DD" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="76" package="Default">
+        <name>isMonday</name>
+        <full_name>\Helpers\Calendar\Date::isMonday()</full_name>
+        <docblock line="76">
+          <description>Checks if date is monday</description>
+          <long-description></long-description>
+          <tag name="return" line="76" description="True if yes" type="boolean">
+            <type>boolean</type>
           </tag>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="84" package="Default">
-        <name>__toString</name>
-        <full_name>\Helpers\Calendar\Date::__toString()</full_name>
-        <docblock line="84">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="84" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="98" package="Default">
-        <name>createFromString</name>
-        <full_name>\Helpers\Calendar\Date::createFromString()</full_name>
-        <docblock line="98">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="98" description="" type="string" variable="$date">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="98" description="" type="\Helpers\Calendar\Date">
-            <type>\Helpers\Calendar\Date</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$date</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Helpers\Calendar" line="109" package="Default">
-        <name>now</name>
-        <full_name>\Helpers\Calendar\Date::now()</full_name>
-        <docblock line="109">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="109" description="" type="\kfilin\Calendar\Date">
-            <type>\kfilin\Calendar\Date</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="118" package="Default">
-        <name>isMonday</name>
-        <full_name>\Helpers\Calendar\Date::isMonday()</full_name>
-        <docblock line="118">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="118" description="" type="boolean">
-            <type>boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="126" package="Default">
         <name>isTuesday</name>
         <full_name>\Helpers\Calendar\Date::isTuesday()</full_name>
-        <docblock line="126">
-          <description></description>
+        <docblock line="84">
+          <description>Checks if date is tuesday</description>
           <long-description></long-description>
-          <tag name="return" line="126" description="" type="boolean">
+          <tag name="return" line="84" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="134" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="92" package="Default">
         <name>isWednesday</name>
         <full_name>\Helpers\Calendar\Date::isWednesday()</full_name>
-        <docblock line="134">
-          <description></description>
+        <docblock line="92">
+          <description>Checks if date is wednesday</description>
           <long-description></long-description>
-          <tag name="return" line="134" description="" type="boolean">
+          <tag name="return" line="92" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="142" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="100" package="Default">
         <name>isThursday</name>
         <full_name>\Helpers\Calendar\Date::isThursday()</full_name>
-        <docblock line="142">
-          <description></description>
+        <docblock line="100">
+          <description>Checks if date is thursday</description>
           <long-description></long-description>
-          <tag name="return" line="142" description="" type="boolean">
+          <tag name="return" line="100" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="150" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="108" package="Default">
         <name>isFriday</name>
         <full_name>\Helpers\Calendar\Date::isFriday()</full_name>
-        <docblock line="150">
-          <description></description>
+        <docblock line="108">
+          <description>Checks if date is friday</description>
           <long-description></long-description>
-          <tag name="return" line="150" description="" type="boolean">
+          <tag name="return" line="108" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="158" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="116" package="Default">
         <name>isSaturday</name>
         <full_name>\Helpers\Calendar\Date::isSaturday()</full_name>
-        <docblock line="158">
-          <description></description>
+        <docblock line="116">
+          <description>Checks if date is saturday</description>
           <long-description></long-description>
-          <tag name="return" line="158" description="" type="boolean">
+          <tag name="return" line="116" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="166" package="Default">
-        <name>isSanday</name>
-        <full_name>\Helpers\Calendar\Date::isSanday()</full_name>
-        <docblock line="166">
-          <description></description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar" line="124" package="Default">
+        <name>isSunday</name>
+        <full_name>\Helpers\Calendar\Date::isSunday()</full_name>
+        <docblock line="124">
+          <description>Checks if date is sunday</description>
           <long-description></long-description>
-          <tag name="return" line="166" description="" type="boolean">
+          <tag name="return" line="124" description="True if yes" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -1791,26 +1291,10 @@
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\Date</error>
-      <error line="17" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="27" code="PPC:ERR-50008">No summary for method getWeekdayNum()</error>
-      <error line="39" code="PPC:ERR-50008">No summary for method getPrev()</error>
-      <error line="51" code="PPC:ERR-50008">No summary for method getNext()</error>
-      <error line="62" code="PPC:ERR-50008">No summary for method getAsArray()</error>
-      <error line="75" code="PPC:ERR-50008">No summary for method getAsObj()</error>
-      <error line="84" code="PPC:ERR-50008">No summary for method __toString()</error>
-      <error line="98" code="PPC:ERR-50008">No summary for method createFromString()</error>
-      <error line="109" code="PPC:ERR-50008">No summary for method now()</error>
-      <error line="118" code="PPC:ERR-50008">No summary for method isMonday()</error>
-      <error line="126" code="PPC:ERR-50008">No summary for method isTuesday()</error>
-      <error line="134" code="PPC:ERR-50008">No summary for method isWednesday()</error>
-      <error line="142" code="PPC:ERR-50008">No summary for method isThursday()</error>
-      <error line="150" code="PPC:ERR-50008">No summary for method isFriday()</error>
-      <error line="158" code="PPC:ERR-50008">No summary for method isSaturday()</error>
-      <error line="166" code="PPC:ERR-50008">No summary for method isSanday()</error>
-      <error line="7" code="PPC:ERR-50007">No summary for property $day</error>
-      <error line="8" code="PPC:ERR-50007">No summary for property $month</error>
-      <error line="9" code="PPC:ERR-50007">No summary for property $year</error>
+      <error line="9" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\Date</error>
+      <error line="14" code="PPC:ERR-50015">Argument $time is missing from the Docblock of __construct</error>
+      <error line="14" code="PPC:ERR-50015">Argument $object is missing from the Docblock of __construct</error>
+      <error line="14" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
   </file>
   <file path="Str.php" generated-path="Str.html" hash="73578f77e04ff24e30047e2efcfa26de" package="Default">
@@ -1958,19 +1442,584 @@
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
   </file>
+  <file path="Str/Ru/Pluralizer.php" generated-path="Str.Ru.Pluralizer.html" hash="6a59d2f1e290f1140d6f117bd1848911" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Helpers\Str\Ru" line="16" package="Default">
+      <extends/>
+      <name>Pluralizer</name>
+      <full_name>\Helpers\Str\Ru\Pluralizer</full_name>
+      <docblock line="16">
+        <description>Description of RuPluralizer</description>
+        <long-description></long-description>
+        <tag name="author" line="16" description="ksf"/>
+        <tag name="package" line="16" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="Helpers\Str\Ru" line="22" package="Default">
+        <name>$form1</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::$form1</full_name>
+        <default></default>
+        <docblock line="22">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="22" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Helpers\Str\Ru" line="28" package="Default">
+        <name>$form2</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::$form2</full_name>
+        <default></default>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Helpers\Str\Ru" line="34" package="Default">
+        <name>$form3</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::$form3</full_name>
+        <default></default>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="34" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Helpers\Str\Ru" line="40" package="Default">
+        <name>$rest10</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::$rest10</full_name>
+        <default></default>
+        <docblock line="40">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="40" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Helpers\Str\Ru" line="46" package="Default">
+        <name>$rest100</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::$rest100</full_name>
+        <default></default>
+        <docblock line="46">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="46" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Str\Ru" line="48" package="Default">
+        <name>__construct</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::__construct()</full_name>
+        <docblock line="48">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$form1</name>
+          <default></default>
+          <type>\Helpers\Str\Ru\string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$form2</name>
+          <default></default>
+          <type>\Helpers\Str\Ru\string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$form3</name>
+          <default></default>
+          <type>\Helpers\Str\Ru\string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Str\Ru" line="56" package="Default">
+        <name>run</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::run()</full_name>
+        <docblock line="56">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$num</name>
+          <default></default>
+          <type>\Helpers\Str\Ru\int</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Helpers\Str\Ru" line="69" package="Default">
+        <name>fillRest</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::fillRest()</full_name>
+        <docblock line="69">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$num</name>
+          <default></default>
+          <type>\Helpers\Str\Ru\int</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Helpers\Str\Ru" line="76" package="Default">
+        <name>isForm1</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::isForm1()</full_name>
+        <docblock line="76">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Helpers\Str\Ru" line="81" package="Default">
+        <name>isForm2</name>
+        <full_name>\Helpers\Str\Ru\Pluralizer::isForm2()</full_name>
+        <docblock line="81">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="48" code="PPC:ERR-50015">Argument $form1 is missing from the Docblock of __construct</error>
+      <error line="48" code="PPC:ERR-50015">Argument $form2 is missing from the Docblock of __construct</error>
+      <error line="48" code="PPC:ERR-50015">Argument $form3 is missing from the Docblock of __construct</error>
+      <error line="48" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="56" code="PPC:ERR-50015">Argument $num is missing from the Docblock of run</error>
+      <error line="56" code="PPC:ERR-50008">No summary for method run()</error>
+      <error line="69" code="PPC:ERR-50015">Argument $num is missing from the Docblock of fillRest</error>
+      <error line="69" code="PPC:ERR-50008">No summary for method fillRest()</error>
+      <error line="76" code="PPC:ERR-50008">No summary for method isForm1()</error>
+      <error line="81" code="PPC:ERR-50008">No summary for method isForm2()</error>
+      <error line="22" code="PPC:ERR-50007">No summary for property $form1</error>
+      <error line="28" code="PPC:ERR-50007">No summary for property $form2</error>
+      <error line="34" code="PPC:ERR-50007">No summary for property $form3</error>
+      <error line="40" code="PPC:ERR-50007">No summary for property $rest10</error>
+      <error line="46" code="PPC:ERR-50007">No summary for property $rest100</error>
+    </parse_markers>
+  </file>
+  <file path="Calendar/Month/Ru/Formatter.php" generated-path="Calendar.Month.Ru.Formatter.html" hash="ce585e8fdd464cf45ae2a1cfc073aeba" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Month\Ru" line="11" package="Default">
+      <extends>\Helpers\Calendar\Month\Formatter</extends>
+      <name>Formatter</name>
+      <full_name>\Helpers\Calendar\Month\Ru\Formatter</full_name>
+      <docblock line="11">
+        <description>Month data formatter</description>
+        <long-description></long-description>
+        <tag name="author" line="11" description="Konstantin S. Filin"/>
+        <tag name="package" line="11" description="Default"/>
+        <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter" refers="\Helpers\Calendar\Month\Formatter" link="/classes/Helpers.Calendar.Month.Formatter.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="17" package="Default">
+        <name>getMonthNames</name>
+        <full_name>\Helpers\Calendar\Month\Ru\Formatter::getMonthNames()</full_name>
+        <docblock line="17">
+          <description>Returns list of month names</description>
+          <long-description></long-description>
+          <tag name="return" line="17" description="List of month names" type="array">
+            <type>array</type>
+          </tag>
+          <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter::getMonthNames()" refers="\Helpers\Calendar\Month\Formatter::getMonthNames()" link="/classes/Helpers.Calendar.Month.Formatter.html#method_getMonthNames"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="39" package="Default">
+        <name>getWeekdayNames</name>
+        <full_name>\Helpers\Calendar\Month\Ru\Formatter::getWeekdayNames()</full_name>
+        <docblock line="39">
+          <description>Returns list of weekday names</description>
+          <long-description></long-description>
+          <tag name="return" line="39" description="List of weekday names" type="array">
+            <type>array</type>
+          </tag>
+          <tag name="inherited_from" description="\Helpers\Calendar\Month\Formatter::getWeekdayNames()" refers="\Helpers\Calendar\Month\Formatter::getWeekdayNames()" link="/classes/Helpers.Calendar.Month.Formatter.html#method_getWeekdayNames"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="20" package="Default">
+        <name>getWeekdayName</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getWeekdayName()</full_name>
+        <docblock line="20">
+          <description>Returns weekday name for given month day</description>
+          <long-description></long-description>
+          <tag name="param" line="20" description="&lt;p&gt;Month object&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$month">
+            <type>\Helpers\Calendar\Month</type>
+          </tag>
+          <tag name="param" line="20" description="&lt;p&gt;Month day&lt;/p&gt;" type="integer" variable="$dayNum">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="20" description="Weekday name (Monday, Tuesday, Wednesday, ...)" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$month</name>
+          <default></default>
+          <type>\Helpers\Calendar\Month</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$dayNum</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="32" package="Default">
+        <name>getMonthNames</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getMonthNames()</full_name>
+        <docblock line="32">
+          <description>Returns list of month names</description>
+          <long-description></long-description>
+          <tag name="return" line="32" description="List of month names" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="54" package="Default">
+        <name>getWeekdayNames</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getWeekdayNames()</full_name>
+        <docblock line="54">
+          <description>Returns list of weekday names</description>
+          <long-description></long-description>
+          <tag name="return" line="54" description="List of weekday names" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="72" package="Default">
+        <name>getMonthName</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getMonthName()</full_name>
+        <docblock line="72">
+          <description>Returns month name</description>
+          <long-description></long-description>
+          <tag name="param" line="72" description="" type="\Helpers\Calendar\Month" variable="$month">
+            <type>\Helpers\Calendar\Month</type>
+          </tag>
+          <tag name="return" line="72" description="Month name in format &quot;MonthName year&quot;" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$month</name>
+          <default></default>
+          <type>\Helpers\Calendar\Month</type>
+        </argument>
+        <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+  </file>
+  <file path="Calendar/Month/Ru/FormatterShort.php" generated-path="Calendar.Month.Ru.FormatterShort.html" hash="5321a0e508b0f28049d6b531d9923b80" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Month\Ru" line="11" package="Default">
+      <extends>\Helpers\Calendar\Month\Ru\Formatter</extends>
+      <name>FormatterShort</name>
+      <full_name>\Helpers\Calendar\Month\Ru\FormatterShort</full_name>
+      <docblock line="11">
+        <description>Month data formatter</description>
+        <long-description></long-description>
+        <tag name="author" line="11" description="Konstantin S. Filin"/>
+        <tag name="package" line="11" description="Default"/>
+        <tag name="inherited_from" description="\Helpers\Calendar\Month\Ru\Formatter" refers="\Helpers\Calendar\Month\Ru\Formatter" link="/classes/Helpers.Calendar.Month.Ru.Formatter.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="17" package="Default">
+        <name>getWeekdayNames</name>
+        <full_name>\Helpers\Calendar\Month\Ru\FormatterShort::getWeekdayNames()</full_name>
+        <docblock line="17">
+          <description>Returns list of weekday names</description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\Helpers\Calendar\Month\Ru\Formatter::getWeekdayNames()" refers="\Helpers\Calendar\Month\Ru\Formatter::getWeekdayNames()" link="/classes/Helpers.Calendar.Month.Ru.Formatter.html#method_getWeekdayNames"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="33" package="Default">
+        <name>getMonthName</name>
+        <full_name>\Helpers\Calendar\Month\Ru\FormatterShort::getMonthName()</full_name>
+        <docblock line="33">
+          <description>{@inheritDoc}</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$month</name>
+          <default></default>
+          <type>\Helpers\Calendar\Month</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="32" package="Default">
+        <name>getMonthNames</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getMonthNames()</full_name>
+        <docblock line="32">
+          <description>Returns list of month names</description>
+          <long-description></long-description>
+          <tag name="return" line="32" description="List of month names" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="54" package="Default">
+        <name>getWeekdayNames</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getWeekdayNames()</full_name>
+        <docblock line="54">
+          <description>Returns list of weekday names</description>
+          <long-description></long-description>
+          <tag name="return" line="54" description="List of weekday names" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="20" package="Default">
+        <name>getWeekdayName</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getWeekdayName()</full_name>
+        <docblock line="20">
+          <description>Returns weekday name for given month day</description>
+          <long-description></long-description>
+          <tag name="param" line="20" description="&lt;p&gt;Month object&lt;/p&gt;" type="\Helpers\Calendar\Month" variable="$month">
+            <type>\Helpers\Calendar\Month</type>
+          </tag>
+          <tag name="param" line="20" description="&lt;p&gt;Month day&lt;/p&gt;" type="integer" variable="$dayNum">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="20" description="Weekday name (Monday, Tuesday, Wednesday, ...)" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$month</name>
+          <default></default>
+          <type>\Helpers\Calendar\Month</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$dayNum</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Month\Ru" line="72" package="Default">
+        <name>getMonthName</name>
+        <full_name>\Helpers\Calendar\Month\Formatter::getMonthName()</full_name>
+        <docblock line="72">
+          <description>Returns month name</description>
+          <long-description></long-description>
+          <tag name="param" line="72" description="" type="\Helpers\Calendar\Month" variable="$month">
+            <type>\Helpers\Calendar\Month</type>
+          </tag>
+          <tag name="return" line="72" description="Month name in format &quot;MonthName year&quot;" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$month</name>
+          <default></default>
+          <type>\Helpers\Calendar\Month</type>
+        </argument>
+        <inherited_from>\Helpers\Calendar\Month\Formatter</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="33" code="PPC:ERR-50015">Argument $month is missing from the Docblock of getMonthName</error>
+    </parse_markers>
+  </file>
+  <file path="Calendar/Generator/MonthWorkdaysGenerator.php" generated-path="Calendar.Generator.MonthWorkdaysGenerator.html" hash="8fbfa6afcbd390e4dcbac970409d66ef" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Month">\Helpers\Calendar\Month</namespace-alias>
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Generator" line="7" package="Default">
+      <extends/>
+      <implements>\Helpers\Calendar\GeneratorIf</implements>
+      <name>MonthWorkdaysGenerator</name>
+      <full_name>\Helpers\Calendar\Generator\MonthWorkdaysGenerator</full_name>
+      <docblock line="7">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Helpers\Calendar\Generator" line="13" package="Default">
+        <name>$month</name>
+        <full_name>\Helpers\Calendar\Generator\MonthWorkdaysGenerator::$month</full_name>
+        <default></default>
+        <docblock line="13">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="13" description="" type="\Helpers\Calendar\Month" variable="">
+            <type>\Helpers\Calendar\Month</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Generator" line="15" package="Default">
+        <name>__construct</name>
+        <full_name>\Helpers\Calendar\Generator\MonthWorkdaysGenerator::__construct()</full_name>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$month</name>
+          <default></default>
+          <type>\Helpers\Calendar\Month</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Generator" line="23" package="Default">
+        <name>make</name>
+        <full_name>\Helpers\Calendar\Generator\MonthWorkdaysGenerator::make()</full_name>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\Helpers\Calendar\GeneratorIf::make()" refers="\Helpers\Calendar\GeneratorIf::make()" link="/classes/Helpers.Calendar.GeneratorIf.html#method_make"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Helpers\Calendar\Generator" line="44" package="Default">
+        <name>isWeekend</name>
+        <full_name>\Helpers\Calendar\Generator\MonthWorkdaysGenerator::isWeekend()</full_name>
+        <docblock line="44">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="44" description="" type="integer" variable="$dayNum">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="44" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$dayNum</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="7" code="PPC:ERR-50005">No summary for class \Helpers\Calendar\Generator\MonthWorkdaysGenerator</error>
+      <error line="15" code="PPC:ERR-50015">Argument $month is missing from the Docblock of __construct</error>
+      <error line="15" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="44" code="PPC:ERR-50008">No summary for method isWeekend()</error>
+      <error line="13" code="PPC:ERR-50007">No summary for property $month</error>
+    </parse_markers>
+  </file>
+  <file path="Calendar/Generator/PeriodDtListGenerator.php" generated-path="Calendar.Generator.PeriodDtListGenerator.html" hash="0f127099dd135ac8b20aede00ff8c532" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Helpers\Calendar\Generator" line="16" package="Default">
+      <extends/>
+      <implements>\Helpers\Calendar\GeneratorIf</implements>
+      <name>PeriodDtListGenerator</name>
+      <full_name>\Helpers\Calendar\Generator\PeriodDtListGenerator</full_name>
+      <docblock line="16">
+        <description>Generates date list from period object</description>
+        <long-description></long-description>
+        <tag name="author" line="16" description="Konstantin S. Filin"/>
+        <tag name="package" line="16" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Helpers\Calendar\Generator" line="22" package="Default">
+        <name>$period</name>
+        <full_name>\Helpers\Calendar\Generator\PeriodDtListGenerator::$period</full_name>
+        <default></default>
+        <docblock line="22">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="22" description="" type="\Helpers\Calendar\Period" variable="">
+            <type>\Helpers\Calendar\Period</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Helpers\Calendar\Generator" line="28" package="Default">
+        <name>$format</name>
+        <full_name>\Helpers\Calendar\Generator\PeriodDtListGenerator::$format</full_name>
+        <default></default>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Generator" line="30" package="Default">
+        <name>__construct</name>
+        <full_name>\Helpers\Calendar\Generator\PeriodDtListGenerator::__construct()</full_name>
+        <docblock line="30">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$period</name>
+          <default></default>
+          <type>\Helpers\Calendar\Period</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$format</name>
+          <default>"Y-m-d"</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Generator" line="38" package="Default">
+        <name>asObj</name>
+        <full_name>\Helpers\Calendar\Generator\PeriodDtListGenerator::asObj()</full_name>
+        <docblock line="38">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Helpers\Calendar\Generator" line="46" package="Default">
+        <name>make</name>
+        <full_name>\Helpers\Calendar\Generator\PeriodDtListGenerator::make()</full_name>
+        <docblock line="46">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\Helpers\Calendar\GeneratorIf::make()" refers="\Helpers\Calendar\GeneratorIf::make()" link="/classes/Helpers.Calendar.GeneratorIf.html#method_make"/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="30" code="PPC:ERR-50015">Argument $period is missing from the Docblock of __construct</error>
+      <error line="30" code="PPC:ERR-50015">Argument $format is missing from the Docblock of __construct</error>
+      <error line="30" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="38" code="PPC:ERR-50008">No summary for method asObj()</error>
+      <error line="22" code="PPC:ERR-50007">No summary for property $period</error>
+      <error line="28" code="PPC:ERR-50007">No summary for property $format</error>
+    </parse_markers>
+  </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>
   <namespace name="global" full_name="global"/>
   <namespace name="Helpers" full_name="Helpers">
     <namespace name="Calendar" full_name="Helpers\Calendar">
       <namespace name="Generator" full_name="Helpers\Calendar\Generator"/>
-      <namespace name="Month" full_name="Helpers\Calendar\Month"/>
-      <namespace name="ru" full_name="Helpers\Calendar\ru"/>
+      <namespace name="Month" full_name="Helpers\Calendar\Month">
+        <namespace name="Ru" full_name="Helpers\Calendar\Month\Ru"/>
+      </namespace>
     </namespace>
-    <namespace name="Str" full_name="Helpers\Str"/>
-  </namespace>
-  <namespace name="kfilin" full_name="kfilin">
-    <namespace name="Calendar" full_name="kfilin\Calendar"/>
+    <namespace name="Str" full_name="Helpers\Str">
+      <namespace name="Ru" full_name="Helpers\Str\Ru"/>
+    </namespace>
   </namespace>
   <deprecated count="0"/>
 </project>
