@@ -1,11 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace Helpers\Calendar\Generators;
 
 use Helpers\Calendar\Date;
@@ -35,7 +29,6 @@ class DtListGenerator implements \Helpers\Calendar\GeneratorIf {
     }
         
     /**
-     * 
      * {@inheritDoc}
      */
     public function make(): array {
@@ -63,9 +56,9 @@ class DtListGenerator implements \Helpers\Calendar\GeneratorIf {
     }
     
     /**
-     * 
-     * @param Date $dt
-     * @return bool
+     * Whether to include given date into the list
+     * @param Date $dt Tested date
+     * @return bool True if yes
      */
     protected function include(Date $dt): bool
     {
@@ -73,9 +66,9 @@ class DtListGenerator implements \Helpers\Calendar\GeneratorIf {
     }
     
     /**
-     * 
-     * @param Date $dt
-     * @return type
+     * Formats date for the list
+     * @param Date $dt Given date
+     * @return string|Date Formatted date
      */
     private function format(Date $dt)
     {
