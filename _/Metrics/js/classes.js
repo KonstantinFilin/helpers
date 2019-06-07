@@ -1,6 +1,6 @@
 var classes = [
     {
-        "name": "Helpers\\Str\\Ru",
+        "name": "Kfilin\\Helpers\\Str\\Ru",
         "interface": false,
         "abstract": false,
         "methods": [],
@@ -42,7 +42,7 @@ var classes = [
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "Helpers\\Str\\",
+        "package": "Kfilin\\Helpers\\Str\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 0,
@@ -50,7 +50,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Helpers\\Str\\Ru\\Pluralizer",
+        "name": "Kfilin\\Helpers\\Str\\Ru\\Pluralizer",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -128,7 +128,7 @@ var classes = [
         "totalStructuralComplexity": 45,
         "totalDataComplexity": 7.5,
         "totalSystemComplexity": 52.5,
-        "package": "Helpers\\Str\\Ru\\",
+        "package": "Kfilin\\Helpers\\Str\\Ru\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 0,
@@ -136,7 +136,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Helpers\\Str\\Random",
+        "name": "Kfilin\\Helpers\\Str\\Random",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -195,7 +195,7 @@ var classes = [
         "totalStructuralComplexity": 2,
         "totalDataComplexity": 3.5,
         "totalSystemComplexity": 5.5,
-        "package": "Helpers\\Str\\",
+        "package": "Kfilin\\Helpers\\Str\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 1,
@@ -203,7 +203,79 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Month",
+        "name": "Kfilin\\Helpers\\Debug",
+        "interface": false,
+        "abstract": false,
+        "methods": [
+            {
+                "name": "getMemoryUsage",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getFreeMemory",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getStackTrace",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 3,
+        "nbMethods": 3,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 3,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 8,
+        "ccn": 6,
+        "ccnMethodMax": 6,
+        "externals": [],
+        "parents": [],
+        "lcom": 3,
+        "length": 38,
+        "vocabulary": 17,
+        "volume": 155.32,
+        "difficulty": 2.07,
+        "effort": 321,
+        "level": 0.48,
+        "bugs": 0.05,
+        "time": 18,
+        "intelligentContent": 75.16,
+        "number_operators": 7,
+        "number_operands": 31,
+        "number_operators_unique": 2,
+        "number_operands_unique": 15,
+        "cloc": 0,
+        "loc": 22,
+        "lloc": 22,
+        "mi": 54.57,
+        "mIwoC": 54.57,
+        "commentWeight": 0,
+        "kanDefect": 0.38,
+        "relativeStructuralComplexity": 0,
+        "relativeDataComplexity": 3,
+        "relativeSystemComplexity": 3,
+        "totalStructuralComplexity": 0,
+        "totalDataComplexity": 9,
+        "totalSystemComplexity": 9,
+        "package": "Kfilin\\Helpers\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 0,
+        "instability": 0,
+        "violations": {}
+    },
+    {
+        "name": "Kfilin\\Helpers\\Calendar\\Month",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -264,10 +336,10 @@ var classes = [
         "ccnMethodMax": 5,
         "externals": [
             "InvalidArgumentException",
-            "Helpers\\Calendar\\Month\\Is",
-            "Helpers\\Calendar\\Month\\Is",
-            "Helpers\\Calendar\\Month\\Dt",
-            "Helpers\\Calendar\\Month\\Dt"
+            "Kfilin\\Helpers\\Calendar\\Month\\Is",
+            "Kfilin\\Helpers\\Calendar\\Month\\Is",
+            "Kfilin\\Helpers\\Calendar\\Month\\Dt",
+            "Kfilin\\Helpers\\Calendar\\Month\\Dt"
         ],
         "parents": [],
         "lcom": 1,
@@ -297,15 +369,78 @@ var classes = [
         "totalStructuralComplexity": 28,
         "totalDataComplexity": 14.67,
         "totalSystemComplexity": 42.67,
-        "package": "Helpers\\Calendar\\",
-        "pageRank": 0.17,
+        "package": "Kfilin\\Helpers\\Calendar\\",
+        "pageRank": 0.15,
         "afferentCoupling": 6,
         "efferentCoupling": 3,
         "instability": 0.33,
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Generators\\DtListGenerator",
+        "name": "Kfilin\\Helpers\\Calendar\\Generators\\WeekendsGenerator",
+        "interface": false,
+        "abstract": false,
+        "methods": [
+            {
+                "name": "include",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 1,
+        "nbMethods": 1,
+        "nbMethodsPrivate": 1,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 2,
+        "ccn": 2,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
+            "Kfilin\\Helpers\\Calendar\\Date"
+        ],
+        "parents": [
+            "Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator"
+        ],
+        "lcom": 1,
+        "length": 5,
+        "vocabulary": 3,
+        "volume": 7.92,
+        "difficulty": 3,
+        "effort": 23.77,
+        "level": 0.33,
+        "bugs": 0,
+        "time": 1,
+        "intelligentContent": 2.64,
+        "number_operators": 2,
+        "number_operands": 3,
+        "number_operators_unique": 2,
+        "number_operands_unique": 1,
+        "cloc": 6,
+        "loc": 14,
+        "lloc": 8,
+        "mi": 116.19,
+        "mIwoC": 73.74,
+        "commentWeight": 42.45,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 4,
+        "relativeDataComplexity": 0.67,
+        "relativeSystemComplexity": 4.67,
+        "totalStructuralComplexity": 4,
+        "totalDataComplexity": 0.67,
+        "totalSystemComplexity": 4.67,
+        "package": "Kfilin\\Helpers\\Calendar\\Generators\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 2,
+        "instability": 1,
+        "violations": {}
+    },
+    {
+        "name": "Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -344,54 +479,117 @@ var classes = [
         "nbMethodsPublic": 2,
         "nbMethodsGetter": 0,
         "nbMethodsSetters": 0,
-        "wmc": 8,
-        "ccn": 5,
-        "ccnMethodMax": 4,
+        "wmc": 9,
+        "ccn": 6,
+        "ccnMethodMax": 5,
         "externals": [
-            "Helpers\\Calendar\\GeneratorIf",
-            "Helpers\\Calendar\\Period",
+            "Kfilin\\Helpers\\Calendar\\GeneratorIf",
+            "Kfilin\\Helpers\\Calendar\\Period",
             "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date"
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date"
         ],
         "parents": [],
         "lcom": 1,
-        "length": 59,
+        "length": 62,
         "vocabulary": 20,
-        "volume": 254.99,
-        "difficulty": 11.04,
-        "effort": 2814.74,
+        "volume": 267.96,
+        "difficulty": 11.58,
+        "effort": 3102.15,
         "level": 0.09,
-        "bugs": 0.08,
-        "time": 156,
-        "intelligentContent": 23.1,
-        "number_operators": 18,
-        "number_operands": 41,
+        "bugs": 0.09,
+        "time": 172,
+        "intelligentContent": 23.15,
+        "number_operators": 19,
+        "number_operands": 43,
         "number_operators_unique": 7,
         "number_operands_unique": 13,
-        "cloc": 27,
-        "loc": 63,
-        "lloc": 36,
-        "mi": 90.98,
-        "mIwoC": 48.53,
-        "commentWeight": 42.45,
-        "kanDefect": 0.45,
+        "cloc": 26,
+        "loc": 64,
+        "lloc": 38,
+        "mi": 89.46,
+        "mIwoC": 47.73,
+        "commentWeight": 41.73,
+        "kanDefect": 0.52,
         "relativeStructuralComplexity": 16,
         "relativeDataComplexity": 0.8,
         "relativeSystemComplexity": 16.8,
         "totalStructuralComplexity": 64,
         "totalDataComplexity": 3.2,
         "totalSystemComplexity": 67.2,
-        "package": "Helpers\\Calendar\\Generators\\",
-        "pageRank": 0.02,
-        "afferentCoupling": 1,
-        "efferentCoupling": 3,
-        "instability": 0.75,
+        "package": "Kfilin\\Helpers\\Calendar\\Generators\\",
+        "pageRank": 0.04,
+        "afferentCoupling": 4,
+        "efferentCoupling": 4,
+        "instability": 0.5,
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Generators\\WorkdaysGenerator",
+        "name": "Kfilin\\Helpers\\Calendar\\Generators\\TueThuSatGenerator",
+        "interface": false,
+        "abstract": false,
+        "methods": [
+            {
+                "name": "include",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 1,
+        "nbMethods": 1,
+        "nbMethodsPrivate": 1,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 3,
+        "ccn": 3,
+        "ccnMethodMax": 3,
+        "externals": [
+            "Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
+            "Kfilin\\Helpers\\Calendar\\Date"
+        ],
+        "parents": [
+            "Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator"
+        ],
+        "lcom": 1,
+        "length": 7,
+        "vocabulary": 3,
+        "volume": 11.09,
+        "difficulty": 4,
+        "effort": 44.38,
+        "level": 0.25,
+        "bugs": 0,
+        "time": 2,
+        "intelligentContent": 2.77,
+        "number_operators": 3,
+        "number_operands": 4,
+        "number_operators_unique": 2,
+        "number_operands_unique": 1,
+        "cloc": 6,
+        "loc": 14,
+        "lloc": 8,
+        "mi": 115.03,
+        "mIwoC": 72.58,
+        "commentWeight": 42.45,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 9,
+        "relativeDataComplexity": 0.5,
+        "relativeSystemComplexity": 9.5,
+        "totalStructuralComplexity": 9,
+        "totalDataComplexity": 0.5,
+        "totalSystemComplexity": 9.5,
+        "package": "Kfilin\\Helpers\\Calendar\\Generators\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 2,
+        "instability": 1,
+        "violations": {}
+    },
+    {
+        "name": "Kfilin\\Helpers\\Calendar\\Generators\\WorkdaysGenerator",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -413,12 +611,11 @@ var classes = [
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "Helpers\\Calendar\\Generators\\DtListGenerator",
-            "Helpers\\Calendar\\Generators\\boolean",
-            "Helpers\\Calendar\\Date"
+            "Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
+            "Kfilin\\Helpers\\Calendar\\Date"
         ],
         "parents": [
-            "Helpers\\Calendar\\Generators\\DtListGenerator"
+            "Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator"
         ],
         "lcom": 1,
         "length": 5,
@@ -434,12 +631,12 @@ var classes = [
         "number_operands": 3,
         "number_operators_unique": 2,
         "number_operands_unique": 1,
-        "cloc": 5,
-        "loc": 13,
+        "cloc": 6,
+        "loc": 14,
         "lloc": 8,
-        "mi": 114.72,
+        "mi": 116.19,
         "mIwoC": 73.74,
-        "commentWeight": 40.98,
+        "commentWeight": 42.45,
         "kanDefect": 0.15,
         "relativeStructuralComplexity": 4,
         "relativeDataComplexity": 0.67,
@@ -447,15 +644,78 @@ var classes = [
         "totalStructuralComplexity": 4,
         "totalDataComplexity": 0.67,
         "totalSystemComplexity": 4.67,
-        "package": "Helpers\\Calendar\\Generators\\",
+        "package": "Kfilin\\Helpers\\Calendar\\Generators\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
-        "efferentCoupling": 3,
+        "efferentCoupling": 2,
         "instability": 1,
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Period",
+        "name": "Kfilin\\Helpers\\Calendar\\Generators\\MonWedFriGenerator",
+        "interface": false,
+        "abstract": false,
+        "methods": [
+            {
+                "name": "include",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 1,
+        "nbMethods": 1,
+        "nbMethodsPrivate": 1,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 3,
+        "ccn": 3,
+        "ccnMethodMax": 3,
+        "externals": [
+            "Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
+            "Kfilin\\Helpers\\Calendar\\Date"
+        ],
+        "parents": [
+            "Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator"
+        ],
+        "lcom": 1,
+        "length": 7,
+        "vocabulary": 3,
+        "volume": 11.09,
+        "difficulty": 4,
+        "effort": 44.38,
+        "level": 0.25,
+        "bugs": 0,
+        "time": 2,
+        "intelligentContent": 2.77,
+        "number_operators": 3,
+        "number_operands": 4,
+        "number_operators_unique": 2,
+        "number_operands_unique": 1,
+        "cloc": 6,
+        "loc": 14,
+        "lloc": 8,
+        "mi": 115.03,
+        "mIwoC": 72.58,
+        "commentWeight": 42.45,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 9,
+        "relativeDataComplexity": 0.5,
+        "relativeSystemComplexity": 9.5,
+        "totalStructuralComplexity": 9,
+        "totalDataComplexity": 0.5,
+        "totalSystemComplexity": 9.5,
+        "package": "Kfilin\\Helpers\\Calendar\\Generators\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 2,
+        "instability": 1,
+        "violations": {}
+    },
+    {
+        "name": "Kfilin\\Helpers\\Calendar\\Period",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -519,18 +779,18 @@ var classes = [
         "ccn": 11,
         "ccnMethodMax": 5,
         "externals": [
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
             "InvalidArgumentException",
             "self",
-            "Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
             "self",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date"
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date"
         ],
         "parents": [],
         "lcom": 2,
@@ -560,7 +820,7 @@ var classes = [
         "totalStructuralComplexity": 63,
         "totalDataComplexity": 18.75,
         "totalSystemComplexity": 81.75,
-        "package": "Helpers\\Calendar\\",
+        "package": "Kfilin\\Helpers\\Calendar\\",
         "pageRank": 0.02,
         "afferentCoupling": 1,
         "efferentCoupling": 3,
@@ -568,7 +828,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Month\\Dt",
+        "name": "Kfilin\\Helpers\\Calendar\\Month\\Dt",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -632,12 +892,12 @@ var classes = [
         "ccn": 5,
         "ccnMethodMax": 3,
         "externals": [
-            "Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month",
             "InvalidArgumentException",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Year",
-            "Helpers\\Calendar\\Month\\Fabric"
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Year",
+            "Kfilin\\Helpers\\Calendar\\Month\\Fabric"
         ],
         "parents": [],
         "lcom": 1,
@@ -667,15 +927,15 @@ var classes = [
         "totalStructuralComplexity": 175,
         "totalDataComplexity": 7.67,
         "totalSystemComplexity": 182.67,
-        "package": "Helpers\\Calendar\\Month\\",
-        "pageRank": 0.1,
+        "package": "Kfilin\\Helpers\\Calendar\\Month\\",
+        "pageRank": 0.09,
         "afferentCoupling": 1,
         "efferentCoupling": 5,
         "instability": 0.83,
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Month\\Ru\\Formatter",
+        "name": "Kfilin\\Helpers\\Calendar\\Month\\Ru\\Formatter",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -704,10 +964,10 @@ var classes = [
         "ccn": 1,
         "ccnMethodMax": 1,
         "externals": [
-            "Helpers\\Calendar\\Month\\Formatter"
+            "Kfilin\\Helpers\\Calendar\\Month\\Formatter"
         ],
         "parents": [
-            "Helpers\\Calendar\\Month\\Formatter"
+            "Kfilin\\Helpers\\Calendar\\Month\\Formatter"
         ],
         "lcom": 2,
         "length": 40,
@@ -736,7 +996,7 @@ var classes = [
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 4,
         "totalSystemComplexity": 4,
-        "package": "Helpers\\Calendar\\Month\\Ru\\",
+        "package": "Kfilin\\Helpers\\Calendar\\Month\\Ru\\",
         "pageRank": 0.02,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -744,7 +1004,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Month\\Ru\\FormatterShort",
+        "name": "Kfilin\\Helpers\\Calendar\\Month\\Ru\\FormatterShort",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -773,11 +1033,11 @@ var classes = [
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "Helpers\\Calendar\\Month\\Ru\\Formatter",
-            "Helpers\\Calendar\\Month"
+            "Kfilin\\Helpers\\Calendar\\Month\\Ru\\Formatter",
+            "Kfilin\\Helpers\\Calendar\\Month"
         ],
         "parents": [
-            "Helpers\\Calendar\\Month\\Ru\\Formatter"
+            "Kfilin\\Helpers\\Calendar\\Month\\Ru\\Formatter"
         ],
         "lcom": 2,
         "length": 37,
@@ -806,7 +1066,7 @@ var classes = [
         "totalStructuralComplexity": 18,
         "totalDataComplexity": 1.25,
         "totalSystemComplexity": 19.25,
-        "package": "Helpers\\Calendar\\Month\\Ru\\",
+        "package": "Kfilin\\Helpers\\Calendar\\Month\\Ru\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 2,
@@ -814,7 +1074,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Month\\Formatter",
+        "name": "Kfilin\\Helpers\\Calendar\\Month\\Formatter",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -857,8 +1117,8 @@ var classes = [
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "Helpers\\Calendar\\Month",
-            "Helpers\\Calendar\\Month"
+            "Kfilin\\Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month"
         ],
         "parents": [],
         "lcom": 2,
@@ -888,15 +1148,15 @@ var classes = [
         "totalStructuralComplexity": 196,
         "totalDataComplexity": 2.38,
         "totalSystemComplexity": 198.38,
-        "package": "Helpers\\Calendar\\Month\\",
-        "pageRank": 0.05,
+        "package": "Kfilin\\Helpers\\Calendar\\Month\\",
+        "pageRank": 0.04,
         "afferentCoupling": 2,
         "efferentCoupling": 1,
         "instability": 0.33,
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Month\\Fabric",
+        "name": "Kfilin\\Helpers\\Calendar\\Month\\Fabric",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -939,18 +1199,18 @@ var classes = [
         "ccn": 5,
         "ccnMethodMax": 2,
         "externals": [
-            "Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month",
             "InvalidArgumentException",
-            "Helpers\\Calendar\\Month",
-            "Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month",
             "InvalidArgumentException",
-            "Helpers\\Calendar\\Month",
-            "Helpers\\Calendar\\Month",
-            "Helpers\\Calendar\\Month",
-            "Helpers\\Calendar\\Month",
-            "Helpers\\Calendar\\Month",
-            "Helpers\\Calendar\\Month",
-            "Helpers\\Calendar\\Month"
+            "Kfilin\\Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Month"
         ],
         "parents": [],
         "lcom": 4,
@@ -980,7 +1240,7 @@ var classes = [
         "totalStructuralComplexity": 16,
         "totalDataComplexity": 6.67,
         "totalSystemComplexity": 22.67,
-        "package": "Helpers\\Calendar\\Month\\",
+        "package": "Kfilin\\Helpers\\Calendar\\Month\\",
         "pageRank": 0.03,
         "afferentCoupling": 1,
         "efferentCoupling": 2,
@@ -988,7 +1248,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Month\\Is",
+        "name": "Kfilin\\Helpers\\Calendar\\Month\\Is",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -1038,11 +1298,11 @@ var classes = [
         "ccn": 6,
         "ccnMethodMax": 3,
         "externals": [
-            "Helpers\\Calendar\\Month",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date",
-            "Helpers\\Calendar\\Date"
+            "Kfilin\\Helpers\\Calendar\\Month",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date"
         ],
         "parents": [],
         "lcom": 1,
@@ -1072,15 +1332,15 @@ var classes = [
         "totalStructuralComplexity": 125,
         "totalDataComplexity": 3.5,
         "totalSystemComplexity": 128.5,
-        "package": "Helpers\\Calendar\\Month\\",
-        "pageRank": 0.1,
+        "package": "Kfilin\\Helpers\\Calendar\\Month\\",
+        "pageRank": 0.09,
         "afferentCoupling": 1,
         "efferentCoupling": 2,
         "instability": 0.67,
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Month\\FormatterShort",
+        "name": "Kfilin\\Helpers\\Calendar\\Month\\FormatterShort",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -1109,11 +1369,11 @@ var classes = [
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "Helpers\\Calendar\\Month\\Formatter",
-            "Helpers\\Calendar\\Month"
+            "Kfilin\\Helpers\\Calendar\\Month\\Formatter",
+            "Kfilin\\Helpers\\Calendar\\Month"
         ],
         "parents": [
-            "Helpers\\Calendar\\Month\\Formatter"
+            "Kfilin\\Helpers\\Calendar\\Month\\Formatter"
         ],
         "lcom": 2,
         "length": 37,
@@ -1142,7 +1402,7 @@ var classes = [
         "totalStructuralComplexity": 18,
         "totalDataComplexity": 1.25,
         "totalSystemComplexity": 19.25,
-        "package": "Helpers\\Calendar\\Month\\",
+        "package": "Kfilin\\Helpers\\Calendar\\Month\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 2,
@@ -1150,7 +1410,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Year",
+        "name": "Kfilin\\Helpers\\Calendar\\Year",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -1200,7 +1460,7 @@ var classes = [
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 2,
         "totalSystemComplexity": 2,
-        "package": "Helpers\\Calendar\\",
+        "package": "Kfilin\\Helpers\\Calendar\\",
         "pageRank": 0.03,
         "afferentCoupling": 1,
         "efferentCoupling": 0,
@@ -1208,7 +1468,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Week",
+        "name": "Kfilin\\Helpers\\Calendar\\Week",
         "interface": false,
         "abstract": false,
         "methods": [],
@@ -1237,12 +1497,12 @@ var classes = [
         "number_operands": 7,
         "number_operators_unique": 0,
         "number_operands_unique": 7,
-        "cloc": 10,
-        "loc": 21,
+        "cloc": 0,
+        "loc": 11,
         "lloc": 11,
-        "mi": 111.93,
+        "mi": 68.09,
         "mIwoC": 68.09,
-        "commentWeight": 43.84,
+        "commentWeight": 0,
         "kanDefect": 0.15,
         "relativeStructuralComplexity": 0,
         "relativeDataComplexity": 0,
@@ -1250,7 +1510,7 @@ var classes = [
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "Helpers\\Calendar\\",
+        "package": "Kfilin\\Helpers\\Calendar\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 0,
@@ -1258,7 +1518,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "Helpers\\Calendar\\Date",
+        "name": "Kfilin\\Helpers\\Calendar\\Date",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -1366,9 +1626,9 @@ var classes = [
         "externals": [
             "DateTime",
             "parent",
-            "Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
             "DateInterval",
-            "Helpers\\Calendar\\Date",
+            "Kfilin\\Helpers\\Calendar\\Date",
             "DateInterval"
         ],
         "parents": [
@@ -1401,15 +1661,15 @@ var classes = [
         "totalStructuralComplexity": 325,
         "totalDataComplexity": 26.67,
         "totalSystemComplexity": 351.67,
-        "package": "Helpers\\Calendar\\",
-        "pageRank": 0.35,
-        "afferentCoupling": 7,
+        "package": "Kfilin\\Helpers\\Calendar\\",
+        "pageRank": 0.37,
+        "afferentCoupling": 10,
         "efferentCoupling": 5,
-        "instability": 0.42,
+        "instability": 0.33,
         "violations": {}
     },
     {
-        "name": "Helpers\\Str",
+        "name": "Kfilin\\Helpers\\Str",
         "interface": false,
         "abstract": false,
         "methods": [
@@ -1473,7 +1733,7 @@ var classes = [
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 25,
         "totalSystemComplexity": 25,
-        "package": "Helpers\\",
+        "package": "Kfilin\\Helpers\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 0,

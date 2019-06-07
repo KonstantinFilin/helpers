@@ -1,2 +1,2 @@
 #!/bin/bash
-bin/phpmd src/Helpers/ html codesize,unusedcode,naming > ./_/phpmd.html
+bin/phpmd src/Kfilin/Helpers/ html codesize,unusedcode,naming > ./_/phpmd.html

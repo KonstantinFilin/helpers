@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content">
         <div class="report-details">
-            Created at 2018-11-14 12:01:17        , with PHPMetrics v2.4.1 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2019-06-06 01:07:20        , with PHPMetrics v2.4.1 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
 
@@ -239,17 +239,17 @@
 
     var relations = [
     {
-        "name": "\\Helpers\\Str\\Ru",
+        "name": "\\Kfilin\\Helpers\\Str\\Ru",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\Helpers\\Str\\Ru\\Pluralizer",
+        "name": "\\Kfilin\\Helpers\\Str\\Ru\\Pluralizer",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\Helpers\\Str\\Random",
+        "name": "\\Kfilin\\Helpers\\Str\\Random",
         "size": 3000,
         "relations": [
             "\\self"
@@ -261,7 +261,12 @@
         "relations": []
     },
     {
-        "name": "\\Helpers\\Calendar\\Month",
+        "name": "\\Kfilin\\Helpers\\Debug",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Kfilin\\Helpers\\Calendar\\Month",
         "size": 3000,
         "relations": []
     },
@@ -271,39 +276,55 @@
         "relations": []
     },
     {
-        "name": "\\Helpers\\Calendar\\Month\\Is",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Month\\Is",
         "size": 3000,
         "relations": [
-            "\\Helpers\\Calendar\\Month",
-            "\\Helpers\\Calendar\\Date"
+            "\\Kfilin\\Helpers\\Calendar\\Month",
+            "\\Kfilin\\Helpers\\Calendar\\Date"
         ]
     },
     {
-        "name": "\\Helpers\\Calendar\\Month\\Dt",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Month\\Dt",
         "size": 3000,
         "relations": [
-            "\\Helpers\\Calendar\\Month",
+            "\\Kfilin\\Helpers\\Calendar\\Month",
             "\\InvalidArgumentException",
-            "\\Helpers\\Calendar\\Date",
-            "\\Helpers\\Calendar\\Year",
-            "\\Helpers\\Calendar\\Month\\Fabric"
+            "\\Kfilin\\Helpers\\Calendar\\Date",
+            "\\Kfilin\\Helpers\\Calendar\\Year",
+            "\\Kfilin\\Helpers\\Calendar\\Month\\Fabric"
         ]
     },
     {
-        "name": "\\Helpers\\Calendar\\Generators\\DtListGenerator",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Helpers\\Calendar\\GeneratorIf",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Helpers\\Calendar\\Period",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Generators\\WeekendsGenerator",
         "size": 3000,
         "relations": [
-            "\\Helpers\\Calendar\\Date",
+            "\\Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
+            "\\Kfilin\\Helpers\\Calendar\\Date"
+        ]
+    },
+    {
+        "name": "\\Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Kfilin\\Helpers\\Calendar\\Date",
+        "size": 3000,
+        "relations": [
+            "\\Kfilin\\Helpers\\Calendar\\Date",
+            "\\DateInterval"
+        ]
+    },
+    {
+        "name": "\\Kfilin\\Helpers\\Calendar\\GeneratorIf",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Kfilin\\Helpers\\Calendar\\Period",
+        "size": 3000,
+        "relations": [
+            "\\Kfilin\\Helpers\\Calendar\\Date",
             "\\InvalidArgumentException",
             "\\self"
         ]
@@ -311,66 +332,73 @@
     {
         "name": "\\Helpers\\Calendar\\Date",
         "size": 3000,
-        "relations": [
-            "\\Helpers\\Calendar\\Date",
-            "\\DateInterval"
-        ]
+        "relations": []
     },
     {
-        "name": "\\Helpers\\Calendar\\Generators\\WorkdaysGenerator",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Generators\\TueThuSatGenerator",
         "size": 3000,
         "relations": [
-            "\\Helpers\\Calendar\\Generators\\DtListGenerator",
-            "\\Helpers\\Calendar\\Generators\\boolean",
-            "\\Helpers\\Calendar\\Date"
+            "\\Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
+            "\\Kfilin\\Helpers\\Calendar\\Date"
         ]
     },
     {
-        "name": "\\Helpers\\Calendar\\Generators\\boolean",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Generators\\WorkdaysGenerator",
+        "size": 3000,
+        "relations": [
+            "\\Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
+            "\\Kfilin\\Helpers\\Calendar\\Date"
+        ]
+    },
+    {
+        "name": "\\Kfilin\\Helpers\\Calendar\\Generators\\MonWedFriGenerator",
+        "size": 3000,
+        "relations": [
+            "\\Kfilin\\Helpers\\Calendar\\Generators\\DtListGenerator",
+            "\\Kfilin\\Helpers\\Calendar\\Date"
+        ]
+    },
+    {
+        "name": "\\Kfilin\\Helpers\\Calendar\\Year",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\Helpers\\Calendar\\Year",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Helpers\\Calendar\\Month\\Fabric",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Month\\Fabric",
         "size": 3000,
         "relations": [
-            "\\Helpers\\Calendar\\Month",
+            "\\Kfilin\\Helpers\\Calendar\\Month",
             "\\InvalidArgumentException"
         ]
     },
     {
-        "name": "\\Helpers\\Calendar\\Month\\Ru\\Formatter",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Month\\Ru\\Formatter",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\Helpers\\Calendar\\Month\\Formatter",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Month\\Formatter",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\Helpers\\Calendar\\Month\\Ru\\FormatterShort",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Month\\Ru\\FormatterShort",
         "size": 3000,
         "relations": [
-            "\\Helpers\\Calendar\\Month\\Ru\\Formatter",
-            "\\Helpers\\Calendar\\Month"
+            "\\Kfilin\\Helpers\\Calendar\\Month\\Ru\\Formatter",
+            "\\Kfilin\\Helpers\\Calendar\\Month"
         ]
     },
     {
-        "name": "\\Helpers\\Calendar\\Month\\FormatterShort",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Month\\FormatterShort",
         "size": 3000,
         "relations": [
-            "\\Helpers\\Calendar\\Month\\Formatter",
-            "\\Helpers\\Calendar\\Month"
+            "\\Kfilin\\Helpers\\Calendar\\Month\\Formatter",
+            "\\Kfilin\\Helpers\\Calendar\\Month"
         ]
     },
     {
-        "name": "\\Week",
+        "name": "\\Kfilin\\Helpers\\Calendar\\Week",
         "size": 3000,
         "relations": []
     },
@@ -390,7 +418,7 @@
         "relations": []
     },
     {
-        "name": "\\Helpers\\Str",
+        "name": "\\Kfilin\\Helpers\\Str",
         "size": 3000,
         "relations": []
     }

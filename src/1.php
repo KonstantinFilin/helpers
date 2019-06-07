@@ -2,11 +2,21 @@
 
 require "../vendor/autoload.php";
 
-$dt1 = new \Helpers\Calendar\Date("2018-12-25");
-$dt2 = new \Helpers\Calendar\Date("2019-01-07");
-$p1 = new Helpers\Calendar\Period($dt1, $dt2);
-$g1 = new \Helpers\Calendar\Generator\PeriodDtListGenerator($p1);
+use Kfilin\Helpers\Calendar\Date;
+use Kfilin\Helpers\Calendar\Period;
+use Kfilin\Helpers\Calendar\Generators\WeekendsGenerator;
+use Kfilin\Helpers\Calendar\Generators\WorkdaysGenerator;
 
-$g1->asObj();
-$dtList = $g1->make();
+$dt1 = new Date("2019-06-04");
+$dt2 = new Date("2019-09-27");
+$p1 = new Period($dt1, $dt2);
+$g1 = new WeekendsGenerator($p1);
+
+$dt21 = new Date("2019-02-01");
+$dt22 = new Date("2019-02-28");
+$p2 = new Period($dt21, $dt22);
+$g2 = new WorkdaysGenerator($p2);
+//$g1->asObj();
+$dtList = $g2->make();
 var_dump($dtList);
+
