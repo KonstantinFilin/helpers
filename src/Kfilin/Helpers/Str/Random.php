@@ -48,7 +48,7 @@ class Random {
      * Creates random string
      * @param int $length Length of the string
      * @param string $chars Chars the resulting string contains from
-     * @return string Resulting string
+     * @return string Resulting random string
      */
     public static function createFromChars(int $length, string $chars): string
     {
